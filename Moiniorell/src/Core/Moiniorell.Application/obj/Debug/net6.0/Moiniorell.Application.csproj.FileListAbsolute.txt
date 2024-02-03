@@ -1,0 +1,15 @@
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\bin\Debug\net6.0\Moiniorell.Application.deps.json
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\bin\Debug\net6.0\Moiniorell.Application.dll
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\bin\Debug\net6.0\Moiniorell.Application.pdb
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\bin\Debug\net6.0\Moiniorell.Domain.dll
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\bin\Debug\net6.0\Moiniorell.Domain.pdb
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\obj\Debug\net6.0\Moiniorell.Application.csproj.AssemblyReference.cache
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\obj\Debug\net6.0\Moiniorell.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\obj\Debug\net6.0\Moiniorell.Application.AssemblyInfoInputs.cache
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\obj\Debug\net6.0\Moiniorell.Application.AssemblyInfo.cs
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\obj\Debug\net6.0\Moiniorell.Application.csproj.CoreCompileInputs.cache
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\obj\Debug\net6.0\Moiniorell.Application.csproj.CopyComplete
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\obj\Debug\net6.0\Moiniorell.Application.dll
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\obj\Debug\net6.0\refint\Moiniorell.Application.dll
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\obj\Debug\net6.0\Moiniorell.Application.pdb
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Core\Moiniorell.Application\obj\Debug\net6.0\ref\Moiniorell.Application.dll

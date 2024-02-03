@@ -1,0 +1,123 @@
+﻿@model EditProfileVM
+<!-- Page Content  -->
+<div id="content-page" class="content-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="iq-card">
+                    <div class="iq-card-body p-0">
+                        <div class="iq-edit-list">
+                            <ul class="iq-edit-profile d-flex nav nav-pills">
+                                <li class="col-md-3 p-0">
+                                    <a class="nav-link active" data-toggle="pill" href="#personal-information">
+                                        Personal Information
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="iq-edit-list-data">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="personal-information" role="tabpanel">
+                            <div class="iq-card">
+                                <div class="iq-card-header d-flex justify-content-between">
+                                    <div class="iq-header-title">
+                                        <h4 class="card-title">Personal Information</h4>
+                                    </div>
+                                </div>
+                                <div class="iq-card-body">
+                                    <form method="post">
+                                        <div class="form-group row align-items-center">
+                                            <div class="col-md-12">
+                                                <div class="profile-img-edit">
+                                                    <img class="profile-pic" src="~/assets/images/@Model.ProfilePicture" alt="profile-pic">
+                                                    <div class="p-image">
+                                                        <i class="ri-pencil-line upload-button"></i>
+                                                        <input class="file-upload" asp-for="ProfilePictureFile" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" row align-items-center">
+                                            <div class="form-group col-sm-6">
+                                                <label asp-for="Name">First Name:</label>
+                                                <input class="form-control" asp-for="Name">
+                                                <span asp-validation-for="Name"></span>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label asp-for="Surname">Last Name:</label>
+                                                <input class="form-control" asp-for="Surname">
+                                                <span asp-validation-for="Surname"></span>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label asp-for="Username">Username:</label>
+                                                <input class="form-control" asp-for="Username">
+                                                <span asp-validation-for="Username"></span>
+                                            </div>
+
+                                            <div class="form-group col-sm-6">
+                                                <label class="d-block">Gender:</label>
+                                                @foreach (var gender in Enum.GetValues(typeof(Gender)))
+                                                {
+                                                    <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="customRadio@(gender)" name="Gender" class="custom-control-input" value="@gender"
+                                                        @(Model.Gender == (Gender)gender ? "checked" : "")>
+                                                        <label class="custom-control-label" for="customRadio@(gender)"> @gender.ToString() </label>
+                                                    </div>
+                                                }
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label asp-for="BirthDate">Birth Date:</label>
+                                                <input class="form-control" asp-for="BirthDate">
+                                                <span asp-validation-for="BirthDate"></span>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label asp-for="Email">Email:</label>
+                                                <input class="form-control" asp-for="Email">
+                                                <span asp-validation-for="Email"></span>
+                                            </div>
+
+
+
+                                            <div class="form-group col-sm-12">
+                                                <label asp-for="Address">Address:</label>
+                                                <input class="form-control" asp-for="Address">
+                                                <span asp-validation-for="Address"></span>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label asp-for="CurrentPassword">Current Password:</label>
+                                                <input class="form-control" asp-for="CurrentPassword">
+                                                <span asp-validation-for="CurrentPassword"></span>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label asp-for="CurrentPassword">Current Password:</label>
+                                                <input class="form-control" asp-for="CurrentPassword">
+                                                <span asp-validation-for="CurrentPassword"></span>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label for="vpass">Verify Password:</label>
+                                                <input type="Password" class="form-control" id="vpass" value="">
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <label for="cno">Contact Number:</label>
+                                                <input type="text" class="form-control" id="cno" value="001 2536 123 458">
+                                            </div>
+                                            
+                                        </div>
+                                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                                        <button type="reset" class="btn iq-bg-danger">Cancle</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
