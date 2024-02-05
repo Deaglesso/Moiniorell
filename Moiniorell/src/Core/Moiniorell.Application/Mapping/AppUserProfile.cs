@@ -14,6 +14,9 @@ namespace Moiniorell.Application.Mapping
         public AppUserProfile()
         {
             CreateMap<RegisterVM, AppUser>();
+            CreateMap<LoginVM, AppUser>().ReverseMap();
+
+            CreateMap<AppUser, EditProfileVM>().ReverseMap();
 
         }
     }

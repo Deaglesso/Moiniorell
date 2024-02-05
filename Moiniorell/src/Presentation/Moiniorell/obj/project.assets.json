@@ -962,7 +962,10 @@
         },
         "runtime": {
           "bin/placeholder/Moiniorell.Application.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Moiniorell.Domain/1.0.0": {
         "type": "project",

@@ -30,11 +30,13 @@
                                     </div>
                                 </div>
                                 <div class="iq-card-body">
-                                    <form method="post">
+                                    <form method="post" enctype="multipart/form-data">
+                                        <div asp-validation-summary="ModelOnly"></div>
                                         <div class="form-group row align-items-center">
                                             <div class="col-md-12">
                                                 <div class="profile-img-edit">
                                                     <img class="profile-pic" src="~/assets/images/@Model.ProfilePicture" alt="profile-pic">
+                                                    <div> <input asp-for="ProfilePicture" hidden /></div>
                                                     <div class="p-image">
                                                         <i class="ri-pencil-line upload-button"></i>
                                                         <input class="file-upload" asp-for="ProfilePictureFile" />
@@ -94,22 +96,25 @@
                                                 <span asp-validation-for="CurrentPassword"></span>
                                             </div>
                                             <div class="form-group col-sm-6">
-                                                <label asp-for="CurrentPassword">Current Password:</label>
-                                                <input class="form-control" asp-for="CurrentPassword">
-                                                <span asp-validation-for="CurrentPassword"></span>
+                                                <label asp-for="NewPassword">New Password:</label>
+                                                <input class="form-control" asp-for="NewPassword">
+                                                <span asp-validation-for="NewPassword"></span>
                                             </div>
                                             <div class="form-group col-sm-6">
-                                                <label for="vpass">Verify Password:</label>
-                                                <input type="Password" class="form-control" id="vpass" value="">
+                                                <label asp-for="ConfirmPassword">Confirm Password:</label>
+                                                <input class="form-control" asp-for="ConfirmPassword">
+                                                <span asp-validation-for="ConfirmPassword"></span>
                                             </div>
+                                            
                                             <div class="form-group col-sm-6">
-                                                <label for="cno">Contact Number:</label>
-                                                <input type="text" class="form-control" id="cno" value="001 2536 123 458">
+                                                <label asp-for="PhoneNumber">Phone Number:</label>
+                                                <input asp-for="PhoneNumber" class="form-control" >
+                                                <span asp-validation-for="PhoneNumber"></span>
                                             </div>
                                             
                                         </div>
                                         <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                        <button type="reset" class="btn iq-bg-danger">Cancle</button>
+                                        <a href="javascript:history.back()" class="btn iq-bg-danger">Cancel</a>
                                     </form>
                                 </div>
                             </div>

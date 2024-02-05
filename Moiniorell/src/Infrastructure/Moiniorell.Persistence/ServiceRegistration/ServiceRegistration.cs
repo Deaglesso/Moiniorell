@@ -36,6 +36,8 @@ namespace Moiniorell.Persistence.ServiceRegistration
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
 
             services.AddScoped<IAuthService, AuthService>();
+            services.AddHttpContextAccessor();
+
 
         }
     }

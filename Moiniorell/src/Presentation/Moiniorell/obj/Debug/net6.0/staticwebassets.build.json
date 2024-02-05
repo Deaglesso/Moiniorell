@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6xmGU1iJpTicKELOl2hoW32FKZ2QRgxs7ROTj4uF1p0=",
+  "Hash": "lS0hjcGg7LxbqOVEf9uiyR9qWtLDYxMKsXIQSRTH8CI=",
   "Source": "Moiniorell",
   "BasePath": "_content/Moiniorell",
   "Mode": "Default",
@@ -3942,6 +3942,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\fullcalendar\\timegrid\\README.md"
+    },
+    {
+      "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\4f10797a-80af-4c09-baae-73a90a9e59becanka.jpg",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/4f10797a-80af-4c09-baae-73a90a9e59becanka.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\4f10797a-80af-4c09-baae-73a90a9e59becanka.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\73409088-0246-48c5-ab94-a64de60a07ffcanka.jpg",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/73409088-0246-48c5-ab94-a64de60a07ffcanka.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\73409088-0246-48c5-ab94-a64de60a07ffcanka.jpg"
     },
     {
       "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\error\\01.png",

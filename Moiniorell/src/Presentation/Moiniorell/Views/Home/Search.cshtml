@@ -1,0 +1,21 @@
+﻿@model List<AppUser>
+@foreach (AppUser user in Model)
+{
+
+    <div class="col-lg-6">
+        <div class="card iq-mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="~/assets/images/@user.ProfilePicture" class="card-img" alt="#">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h4 class="card-title">@user.Name @user.Surname</h4>
+                        <p class="card-text"><small class="text-muted">@user.UserName</small></p>
+                        <p class="card-text">@user.Biography</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

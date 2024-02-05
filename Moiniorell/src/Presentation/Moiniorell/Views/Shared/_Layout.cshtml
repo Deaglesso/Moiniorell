@@ -196,16 +196,17 @@
             <div class="iq-navbar-custom">
                 <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <div class="iq-navbar-logo d-flex justify-content-between">
-                        <a href="index.html">
+                        <a asp-controller="Home" asp-action="Index">
                             <img src="~/assets/images/logo.png" class="img-fluid" alt="">
-                            <span>SocialV</span>
+                            <span>Moiniorell</span>
                         </a>
                     </div>
                     <div class="iq-search-bar">
-                        <form action="#" class="searchbox">
-                            <input type="text" class="text search-input" placeholder="Type here to search...">
-                            <a class="search-link" href="#"><i class="ri-search-line"></i></a>
+                        <form method="get" asp-controller="Home" asp-action="Search" class="searchbox">
+                            <input type="text" name="searchTerm" class="text search-input" placeholder="Type here to search...">
+                            <button type="submit" class="search-link"><i class="ri-search-line"></i></button>
                         </form>
+
                     </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
                         <i class="ri-menu-3-line"></i>
@@ -451,7 +452,7 @@
                                     <div class="iq-card shadow-none m-0">
                                         <div class="iq-card-body p-0 ">
                                             <div class="bg-primary p-3 line-height">
-                                                <h5 class="mb-0 text-white line-height">Hello Bni Cyst</h5>
+                                                <h5 class="mb-0 text-white line-height">Hello @user.Name @user.Surname</h5>
                                                 <span class="text-white font-size-12">Available</span>
                                             </div>
                                             <a href="profile.html" class="iq-sub-card iq-bg-primary-hover">

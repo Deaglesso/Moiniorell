@@ -19,6 +19,10 @@ namespace Moiniorell.Controllers
         //Register
         public IActionResult Register()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
         [HttpPost]
@@ -44,6 +48,10 @@ namespace Moiniorell.Controllers
         //Login
         public IActionResult Login()
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
         [HttpPost]
@@ -51,15 +59,16 @@ namespace Moiniorell.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _service.Login(vm);
-                //if (res.Any())
-                //{
-                //    foreach (var item in res)
-                //    {
-                //        ModelState.AddModelError(String.Empty, item);
-                //    }
-                //    return View(vm);
-                //}
+                await _service.Logout();
+                var res =  await _service.Login(vm);
+                if (res.Any())
+                {
+                    foreach (var item in res)
+                    {
+                        ModelState.AddModelError(String.Empty, item);
+                    }
+                    return View(vm);
+                }
                 return RedirectToAction("Index", "Home");
             }
             return View(vm);

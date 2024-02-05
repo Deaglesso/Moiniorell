@@ -1,17 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Moiniorell.Application.Abstractions.Services;
+using Moiniorell.Application.ViewModels;
 using Moiniorell.Domain.Models;
-using Moiniorell.ViewModels;
 
 namespace Moiniorell.Controllers
 {
     public class ProfileController : Controller
     {
         private readonly IAuthService _service;
+        private readonly IMapper _mapper;
 
-        public ProfileController(IAuthService service)
+        public ProfileController(IAuthService service, IMapper mapper)
         {
             _service = service;
+            _mapper = mapper;
         }
 
         public async Task<IActionResult> User(string username)
@@ -23,27 +28,43 @@ namespace Moiniorell.Controllers
             }
             return View(user);
         }
+        
         public async Task<IActionResult> Edit(string username) 
         {
             AppUser user = await _service.GetUser(username);
+            if (user.UserName != HttpContext.User.Identity.Name) 
+            {
+                return BadRequest();
+            }
             if (user == null)
             {
                 return NotFound();
             }
-            EditProfileVM vm = new EditProfileVM
-            {
-                Name = user.Name,
-                Surname = user.Surname,
-                Username = user.UserName,
-                Email = user.Email,
-                ProfilePicture = user.ProfilePicture,
-                Gender = user.Gender,
-                BirthDate = user.BirthDate,
-                Address = user.Address,
-                
-            };
-
+            EditProfileVM vm = _mapper.Map<EditProfileVM>(user);
             return View(vm);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(EditProfileVM vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(vm);
+                
+            }
+            AppUser user = await _service.GetUser(HttpContext.User.Identity.Name);
+            var res = await _service.UpdateUser(user,vm);
+            if (res.Any())
+            {
+                foreach (var item in res)
+                {
+                    ModelState.AddModelError(String.Empty, item);
+                }
+                return View(vm);
+            }
+            await _service.Logout();
+
+            await _service.LoginNoPass(user.UserName);
+            return RedirectToAction("Index", "Home");
         }
     }
 }
