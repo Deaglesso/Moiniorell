@@ -203,8 +203,12 @@
                     </div>
                     <div class="iq-search-bar">
                         <form method="get" asp-controller="Home" asp-action="Search" class="searchbox">
-                            <input type="text" name="searchTerm" class="text search-input" placeholder="Type here to search...">
-                            <button type="submit" class="search-link"><i class="ri-search-line"></i></button>
+                            <input type="text" name="searchTerm" class="text search-input"
+                                   placeholder='@(TempData["ErrorMessage"] is null ? "Type here to search..." : TempData["ErrorMessage"].ToString())'>
+
+
+                            <span class="search-link"><button type="submit" hidden><span class="search-link"><i class="ri-search-line"></i></span></button></span>
+                            
                         </form>
 
                     </div>

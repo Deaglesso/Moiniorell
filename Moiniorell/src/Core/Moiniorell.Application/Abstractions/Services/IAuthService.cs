@@ -11,8 +11,12 @@ namespace Moiniorell.Application.Abstractions.Services
 
         Task Logout();
         Task<AppUser> GetUser(string username);
+        Task<AppUser> GetUserById(string userId);
+
         Task<List<string>> UpdateUser(AppUser user,EditProfileVM vm);
         Task<List<AppUser>> GetUsers(string searchTerm);
+        Task Follow(string userId);
+        Task Unfollow(string followedId);
 
     }
 

@@ -2,16 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Moiniorell.Application.Abstractions.Repositories;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Domain.Models;
 using Moiniorell.Persistence.DAL;
+using Moiniorell.Persistence.Implementations.Repositories;
 using Moiniorell.Persistence.Implementations.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Moiniorell.Persistence.ServiceRegistration
 {
@@ -21,6 +18,17 @@ namespace Moiniorell.Persistence.ServiceRegistration
         {
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("Default"), b => b.MigrationsAssembly(Assembly.GetExecutingAssembly().FullName)));
 
+            AddIdentity(services);
+
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddHttpContextAccessor();
+            services.AddScoped<IFollowRepository, FollowRepository>();
+
+
+        }
+
+        private static void AddIdentity(IServiceCollection services)
+        {
             services.AddIdentity<AppUser, IdentityRole>(opt =>
             {
                 opt.Password.RequireNonAlphanumeric = false;
@@ -34,11 +42,6 @@ namespace Moiniorell.Persistence.ServiceRegistration
                 opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
 
             }).AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
-
-            services.AddScoped<IAuthService, AuthService>();
-            services.AddHttpContextAccessor();
-
-
         }
     }
 }

@@ -1,10 +1,9 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
 using Moiniorell.Domain.Models;
+using System.Security.Claims;
 
 namespace Moiniorell.Controllers
 {
@@ -21,18 +20,20 @@ namespace Moiniorell.Controllers
 
         public async Task<IActionResult> User(string username)
         {
+
             AppUser user = await _service.GetUser(username);
             if (user == null)
             {
                 return NotFound();
             }
+            
             return View(user);
         }
-        
-        public async Task<IActionResult> Edit(string username) 
+
+        public async Task<IActionResult> Edit(string username)
         {
             AppUser user = await _service.GetUser(username);
-            if (user.UserName != HttpContext.User.Identity.Name) 
+            if (user.UserName != HttpContext.User.Identity.Name)
             {
                 return BadRequest();
             }
@@ -49,10 +50,10 @@ namespace Moiniorell.Controllers
             if (!ModelState.IsValid)
             {
                 return View(vm);
-                
+
             }
             AppUser user = await _service.GetUser(HttpContext.User.Identity.Name);
-            var res = await _service.UpdateUser(user,vm);
+            var res = await _service.UpdateUser(user, vm);
             if (res.Any())
             {
                 foreach (var item in res)
@@ -65,6 +66,19 @@ namespace Moiniorell.Controllers
 
             await _service.LoginNoPass(user.UserName);
             return RedirectToAction("Index", "Home");
+        }
+
+        public async Task<IActionResult> Follow(string followeeId)
+        {
+            await _service.Follow(followeeId);
+            AppUser user = await _service.GetUserById(followeeId);
+            return RedirectToAction("User","Profile",new { username = user.UserName});
+        }
+        public async Task<IActionResult> Unfollow(string followeeId)
+        {
+            await _service.Unfollow(followeeId);
+            AppUser user = await _service.GetUserById(followeeId);
+            return RedirectToAction("User", "Profile", new { username = user.UserName });
         }
     }
 }

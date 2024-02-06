@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Moiniorell.Application.Abstractions.Repositories.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Moiniorell.Application.ServiceRegistration
         public static void AddApplicationServices(this IServiceCollection service)
         {
             service.AddAutoMapper(Assembly.GetExecutingAssembly());
-
+            
 
 
 

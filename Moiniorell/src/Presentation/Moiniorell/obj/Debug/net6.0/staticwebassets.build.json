@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lS0hjcGg7LxbqOVEf9uiyR9qWtLDYxMKsXIQSRTH8CI=",
+  "Hash": "DJtNCTvavgRPLJr1yd8RhW8R3iPNFPNLFT8FwEAhVrc=",
   "Source": "Moiniorell",
   "BasePath": "_content/Moiniorell",
   "Mode": "Default",
@@ -3976,6 +3976,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\73409088-0246-48c5-ab94-a64de60a07ffcanka.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\85d0b9a1-d78a-4374-b0cf-c82baeef3b50zuzu.webp",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/85d0b9a1-d78a-4374-b0cf-c82baeef3b50zuzu.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\85d0b9a1-d78a-4374-b0cf-c82baeef3b50zuzu.webp"
     },
     {
       "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\error\\01.png",

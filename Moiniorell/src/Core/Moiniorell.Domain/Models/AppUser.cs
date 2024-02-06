@@ -25,7 +25,9 @@ namespace Moiniorell.Domain.Models
         public bool IsOnline { get; set; }
         public bool IsActive { get; set; }
         public string ProfilePicture { get; set; }
+        public ICollection<Follow> Followers { get; set; }
 
+        public ICollection<Follow> Followees { get; set; }
         public AppUser()
         {
             RegisteredAt = DateTime.UtcNow;

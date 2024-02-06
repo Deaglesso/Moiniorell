@@ -3,11 +3,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Moiniorell.Application.Abstractions.Repositories;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
 using Moiniorell.Domain.Enums;
 using Moiniorell.Domain.Models;
 using Moiniorell.Infrastructure.Utilities.Extensions;
+using System.Linq.Expressions;
 
 namespace Moiniorell.Persistence.Implementations.Services
 {
@@ -19,8 +21,9 @@ namespace Moiniorell.Persistence.Implementations.Services
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _env;
         private readonly IHttpContextAccessor _http;
+        private readonly IFollowRepository _followRepo;
 
-        public AuthService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager, IMapper mapper, IWebHostEnvironment env, IHttpContextAccessor http)
+        public AuthService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager, IMapper mapper, IWebHostEnvironment env, IHttpContextAccessor http, IFollowRepository followRepo)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -28,16 +31,64 @@ namespace Moiniorell.Persistence.Implementations.Services
             _mapper = mapper;
             _env = env;
             _http = http;
+            _followRepo = followRepo;
+        }
+
+        public async Task Follow(string followedId)
+        {
+            string userId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
+            AppUser user = await _userManager.FindByIdAsync(userId);
+            AppUser followed = await _userManager.FindByIdAsync(followedId);
+
+            followed.FollowerCount++;
+            user.FollowingCount++;
+
+            Follow foll = new Follow
+            {
+
+                FolloweeId = followedId,
+                FollowerId = userId
+            };
+
+            await _followRepo.CreateAsync(foll);
+            await _followRepo.SaveChangesAsync();
+        }
+        public async Task Unfollow(string followedId)
+        {
+            string userId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
+            AppUser user = await _userManager.FindByIdAsync(userId);
+            AppUser followed = await _userManager.FindByIdAsync(followedId);
+
+            followed.FollowerCount--;
+            user.FollowingCount--;
+
+            Follow foll = await _followRepo.GetSingleAsync(f => f.FolloweeId == followedId && f.FollowerId == userId);
+
+            if (foll != null)
+            {
+                _followRepo.Delete(foll);
+                await _followRepo.SaveChangesAsync();
+            }
         }
 
         public async Task<AppUser> GetUser(string username)
         {
-            return await _userManager.FindByNameAsync(username);
+            return await _userManager.Users
+                .Include(u => u.Followers).ThenInclude(x=>x.Follower).Include(x=>x.Followees).ThenInclude(x => x.Followee)
+                .FirstOrDefaultAsync(u => u.UserName == username);
+        }
+
+        public async Task<AppUser> GetUserById(string userId)
+        {
+            return await _userManager.FindByIdAsync(userId);
         }
 
         public async Task<List<AppUser>> GetUsers(string searchTerm)
         {
-            return await _userManager.Users.Where(x => x.UserName.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
+
+            return await _userManager.Users.Where(x => x.UserName.ToLower().Contains(searchTerm.ToLower()) || x.Name.ToLower().Contains(searchTerm.ToLower()) || x.Surname.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
         }
 
         public async Task<List<string>> Login(LoginVM vm)
@@ -49,12 +100,12 @@ namespace Moiniorell.Persistence.Implementations.Services
             if (user is null)
             {
                 user = await _userManager.FindByNameAsync(vm.UsernameOrEmail);
-                if(user is null)
+                if (user is null)
                 {
                     str.Add("Username email or password is wrong!");
                     return str;
                 }
-                
+
             }
             var res = await _signInManager.PasswordSignInAsync(user, vm.Password, vm.isRemembered, true);
             if (res.IsLockedOut)
@@ -73,7 +124,7 @@ namespace Moiniorell.Persistence.Implementations.Services
 
         public async Task<List<string>> LoginNoPass(string username)
         {
-            
+
 
             List<string> str = new List<string>();
             AppUser user = await _userManager.FindByEmailAsync(username);
@@ -87,8 +138,8 @@ namespace Moiniorell.Persistence.Implementations.Services
                 }
 
             }
-             await _signInManager.SignInAsync(user,true);
-            
+            await _signInManager.SignInAsync(user, true);
+
             return new List<string>();
         }
 
@@ -100,7 +151,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             }
 
             await _signInManager.SignOutAsync();
-            
+
         }
 
         public async Task<List<string>> Register(RegisterVM vm)
@@ -112,7 +163,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             AppUser user = _mapper.Map<AppUser>(vm);
             List<string> str = new List<string>();
             var res = await _userManager.CreateAsync(user, vm.Password);
-            
+
             if (!res.Succeeded)
             {
                 foreach (var item in res.Errors)
@@ -122,10 +173,10 @@ namespace Moiniorell.Persistence.Implementations.Services
                 return str;
             }
             //Create Role
-            /*foreach (var item in Enum.GetValues(typeof(Role)))
+            foreach (var item in Enum.GetValues(typeof(Role)))
             {
                 await _roleManager.CreateAsync(new IdentityRole { Name = item.ToString() });
-            }*/
+            }
             await _userManager.AddToRoleAsync(user, Role.Member.ToString());
             await _signInManager.SignInAsync(user, isPersistent: false);
 
@@ -135,7 +186,7 @@ namespace Moiniorell.Persistence.Implementations.Services
 
         }
 
-        public async Task<List<string>> UpdateUser(AppUser user,EditProfileVM vm)
+        public async Task<List<string>> UpdateUser(AppUser user, EditProfileVM vm)
         {
             List<string> str = new List<string>();
 
@@ -186,7 +237,7 @@ namespace Moiniorell.Persistence.Implementations.Services
                 }
                 user.ProfilePicture = await vm.ProfilePictureFile.CreateFileAsync(_env.WebRootPath, "assets", "images");
             }
-            
+
 
             var res = await _userManager.UpdateAsync(user);
             if (!res.Succeeded)
