@@ -38,24 +38,40 @@ namespace Moiniorell.Persistence.DAL
             {
                 entity.HasOne<AppUser>(a => a.Author)
                 .WithMany(u => u.Posts)
-                .HasForeignKey(id => id.AuthorId);
+                .HasForeignKey(id => id.AuthorId)
+                .OnDelete(DeleteBehavior.Restrict);
 
                 entity.HasMany<Comment>(c => c.Comments)
                 .WithOne(p => p.CommentedPost)
                 .HasForeignKey(i => i.CommentedPostId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
             });
             builder.Entity<Comment>(entity =>
             {
                 entity.HasOne(a => a.Author)
                 .WithMany(c => c.Comments)
-                .HasForeignKey(aId => aId.AuthorId);
+                .HasForeignKey(aId => aId.AuthorId)
+                .OnDelete(DeleteBehavior.Restrict);
 
 
                 entity.HasOne(p => p.CommentedPost)
                 .WithMany(c => c.Comments)
                 .HasForeignKey(pId => pId.CommentedPostId);
 
+            });
+
+
+            builder.Entity<AppUser>(entity =>
+            {
+                entity.HasMany<Post>(p => p.Posts)
+                .WithOne(a => a.Author)
+                .HasForeignKey(pId => pId.AuthorId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+                entity.HasMany<Comment>(c => c.Comments)
+                .WithOne(a => a.Author)
+                .HasForeignKey(cId => cId.AuthorId)
+                .OnDelete(DeleteBehavior.Restrict);
             });
         }
 

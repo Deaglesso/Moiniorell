@@ -420,12 +420,13 @@ namespace Moiniorell.Persistence.Migrations
                 {
                     b.HasOne("Moiniorell.Domain.Models.AppUser", "Author")
                         .WithMany("Comments")
-                        .HasForeignKey("AuthorId");
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("Moiniorell.Domain.Models.Post", "CommentedPost")
                         .WithMany("Comments")
                         .HasForeignKey("CommentedPostId")
-                        .OnDelete(DeleteBehavior.NoAction);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Author");
 
@@ -455,7 +456,8 @@ namespace Moiniorell.Persistence.Migrations
                 {
                     b.HasOne("Moiniorell.Domain.Models.AppUser", "Author")
                         .WithMany("Posts")
-                        .HasForeignKey("AuthorId");
+                        .HasForeignKey("AuthorId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Author");
                 });
