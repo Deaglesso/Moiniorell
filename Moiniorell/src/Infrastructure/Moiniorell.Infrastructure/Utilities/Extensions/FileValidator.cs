@@ -19,7 +19,7 @@ namespace Moiniorell.Infrastructure.Utilities.Extensions
         }
         public static bool CheckFileSize(this IFormFile file, int Mb)
         {
-            if (file.Length * 1024 * 1024 > Mb)
+            if (file.Length > Mb * 1024 * 1024)
             {
                 return true;
             }

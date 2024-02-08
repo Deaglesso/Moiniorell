@@ -20,5 +20,6 @@ namespace Moiniorell.Application.ServiceRegistration
 
 
         }
+
     }
 }

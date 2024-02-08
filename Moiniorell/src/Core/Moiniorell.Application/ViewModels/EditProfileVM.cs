@@ -11,7 +11,7 @@ namespace Moiniorell.Application.ViewModels
         [Display(Name = "Profile Picture")]
         public IFormFile? ProfilePictureFile { get; set; }
 
-        public string ProfilePicture { get; set; }
+        public string? ProfilePicture { get; set; }
 
         [Required(ErrorMessage = "First Name is required.")]
         [MinLength(3, ErrorMessage = "Name must be at least 3 characters long")]

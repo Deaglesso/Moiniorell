@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
 using Moiniorell.Domain.Models;
@@ -25,12 +27,22 @@ namespace Moiniorell.Controllers
             }
             return View();
         }
+        [HttpGet]
+        public async Task<IActionResult> ConfirmEmail(string token, string email)
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult SuccessRegistration()
+        {
+            return View();
+        }
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM vm)
         {
             if (ModelState.IsValid)
             {
-                var res = await _service.Register(vm);
+                var res = await _service.Register(Url,vm);
                 if (res.Any())
                 {
                     foreach (var item in res)
@@ -39,9 +51,12 @@ namespace Moiniorell.Controllers
                     }
                     return View(vm);
                 }
+                
                 return RedirectToAction("Index", "Home");
             }
+
             return View(vm);
+            
         }
 
 

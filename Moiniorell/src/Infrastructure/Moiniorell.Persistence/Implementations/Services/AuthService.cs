@@ -2,6 +2,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
 using Moiniorell.Application.Abstractions.Repositories;
 using Moiniorell.Application.Abstractions.Services;
@@ -9,6 +12,7 @@ using Moiniorell.Application.ViewModels;
 using Moiniorell.Domain.Enums;
 using Moiniorell.Domain.Models;
 using Moiniorell.Infrastructure.Utilities.Extensions;
+using System;
 using System.Linq.Expressions;
 
 namespace Moiniorell.Persistence.Implementations.Services
@@ -22,8 +26,9 @@ namespace Moiniorell.Persistence.Implementations.Services
         private readonly IWebHostEnvironment _env;
         private readonly IHttpContextAccessor _http;
         private readonly IFollowRepository _followRepo;
+        private readonly IEmailService _emailService;
 
-        public AuthService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager, IMapper mapper, IWebHostEnvironment env, IHttpContextAccessor http, IFollowRepository followRepo)
+        public AuthService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, RoleManager<IdentityRole> roleManager, IMapper mapper, IWebHostEnvironment env, IHttpContextAccessor http, IFollowRepository followRepo, IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -32,6 +37,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             _env = env;
             _http = http;
             _followRepo = followRepo;
+            _emailService = emailService;
         }
 
         public async Task Follow(string followedId)
@@ -154,7 +160,7 @@ namespace Moiniorell.Persistence.Implementations.Services
 
         }
 
-        public async Task<List<string>> Register(RegisterVM vm)
+        public async Task<List<string>> Register(IUrlHelper Url,RegisterVM vm)
         {
             vm.Name = vm.Name.Capitalize();
             vm.Surname = vm.Surname.Capitalize();
@@ -177,10 +183,16 @@ namespace Moiniorell.Persistence.Implementations.Services
             {
                 await _roleManager.CreateAsync(new IdentityRole { Name = item.ToString() });
             }
+            //Email Conf
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var confirmationLink = Url.Action("ConfirmEmail", "Account", new { token, email = user.Email }, _http.HttpContext.Request.Scheme);
+            await _emailService.SendMailAsync(user.Email, "Confirmation email link", confirmationLink, false);
+            
+            
             await _userManager.AddToRoleAsync(user, Role.Member.ToString());
             await _signInManager.SignInAsync(user, isPersistent: false);
-
-
+            
+            
             return new List<string>();
 
 
@@ -197,6 +209,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             user.BirthDate = vm.BirthDate;
             user.Gender = vm.Gender;
             user.UserName = vm.Username;
+            user.ProfilePicture = vm.ProfilePicture;
             if (user.Email != vm.Email)
             {
                 var eres = await _userManager.SetEmailAsync(user, vm.Email);
@@ -225,12 +238,12 @@ namespace Moiniorell.Persistence.Implementations.Services
 
             if (vm.ProfilePictureFile is not null)
             {
-                if (vm.ProfilePictureFile.CheckFileType("Image"))
+                if (!vm.ProfilePictureFile.CheckFileType("image"))
                 {
                     str.Add("Only images allowed");
                     return str;
                 }
-                if (!vm.ProfilePictureFile.CheckFileSize(2))
+                if (vm.ProfilePictureFile.CheckFileSize(2))
                 {
                     str.Add("Max file size is 2 Mb");
                     return str;

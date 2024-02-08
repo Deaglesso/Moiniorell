@@ -24,6 +24,7 @@ namespace Moiniorell.Persistence.ServiceRegistration
             services.AddHttpContextAccessor();
             services.AddScoped<IFollowRepository, FollowRepository>();
 
+            services.AddScoped<IEmailService, EmailService>();
 
         }
 
@@ -36,6 +37,8 @@ namespace Moiniorell.Persistence.ServiceRegistration
 
 
                 opt.User.RequireUniqueEmail = true;
+                opt.SignIn.RequireConfirmedEmail = true;
+
 
                 opt.Lockout.AllowedForNewUsers = true;
                 opt.Lockout.MaxFailedAccessAttempts = 5;

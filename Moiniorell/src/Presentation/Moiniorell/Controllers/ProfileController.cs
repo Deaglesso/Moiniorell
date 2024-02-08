@@ -47,19 +47,22 @@ namespace Moiniorell.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(EditProfileVM vm)
         {
+            AppUser user = await _service.GetUser(HttpContext.User.Identity.Name);
             if (!ModelState.IsValid)
             {
+                vm.ProfilePicture = user.ProfilePicture;
                 return View(vm);
 
             }
-            AppUser user = await _service.GetUser(HttpContext.User.Identity.Name);
             var res = await _service.UpdateUser(user, vm);
             if (res.Any())
             {
                 foreach (var item in res)
                 {
+
                     ModelState.AddModelError(String.Empty, item);
                 }
+                vm.ProfilePicture = user.ProfilePicture;
                 return View(vm);
             }
             await _service.Logout();

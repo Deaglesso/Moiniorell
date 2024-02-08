@@ -28,6 +28,8 @@ namespace Moiniorell.Domain.Models
         public ICollection<Follow> Followers { get; set; }
 
         public ICollection<Follow> Followees { get; set; }
+        public ICollection<Post> Posts { get; set; }
+        public ICollection<Comment> Comments { get; set; }
         public AppUser()
         {
             RegisteredAt = DateTime.UtcNow;
