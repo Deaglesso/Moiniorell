@@ -79,3 +79,4 @@ C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Presentation\Moiniorell\bin\D
 C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Presentation\Moiniorell\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Presentation\Moiniorell\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Presentation\Moiniorell\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Omen\Documents\SocialFinal\Moiniorell\src\Presentation\Moiniorell\bin\Debug\net6.0\SixLabors.ImageSharp.dll

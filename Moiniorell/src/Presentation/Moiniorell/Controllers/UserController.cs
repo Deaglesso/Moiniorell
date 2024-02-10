@@ -30,7 +30,8 @@ namespace Moiniorell.Controllers
         [HttpGet]
         public async Task<IActionResult> ConfirmEmail(string token, string email)
         {
-            return View();
+            var res = await _service.ConfirmEmail(token, email);
+            return View(res.Succeeded ? nameof(ConfirmEmail) : "Error");
         }
         [HttpGet]
         public IActionResult SuccessRegistration()
@@ -47,12 +48,13 @@ namespace Moiniorell.Controllers
                 {
                     foreach (var item in res)
                     {
+                      
                         ModelState.AddModelError(String.Empty, item);
                     }
                     return View(vm);
                 }
                 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("SuccessRegistration", "User");
             }
 
             return View(vm);
@@ -75,11 +77,16 @@ namespace Moiniorell.Controllers
             if (ModelState.IsValid)
             {
                 await _service.Logout();
-                var res =  await _service.Login(vm);
+                var res =  await _service.Login(Url,vm);
                 if (res.Any())
                 {
                     foreach (var item in res)
                     {
+                        if (item == "emailconfirm")
+                        {
+
+                            return RedirectToAction("SuccessRegistration", "User");
+                        }
                         ModelState.AddModelError(String.Empty, item);
                     }
                     return View(vm);

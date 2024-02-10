@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Moiniorell.Application.Abstractions.Services;
+using Moiniorell.Application.ViewModels;
 using Moiniorell.Domain.Models;
+using System.Security.Claims;
 
 namespace Moiniorell.Controllers
 {
@@ -9,15 +12,41 @@ namespace Moiniorell.Controllers
     public class HomeController : Controller
     {
         private readonly IAuthService _service;
+        private readonly IPostService _postService;
 
-        public HomeController(IAuthService service)
+        public HomeController(IAuthService service, IPostService postService)
         {
             _service = service;
+            _postService = postService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+           
+            HomeVM vm = new HomeVM
+            {
+                Posts = await _postService.GetPosts(),
+            };
+            return View(vm);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken] 
+        public async Task<IActionResult> Index(CreatePostVM vm)
+        {
+            if (ModelState.IsValid)
+            {
+                await _postService.CreatePost(vm);
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            HomeVM homeVm = new HomeVM
+            {
+                Posts = await _postService.GetPosts(),
+                CreatePostVM = vm 
+            };
+
+            return View("Index", homeVm);
         }
         public async Task<IActionResult> Search(string searchTerm)
         {
@@ -42,6 +71,8 @@ namespace Moiniorell.Controllers
             List<AppUser> users =  await _service.GetUsers(searchTerm);
             return View("Search", users);
         }
+
+        
 
     }
 }

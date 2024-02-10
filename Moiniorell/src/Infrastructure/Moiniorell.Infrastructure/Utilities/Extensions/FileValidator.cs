@@ -5,6 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.IO;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
+
+
 namespace Moiniorell.Infrastructure.Utilities.Extensions
 {
     public static class FileValidator
@@ -25,7 +30,7 @@ namespace Moiniorell.Infrastructure.Utilities.Extensions
             }
             return false;
         }
-        public static async Task<string> CreateFileAsync(this IFormFile file, string root, params string[] folders)
+        public static async Task<string> CreateFileAsync(this IFormFile file, string root, bool cropImage = false, params string[] folders)
         {
             string path = root;
             string filename = Guid.NewGuid().ToString() + file.FileName;
@@ -38,7 +43,25 @@ namespace Moiniorell.Infrastructure.Utilities.Extensions
             {
                 await file.CopyToAsync(fs);
             }
+            if (cropImage)
+            {
+                CropImage(path, 1440, 1080);
+            }
+
             return filename;
+        }
+        private static void CropImage(string imagePath, int targetWidth, int targetHeight)
+        {
+            using (Image image = Image.Load(imagePath))
+            {
+                image.Mutate(x => x.Resize(new ResizeOptions
+                {
+                    Size = new SixLabors.ImageSharp.Size(targetWidth, targetHeight),
+                    Mode = ResizeMode.Crop
+                }));
+
+                image.Save(imagePath);
+            }
         }
         public static void DeleteFile(this string filename, string root, params string[] folders)
         {
@@ -56,5 +79,6 @@ namespace Moiniorell.Infrastructure.Utilities.Extensions
             }
 
         }
+
     }
 }

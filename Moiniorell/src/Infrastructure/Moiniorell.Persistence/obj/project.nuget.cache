@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "xX+Qhwu7btdSH+uDCdGSGmHcE9vMB5IGQDYscExtNrdsKeVZDu9Dtuxsb9fv6nN/WzJxNix9m1MX4s5ZseAhKQ==",
+  "dgSpecHash": "dwmNN/Gd30kJQpc0RC5SMmIlkwmUR0tiAc9JwZCWxBcW4BVDXKjRoavtif0YzdTj/ORc9L/AN64EeaTH7x7BpQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj",
   "expectedPackageFiles": [
@@ -43,6 +43,7 @@
     "C:\\Users\\Omen\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Omen\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Omen\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Omen\\.nuget\\packages\\sixlabors.imagesharp\\3.1.2\\sixlabors.imagesharp.3.1.2.nupkg.sha512",
     "C:\\Users\\Omen\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Omen\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\Omen\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

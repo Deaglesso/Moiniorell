@@ -328,6 +328,39 @@ namespace Moiniorell.Persistence.Migrations
                     b.ToTable("Follows");
                 });
 
+            modelBuilder.Entity("Moiniorell.Domain.Models.Like", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LikerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LikerId");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("Likes");
+                });
+
             modelBuilder.Entity("Moiniorell.Domain.Models.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -452,6 +485,25 @@ namespace Moiniorell.Persistence.Migrations
                     b.Navigation("Follower");
                 });
 
+            modelBuilder.Entity("Moiniorell.Domain.Models.Like", b =>
+                {
+                    b.HasOne("Moiniorell.Domain.Models.AppUser", "Liker")
+                        .WithMany()
+                        .HasForeignKey("LikerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Moiniorell.Domain.Models.Post", "Post")
+                        .WithMany("Likes")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Liker");
+
+                    b.Navigation("Post");
+                });
+
             modelBuilder.Entity("Moiniorell.Domain.Models.Post", b =>
                 {
                     b.HasOne("Moiniorell.Domain.Models.AppUser", "Author")
@@ -476,6 +528,8 @@ namespace Moiniorell.Persistence.Migrations
             modelBuilder.Entity("Moiniorell.Domain.Models.Post", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("Likes");
                 });
 #pragma warning restore 612, 618
         }

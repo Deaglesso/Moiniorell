@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "191q3ebfbNtjjzw2KD97EahHdj8v6InOWpnLHRlvoPwIdlaNZ1fSNmGSXXBmdui9FZ5AnqkBfK0UPtjSzVU+kA==",
+  "dgSpecHash": "/LEuB6UePJxsY2Zq3sOhRzUKKRo2S9+eeY1z235sZBto4hRBa6qz+4C0xC2xyU7BKDh2XzrJAhOfpF3Sa92Xrg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\Omen\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Omen\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Omen\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Omen\\.nuget\\packages\\sixlabors.imagesharp\\3.1.2\\sixlabors.imagesharp.3.1.2.nupkg.sha512",
     "C:\\Users\\Omen\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Omen\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\Omen\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"

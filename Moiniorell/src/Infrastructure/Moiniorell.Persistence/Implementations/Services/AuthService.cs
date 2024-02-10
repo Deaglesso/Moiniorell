@@ -82,7 +82,7 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task<AppUser> GetUser(string username)
         {
             return await _userManager.Users
-                .Include(u => u.Followers).ThenInclude(x=>x.Follower).Include(x=>x.Followees).ThenInclude(x => x.Followee)
+                .Include(u => u.Followers).ThenInclude(x => x.Follower).Include(x => x.Followees).ThenInclude(x => x.Followee)
                 .FirstOrDefaultAsync(u => u.UserName == username);
         }
 
@@ -97,7 +97,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             return await _userManager.Users.Where(x => x.UserName.ToLower().Contains(searchTerm.ToLower()) || x.Name.ToLower().Contains(searchTerm.ToLower()) || x.Surname.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
         }
 
-        public async Task<List<string>> Login(LoginVM vm)
+        public async Task<List<string>> Login(IUrlHelper Url,LoginVM vm)
         {
             vm.UsernameOrEmail = vm.UsernameOrEmail.ToLower();
 
@@ -113,6 +113,13 @@ namespace Moiniorell.Persistence.Implementations.Services
                 }
 
             }
+            if (!user.EmailConfirmed)
+            {
+                str.Add("emailconfirm");
+                var confres = await SendVerificationMail(Url, vm);
+
+                return str;
+            }
             var res = await _signInManager.PasswordSignInAsync(user, vm.Password, vm.isRemembered, true);
             if (res.IsLockedOut)
             {
@@ -121,6 +128,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             }
             if (!res.Succeeded)
             {
+
                 str.Add("Username email or password is wrong!");
                 return str;
             }
@@ -184,15 +192,11 @@ namespace Moiniorell.Persistence.Implementations.Services
                 await _roleManager.CreateAsync(new IdentityRole { Name = item.ToString() });
             }
             //Email Conf
-            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            var confirmationLink = Url.Action("ConfirmEmail", "Account", new { token, email = user.Email }, _http.HttpContext.Request.Scheme);
-            await _emailService.SendMailAsync(user.Email, "Confirmation email link", confirmationLink, false);
-            
+            var confres = await SendVerificationMail(Url, new LoginVM {UsernameOrEmail= vm.Email,Password=vm.Password });
             
             await _userManager.AddToRoleAsync(user, Role.Member.ToString());
-            await _signInManager.SignInAsync(user, isPersistent: false);
-            
-            
+
+
             return new List<string>();
 
 
@@ -248,7 +252,7 @@ namespace Moiniorell.Persistence.Implementations.Services
                     str.Add("Max file size is 2 Mb");
                     return str;
                 }
-                user.ProfilePicture = await vm.ProfilePictureFile.CreateFileAsync(_env.WebRootPath, "assets", "images");
+                user.ProfilePicture = await vm.ProfilePictureFile.CreateFileAsync(_env.WebRootPath,false, "assets", "images");
             }
 
 
@@ -262,6 +266,32 @@ namespace Moiniorell.Persistence.Implementations.Services
                 return str;
             }
             return new List<string>();
+        }
+
+        public async Task<IdentityResult> ConfirmEmail(string token, string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            return await _userManager.ConfirmEmailAsync(user, token);
+        }
+
+        public async Task<List<string>> SendVerificationMail(IUrlHelper Url, LoginVM vm)
+        {
+            List<string> str = new List<string>();
+            AppUser user = await _userManager.FindByEmailAsync(vm.UsernameOrEmail);
+            if (user is null)
+            {
+                user = await _userManager.FindByNameAsync(vm.UsernameOrEmail);
+                if (user is null)
+                {
+                    str.Add("Username email or password is wrong!");
+                    return str;
+                }
+            }
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var confirmationLink = Url.Action("ConfirmEmail", "User", new { email = user.Email, token }, _http.HttpContext.Request.Scheme);
+            await _emailService.SendMailAsync(user.Email, "Confirmation email link", confirmationLink, false);
+            return str;
         }
     }
 }
