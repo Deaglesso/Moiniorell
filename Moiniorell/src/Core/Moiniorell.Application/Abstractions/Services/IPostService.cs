@@ -12,5 +12,10 @@ namespace Moiniorell.Application.Abstractions.Services
     {
         Task<List<string>> CreatePost(CreatePostVM vm);
         Task<List<Post>> GetPosts();
+        Task LikePost(int postId);
+        Task UnlikePost(int postId);
+        Task DeletePost(int postId);
+
+
     }
 }

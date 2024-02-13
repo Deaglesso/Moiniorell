@@ -4,6 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
 using Moiniorell.Domain.Models;
+using Moiniorell.Infrastructure.Utilities.Extensions;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats.Jpeg;
+using SixLabors.ImageSharp.Processing;
 using System.Security.Claims;
 
 namespace Moiniorell.Controllers
@@ -35,6 +39,7 @@ namespace Moiniorell.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 await _postService.CreatePost(vm);
 
                 return RedirectToAction(nameof(Index));
@@ -72,7 +77,9 @@ namespace Moiniorell.Controllers
             return View("Search", users);
         }
 
+
         
+
 
     }
 }

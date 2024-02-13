@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1vmQFqlSuoezfk0SQh05yXV0SurGElW2do/bvUCfLYc=",
+  "Hash": "k3SPJ/C5YO9FoujLhbMIovfx9SY8g3qM58d4Nl4usRM=",
   "Source": "Moiniorell",
   "BasePath": "_content/Moiniorell",
   "Mode": "Default",
@@ -3978,6 +3978,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\122071d5-9ea5-4082-9594-050762182cc3nah.png"
     },
     {
+      "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\1fda9e22-8b8e-4a1a-8942-ee4c1a6e0754nah.png",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/1fda9e22-8b8e-4a1a-8942-ee4c1a6e0754nah.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\1fda9e22-8b8e-4a1a-8942-ee4c1a6e0754nah.png"
+    },
+    {
       "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\2fdfbfed-1769-4ca1-945e-b44c5594e05fnopic.png",
       "SourceId": "Moiniorell",
       "SourceType": "Discovered",
@@ -4097,6 +4114,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\3f67d7bb-81a8-43fd-89de-6fc8da9c9535lms.png"
     },
     {
+      "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\43b5a54a-4787-4a48-904f-ab959ff4b6891171858.jpg",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/43b5a54a-4787-4a48-904f-ab959ff4b6891171858.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\43b5a54a-4787-4a48-904f-ab959ff4b6891171858.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\45bcde76-b163-4952-8a3a-3337df1ad223canka.jpg",
       "SourceId": "Moiniorell",
       "SourceType": "Discovered",
@@ -4112,6 +4146,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\45bcde76-b163-4952-8a3a-3337df1ad223canka.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\4c303a67-dd6c-4019-afbd-7e978c9a6875nah.png",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/4c303a67-dd6c-4019-afbd-7e978c9a6875nah.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\4c303a67-dd6c-4019-afbd-7e978c9a6875nah.png"
     },
     {
       "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\4f10797a-80af-4c09-baae-73a90a9e59becanka.jpg",
@@ -4182,6 +4233,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\67d21d03-57a3-4e63-8182-78f160c3e5d4lms.png"
     },
     {
+      "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\6a7e84ba-7c8a-4b11-a25f-1b784503ec21nah.png",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/6a7e84ba-7c8a-4b11-a25f-1b784503ec21nah.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\6a7e84ba-7c8a-4b11-a25f-1b784503ec21nah.png"
+    },
+    {
       "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\73409088-0246-48c5-ab94-a64de60a07ffcanka.jpg",
       "SourceId": "Moiniorell",
       "SourceType": "Discovered",
@@ -4250,6 +4318,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\88fe6df6-ea19-4e06-860f-557047f5d441lms.png"
     },
     {
+      "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\8a6dd364-259f-4d1a-b22f-f12bfcc78052nah.png",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/8a6dd364-259f-4d1a-b22f-f12bfcc78052nah.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\8a6dd364-259f-4d1a-b22f-f12bfcc78052nah.png"
+    },
+    {
       "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\8c2e2d15-6632-43b5-92e1-c896f83353535m.jpg",
       "SourceId": "Moiniorell",
       "SourceType": "Discovered",
@@ -4301,6 +4386,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\ad3f93e3-42b8-4f91-84be-735938f989ffnah.png"
     },
     {
+      "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\bday.jpg",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/bday.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\bday.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\c88e4678-6d23-48ec-90f0-f4be2a669ce5nah.png",
       "SourceId": "Moiniorell",
       "SourceType": "Discovered",
@@ -4333,6 +4435,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\ca3ac584-8172-4954-a62e-939d603ee82clms.png"
+    },
+    {
+      "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\cfdbb337-2bed-475b-8c9d-fd54af3154e9nah.png",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/cfdbb337-2bed-475b-8c9d-fd54af3154e9nah.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\cfdbb337-2bed-475b-8c9d-fd54af3154e9nah.png"
     },
     {
       "Identity": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\d1226113-2337-4b3f-975c-ea9ca15b47b5nah.png",

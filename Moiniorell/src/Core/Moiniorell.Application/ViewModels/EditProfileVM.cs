@@ -55,6 +55,8 @@ namespace Moiniorell.Application.ViewModels
 
         
         public string? Address { get; set; }
+        public string? Biography { get; set; }
+
         [Phone(ErrorMessage = "Invalid phone number format")]
         public string? PhoneNumber { get; set; }
     }

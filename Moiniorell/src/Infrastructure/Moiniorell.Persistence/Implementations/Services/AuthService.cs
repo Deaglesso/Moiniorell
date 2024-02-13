@@ -82,7 +82,7 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task<AppUser> GetUser(string username)
         {
             return await _userManager.Users
-                .Include(u => u.Followers).ThenInclude(x => x.Follower).Include(x => x.Followees).ThenInclude(x => x.Followee)
+                .Include(u => u.Followers).ThenInclude(x => x.Follower).Include(x => x.Followees).ThenInclude(x => x.Followee).Include(x => x.Posts).ThenInclude(p=>p.Likes)
                 .FirstOrDefaultAsync(u => u.UserName == username);
         }
 
@@ -209,6 +209,8 @@ namespace Moiniorell.Persistence.Implementations.Services
             user.Name = vm.Name.Capitalize();
             user.Surname = vm.Surname.Capitalize();
             user.Address = vm.Address;
+            user.Biography = vm.Biography;
+
             user.PhoneNumber = vm.PhoneNumber;
             user.BirthDate = vm.BirthDate;
             user.Gender = vm.Gender;
@@ -271,8 +273,8 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task<IdentityResult> ConfirmEmail(string token, string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
-
             return await _userManager.ConfirmEmailAsync(user, token);
+
         }
 
         public async Task<List<string>> SendVerificationMail(IUrlHelper Url, LoginVM vm)
@@ -290,7 +292,10 @@ namespace Moiniorell.Persistence.Implementations.Services
             }
             var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             var confirmationLink = Url.Action("ConfirmEmail", "User", new { email = user.Email, token }, _http.HttpContext.Request.Scheme);
-            await _emailService.SendMailAsync(user.Email, "Confirmation email link", confirmationLink, false);
+            string confirmationButton = $"<a href=\"{confirmationLink}\" style=\"display:inline-block;padding:10px 20px;margin:10px;color:#fff;background-color:#007bff;text-decoration:none;border-radius:5px;\">Confirm Email</a>";
+
+            string body = $"Dear user,<br><br>Thank you for signing up! Please click the following button to confirm your email:<br>{confirmationButton}";
+            await _emailService.SendMailAsync(user.Email, "Confirmation email link", body, true);
             return str;
         }
     }

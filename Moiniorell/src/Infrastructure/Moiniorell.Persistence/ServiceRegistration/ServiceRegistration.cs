@@ -26,6 +26,8 @@ namespace Moiniorell.Persistence.ServiceRegistration
             services.AddHttpContextAccessor();
             services.AddScoped<IFollowRepository, FollowRepository>();
             services.AddScoped<IPostRepository, PostRepository>();
+            services.AddScoped<ILikeRepository, LikeRepository>();
+
 
             services.AddScoped<IEmailService, EmailService>();
 
