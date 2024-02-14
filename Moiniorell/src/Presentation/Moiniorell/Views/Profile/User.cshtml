@@ -244,7 +244,7 @@
                                                                     {
                                                                         
                                                                     <div style="text-align: right;">
-                                                                            <a asp-controller="User" asp-action="DeletePost" asp-route-postId="@item.Id"><i class=" fa fa-trash"></i></a>
+                                                                            <a asp-controller="Post" asp-action="DeletePost" asp-route-postId="@item.Id"><i class=" fa fa-trash"></i></a>
                                                                     </div>
                                                                     }
 
@@ -275,7 +275,7 @@
                                                                                     @if (item.Likes.Any(like => like.LikerId == Model.Id))
                                                                                     {
                                                                                         <span>
-                                                                                            <a asp-controller="User" asp-action="UnlikePost" asp-route-postId="@item.Id">
+                                                                                            <a asp-controller="Post" asp-action="UnlikePost" asp-route-postId="@item.Id">
                                                                                                 <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Unlike
                                                                                             </a>
                                                                                         </span>
@@ -284,7 +284,7 @@
                                                                                     {
 
                                                                                         <span>
-                                                                                            <a asp-controller="User" asp-action="LikePost" asp-route-postId="@item.Id">
+                                                                                            <a asp-controller="Post" asp-action="LikePost" asp-route-postId="@item.Id">
                                                                                                 <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Like
                                                                                             </a>
                                                                                         </span>

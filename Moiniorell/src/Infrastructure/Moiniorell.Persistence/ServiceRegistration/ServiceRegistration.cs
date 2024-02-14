@@ -22,11 +22,15 @@ namespace Moiniorell.Persistence.ServiceRegistration
 
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IPostService, PostService>();
+            services.AddScoped<ICommentService, CommentService>();
+
 
             services.AddHttpContextAccessor();
             services.AddScoped<IFollowRepository, FollowRepository>();
             services.AddScoped<IPostRepository, PostRepository>();
             services.AddScoped<ILikeRepository, LikeRepository>();
+            services.AddScoped<ICommentRepository, CommentRepository>();
+
 
 
             services.AddScoped<IEmailService, EmailService>();

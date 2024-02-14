@@ -122,7 +122,8 @@
                         </div>
                     </div>
                 </div>
-                @foreach (var item in Model.Posts)
+                @foreach (var item in Model.Posts)
+
                 {
 
                     <div class="col-sm-12">
@@ -168,7 +169,7 @@
                                                         @if (item.Likes.Any(like => like.LikerId == user.Id))
                                                         {
                                                             <span >
-                                                            <a asp-controller="User" asp-action="UnlikePost" asp-route-postId="@item.Id">
+                                                            <a asp-controller="Post" asp-action="UnlikePost" asp-route-postId="@item.Id">
                                                             <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Unlike
                                                             </a>
                                                         </span>
@@ -176,7 +177,7 @@
                                                         else{
 
                                                         <span >
-                                                            <a asp-controller="User" asp-action="LikePost" asp-route-postId="@item.Id">
+                                                            <a asp-controller="Post" asp-action="LikePost" asp-route-postId="@item.Id">
                                                             <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Like
                                                             </a>
                                                         </span>
@@ -196,7 +197,15 @@
                                             <div class="total-comment-block">
                                                 <div class="dropdown">
                                                     <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                                                        20 Comment
+                                                        @if (item.Comments is not null)
+                                                        {
+                                                            <span>@item.Comments.Count() Comments</span>
+
+                                                        }
+                                                        else
+                                                        {
+                                                            <span> No comments </span>
+                                                        }
                                                     </span>
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item" href="#">Max Emum</a>
@@ -248,14 +257,14 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <form class="comment-text d-flex align-items-center mt-3" action="javascript:void(0);">
-                                        <input type="text" class="form-control rounded">
+                                    @await Html.PartialAsync("_CreateCommentForm", new CreateCommentVM{PostId = item.Id})
+                                    @* <form class="comment-text d-flex align-items-center mt-3" asp-controller="Comment" asp-action="CreateComment" method="post">
+                                        <input asp-for="CreateCommentVM.Text" class="form-control rounded">
+                                        <input asp-for="CreateCommentVM.PostId" value="@item.Id" hidden/>
                                         <div class="comment-attagement d-flex">
-                                            <a href="javascript:void();"><i class="ri-link mr-3"></i></a>
-                                            <a href="javascript:void();"><i class="ri-user-smile-line mr-3"></i></a>
-                                            <a href="javascript:void();"><i class="ri-camera-line mr-3"></i></a>
+                                            <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                                         </div>
-                                    </form>
+                                    </form>  *@
                                 </div>
                             </div>
                         </div>

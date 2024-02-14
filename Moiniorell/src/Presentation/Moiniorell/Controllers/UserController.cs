@@ -7,18 +7,12 @@ namespace Moiniorell.Controllers;
 public class UserController : Controller
 {
     private readonly IAuthService _service;
-    private readonly IPostService _postService;
 
-    public UserController(IAuthService service, IPostService postService)
+    public UserController(IAuthService service)
     {
         _service = service;
-        _postService = postService;
     }
 
-
-
-
-    //Register
     public IActionResult Register()
     {
         if (User.Identity.IsAuthenticated)
@@ -66,8 +60,6 @@ public class UserController : Controller
 
     }
 
-
-    //Login
     public IActionResult Login()
     {
         if (User.Identity.IsAuthenticated)
@@ -104,26 +96,6 @@ public class UserController : Controller
     {
         await _service.Logout();
         return RedirectToAction("Login", "User");
-    }
-    //Like
-    public async Task<IActionResult> LikePost(int postId)
-    {
-
-        await _postService.LikePost(postId);
-
-        return RedirectToAction("Index", "Home");
-    }
-    public async Task<IActionResult> UnlikePost(int postId)
-    {
-
-        await _postService.UnlikePost(postId);
-
-        return RedirectToAction("Index", "Home");
-    }
-    public async Task<IActionResult> DeletePost(int postId)
-    {
-        await _postService.DeletePost(postId);
-        return RedirectToAction("User", "Profile", new { username = User.Identity.Name});
     }
 
 }
