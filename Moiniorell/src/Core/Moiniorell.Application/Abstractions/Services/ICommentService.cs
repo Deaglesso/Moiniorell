@@ -10,6 +10,8 @@ namespace Moiniorell.Application.Abstractions.Services
     public interface ICommentService
     {
         Task<List<string>> CreateComment(CreateCommentVM vm);
+        Task<List<string>> CreateReply(CreateReplyVM vm);
+
 
     }
 }

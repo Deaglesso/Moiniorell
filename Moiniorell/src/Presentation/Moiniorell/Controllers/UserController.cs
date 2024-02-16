@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
 
@@ -96,6 +99,60 @@ public class UserController : Controller
     {
         await _service.Logout();
         return RedirectToAction("Login", "User");
+    }
+
+    public IActionResult ForgotPassword()
+    {
+        return View();
+    }
+    [HttpPost]
+    public async Task<IActionResult> ForgotPassword(ForgotPasswordVM model)
+    {
+        if (ModelState.IsValid)
+        {
+            var result = await _service.ForgotPassword(Url,model);
+            if (!result.Any())
+            {
+                return View("ForgotPasswordConfirmation");
+            }
+            else
+            {
+                ModelState.AddModelError("Email", result[0]);
+                return View(model);
+            }
+        }
+        return View(model);
+    }
+    public IActionResult ResetPassword(string token, string email)
+    {
+        if (token == null || email == null)
+        {
+            ModelState.AddModelError("", "Invalid password reset token");
+        }
+        return View();
+
+    }
+    [HttpPost]
+    public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
+    {
+        if (ModelState.IsValid)
+        {
+            var result = await _service.ResetPasswordAsync(model.Email, model.Token, model.Password);
+
+            if (result.Succeeded)
+            {
+                return View("ResetPasswordConfirmation");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return View(model);
+        }
+
+        return View(model);
     }
 
 }

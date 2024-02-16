@@ -1,9 +1,21 @@
 ﻿@model CreateCommentVM
 
 <form class="comment-text d-flex align-items-center mt-3" asp-controller="Comment" asp-action="CreateComment" method="post">
-    <input asp-for="Text" class="form-control rounded">
+    <input asp-for="Text" class="form-control rounded" placeholder="@(string.IsNullOrWhiteSpace(ViewData.ModelState["Text"]?.Errors.FirstOrDefault()?.ErrorMessage) ? " Write your comment here" : ViewData.ModelState["Text"]?.Errors.FirstOrDefault()?.ErrorMessage)">
+    <span asp-validation-for="Text" hidden></span>
+
     <input asp-for="PostId"  hidden/>
     <div class="comment-attagement d-flex">
-        <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+        <button class="btn btn-transparent" type="submit"><a><i class="fa fa-paper-plane" aria-hidden="true"></i></a></button>
     </div>
 </form>
+@section scripts {
+    <script>
+        var inputElement = document.querySelector('[asp-for="Text"]');
+        var spanElement = document.querySelector('[asp-validation-for="Text"]');
+
+        spanElement.addEventListener('DOMSubtreeModified', function () {
+            inputElement.placeholder = spanElement.innerText.trim();
+        });
+    </script>
+}

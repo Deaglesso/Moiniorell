@@ -301,6 +301,39 @@ namespace Moiniorell.Persistence.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("Moiniorell.Domain.Models.CommentLike", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CommentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LikerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommentId");
+
+                    b.HasIndex("LikerId");
+
+                    b.ToTable("CommentLikes");
+                });
+
             modelBuilder.Entity("Moiniorell.Domain.Models.Follow", b =>
                 {
                     b.Property<string>("FollowerId")
@@ -398,6 +431,42 @@ namespace Moiniorell.Persistence.Migrations
                     b.ToTable("Posts");
                 });
 
+            modelBuilder.Entity("Moiniorell.Domain.Models.Reply", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AuthorId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("RepliedCommentId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AuthorId");
+
+                    b.HasIndex("RepliedCommentId");
+
+                    b.ToTable("Replies");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -466,6 +535,25 @@ namespace Moiniorell.Persistence.Migrations
                     b.Navigation("CommentedPost");
                 });
 
+            modelBuilder.Entity("Moiniorell.Domain.Models.CommentLike", b =>
+                {
+                    b.HasOne("Moiniorell.Domain.Models.Comment", "Comment")
+                        .WithMany()
+                        .HasForeignKey("CommentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Moiniorell.Domain.Models.AppUser", "Liker")
+                        .WithMany()
+                        .HasForeignKey("LikerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Comment");
+
+                    b.Navigation("Liker");
+                });
+
             modelBuilder.Entity("Moiniorell.Domain.Models.Follow", b =>
                 {
                     b.HasOne("Moiniorell.Domain.Models.AppUser", "Follower")
@@ -512,6 +600,21 @@ namespace Moiniorell.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("Moiniorell.Domain.Models.Reply", b =>
+                {
+                    b.HasOne("Moiniorell.Domain.Models.AppUser", "Author")
+                        .WithMany()
+                        .HasForeignKey("AuthorId");
+
+                    b.HasOne("Moiniorell.Domain.Models.Comment", "RepliedComment")
+                        .WithMany()
+                        .HasForeignKey("RepliedCommentId");
+
+                    b.Navigation("Author");
+
+                    b.Navigation("RepliedComment");
                 });
 
             modelBuilder.Entity("Moiniorell.Domain.Models.AppUser", b =>

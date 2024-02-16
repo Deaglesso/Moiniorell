@@ -26,7 +26,7 @@ namespace Moiniorell.Domain.Models
         public bool IsActive { get; set; }
         public string ProfilePicture { get; set; }
         public ICollection<Follow> Followers { get; set; }
-
+        public ICollection<Like>? Likes { get; set; }
         public ICollection<Follow> Followees { get; set; }
         public ICollection<Post> Posts { get; set; }
         public ICollection<Comment> Comments { get; set; }

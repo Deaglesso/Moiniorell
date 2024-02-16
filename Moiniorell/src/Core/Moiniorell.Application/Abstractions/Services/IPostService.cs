@@ -11,7 +11,10 @@ namespace Moiniorell.Application.Abstractions.Services
     public interface IPostService
     {
         Task<List<string>> CreatePost(CreatePostVM vm);
+
         Task<List<Post>> GetPosts();
+        Task<Post> GetPost(int postId);
+
         Task LikePost(int postId);
         Task UnlikePost(int postId);
         Task DeletePost(int postId);

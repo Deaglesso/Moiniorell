@@ -1,0 +1,11 @@
+﻿@model CreateReplyVM
+<form class="comment-text d-flex align-items-center mt-3 col-6 " id="myForm" style="display:none;" asp-controller="Comment" asp-action="CreateReply" method="post">
+    <input asp-for="Text" class="form-control rounded" placeholder="@(string.IsNullOrWhiteSpace(ViewData.ModelState["Text"]?.Errors.FirstOrDefault()?.ErrorMessage) ? " Write your reply here" : ViewData.ModelState["Text"]?.Errors.FirstOrDefault()?.ErrorMessage)">
+
+    <span asp-validation-for="Text" hidden></span>
+
+    <input asp-for="CommentId" hidden />
+    <div class="comment-attagement d-flex">
+        <button class="btn btn-transparent" type="submit"><a><i class="fa fa-paper-plane" aria-hidden="true"></i></a></button>
+    </div>
+</form>

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Moiniorell.Application.Abstractions.Repositories;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
@@ -82,7 +83,7 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task<AppUser> GetUser(string username)
         {
             return await _userManager.Users
-                .Include(u => u.Followers).ThenInclude(x => x.Follower).Include(x => x.Followees).ThenInclude(x => x.Followee).Include(x => x.Posts).ThenInclude(p=>p.Likes)
+                .Include(u => u.Followers).ThenInclude(x => x.Follower).Include(x => x.Followees).ThenInclude(x => x.Followee).Include(x => x.Posts).ThenInclude(p => p.Likes)
                 .FirstOrDefaultAsync(u => u.UserName == username);
         }
 
@@ -97,7 +98,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             return await _userManager.Users.Where(x => x.UserName.ToLower().Contains(searchTerm.ToLower()) || x.Name.ToLower().Contains(searchTerm.ToLower()) || x.Surname.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
         }
 
-        public async Task<List<string>> Login(IUrlHelper Url,LoginVM vm)
+        public async Task<List<string>> Login(IUrlHelper Url, LoginVM vm)
         {
             vm.UsernameOrEmail = vm.UsernameOrEmail.ToLower();
 
@@ -168,7 +169,7 @@ namespace Moiniorell.Persistence.Implementations.Services
 
         }
 
-        public async Task<List<string>> Register(IUrlHelper Url,RegisterVM vm)
+        public async Task<List<string>> Register(IUrlHelper Url, RegisterVM vm)
         {
             vm.Name = vm.Name.Capitalize();
             vm.Surname = vm.Surname.Capitalize();
@@ -192,8 +193,8 @@ namespace Moiniorell.Persistence.Implementations.Services
                 await _roleManager.CreateAsync(new IdentityRole { Name = item.ToString() });
             }
             //Email Conf
-            var confres = await SendVerificationMail(Url, new LoginVM {UsernameOrEmail= vm.Email,Password=vm.Password });
-            
+            var confres = await SendVerificationMail(Url, new LoginVM { UsernameOrEmail = vm.Email, Password = vm.Password });
+
             await _userManager.AddToRoleAsync(user, Role.Member.ToString());
 
 
@@ -254,7 +255,7 @@ namespace Moiniorell.Persistence.Implementations.Services
                     str.Add("Max file size is 2 Mb");
                     return str;
                 }
-                user.ProfilePicture = await vm.ProfilePictureFile.CreateFileAsync(_env.WebRootPath,false, "assets", "images");
+                user.ProfilePicture = await vm.ProfilePictureFile.CreateFileAsync(_env.WebRootPath, false, "assets", "images");
             }
 
 
@@ -297,6 +298,63 @@ namespace Moiniorell.Persistence.Implementations.Services
             string body = $"Dear user,<br><br>Thank you for signing up! Please click the following button to confirm your email:<br>{confirmationButton}";
             await _emailService.SendMailAsync(user.Email, "Confirmation email link", body, true);
             return str;
+        }
+
+        public async Task<List<string>> ForgotPassword(IUrlHelper Url, ForgotPasswordVM model)
+        {
+            List<string> str = new List<string>();
+
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user is null)
+            {
+                str.Add("Account not found");
+                return str;
+            }
+            else if (!await _userManager.IsEmailConfirmedAsync(user))
+            {
+                str.Add("Account email not verified");
+                return str;
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            var passwordResetLink = Url.Action("ResetPassword", "User",
+                    new { email = model.Email, token = token }, _http.HttpContext.Request.Scheme);
+            string confirmationButton = $"<a href=\"{passwordResetLink}\" style=\"display:inline-block;padding:10px 20px;margin:10px;color:#fff;background-color:#007bff;text-decoration:none;border-radius:5px;\">Reset Password</a>";
+
+            string body = $"Dear user,<br><br>Click the link below to reset your password and regain access to your account.<br>{confirmationButton}";
+            await _emailService.SendMailAsync(user.Email, "Reset password", body, true);
+
+            return str;
+
+        }
+        /*public async Task<List<string>> ResetPassword(string email,string token)
+        {
+            List<string> str = new List<string>();
+
+            var user = await _userManager.FindByEmailAsync(email);
+            var pres = await _userManager.Pass
+            if (!pres.Succeeded)
+            {
+                foreach (var item in pres.Errors)
+                {
+                    str.Add(item.Description);
+                }
+                return str;
+            }
+        }*/
+        public async Task<IdentityResult> ResetPasswordAsync(string email, string token, string password)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if (user != null)
+            {
+                var result = await _userManager.ResetPasswordAsync(user, token, password);
+                return result;
+            }
+
+            // Handle the case where the user is not found
+            return IdentityResult.Failed(new IdentityError { Description = "User not found." });
         }
     }
 }

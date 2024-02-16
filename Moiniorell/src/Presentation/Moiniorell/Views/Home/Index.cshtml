@@ -88,7 +88,7 @@
                                                                 $('#croppie-container').append(container);
 
                                                                 $('#cropButton').on('click', function () {
-                                                                    var croppedImageSrc = imageUrl;  
+                                                                    var croppedImageSrc = imageUrl;
                                                                     console.log('Cropped Image:', croppedImageSrc);
                                                                     $('#cropModal').modal('hide');
                                                                 });
@@ -163,37 +163,99 @@
                                 <div class="comment-area mt-3">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="like-block position-relative d-flex align-items-center">
-                                            <div class="d-flex align-items-center">
+                                            <div class="d-flex align-items-center like-section" data-post-id="@item.Id">
                                                 <div class="like-data">
                                                     <div class="dropdown">
                                                         @if (item.Likes.Any(like => like.LikerId == user.Id))
                                                         {
-                                                            <span >
-                                                            <a asp-controller="Post" asp-action="UnlikePost" asp-route-postId="@item.Id">
-                                                            <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Unlike
-                                                            </a>
-                                                        </span>
-                                                        } 
-                                                        else{
-
-                                                        <span >
-                                                            <a asp-controller="Post" asp-action="LikePost" asp-route-postId="@item.Id">
-                                                            <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Like
-                                                            </a>
-                                                        </span>
+                                                            <span>
+                                                                <a href="#" class="likeToggle" data-post-id="@item.Id" data-liked="true">
+                                                                    <img src="~/assets/images/icon/01.png" class="img-fluid" alt="">
+                                                                    <span class="toggle-text">@((item.Likes.Any(like => like.LikerId == user.Id)) ? "Unlike" : "Like")</span>
+                                                                </a>
+                                                            </span>
                                                         }
-
+                                                        else
+                                                        {
+                                                            <span>
+                                                                <a href="#" class="likeToggle" data-post-id="@item.Id" data-liked="false">
+                                                                    <img src="~/assets/images/icon/01.png" class="img-fluid" alt="">
+                                                                    <span class="toggle-text">@((item.Likes.Any(like => like.LikerId == user.Id)) ? "Unlike" : "Like")</span>
+                                                                </a>
+                                                            </span>
+                                                        }
                                                     </div>
+
                                                 </div>
                                                 <div class="total-like-block ml-2 mr-3">
                                                     <div class="dropdown">
                                                         <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
                                                             @item.LikeCount
                                                         </span>
-
+                                                        <div class="dropdown-menu">
+                                                            @if (item.Likes.Any())
+                                                            {
+                                                                @foreach (var like in item.Likes.TakeLast(5))
+                                                                {
+                                                                    <a class="dropdown-item">@like.Liker.Name @like.Liker.Surname</a>
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                <a class="dropdown-item">No likes for now</a>
+                                                            }
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            @*  <div class="d-flex align-items-center">
+                                        <div class="like-data">
+                                        <div class="dropdown">
+                                        @if (item.Likes.Any(like => like.LikerId == user.Id))
+                                        {
+                                        <span>
+                                        <a href="#" class="unlikeButton" data-post-id="@item.Id">
+                                        <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Unlike
+                                        </a>
+                                        </span>
+                                        }
+                                        else
+                                        {
+                                        <span>
+                                        <a href="#" class="likeButton" data-post-id="@item.Id">
+                                        <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Like
+                                        </a>
+                                        </span>
+                                        }
+
+
+
+                                        </div>
+                                        </div>
+                                        <div class="total-like-block ml-2 mr-3">
+                                        <div class="dropdown">
+                                        <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                        @item.LikeCount
+                                        </span>
+                                        <div class="dropdown-menu">
+                                        @if (item.Likes.Any())
+                                        {
+
+                                        @foreach (var like in item.Likes.TakeLast(5))
+                                        {
+                                        <a class="dropdown-item">@like.Liker.Name @like.Liker.Surname</a>
+                                        }
+                                        }
+                                        else
+                                        {
+                                        <a class="dropdown-item">No likes for now</a>
+
+                                        }
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div> *@
                                             <div class="total-comment-block">
                                                 <div class="dropdown">
                                                     <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
@@ -208,13 +270,10 @@
                                                         }
                                                     </span>
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#">Max Emum</a>
-                                                        <a class="dropdown-item" href="#">Bill Yerds</a>
-                                                        <a class="dropdown-item" href="#">Hap E. Birthday</a>
-                                                        <a class="dropdown-item" href="#">Tara Misu</a>
-                                                        <a class="dropdown-item" href="#">Midge Itz</a>
-                                                        <a class="dropdown-item" href="#">Sal Vidge</a>
-                                                        <a class="dropdown-item" href="#">Other</a>
+                                                        @foreach (var comuser in item.Comments.TakeLast(5))
+                                                        {
+                                                            <a class="dropdown-item">@comuser.Author.Name @comuser.Author.Surname</a>
+                                                        }
                                                     </div>
                                                 </div>
                                             </div>
@@ -223,48 +282,89 @@
                                     </div>
                                     <hr>
                                     <ul class="post-comments p-0 m-0">
-                                        <li class="mb-2">
-                                            <div class="d-flex flex-wrap">
-                                                <div class="user-img">
-                                                    <img src="~/assets/images/user/02.jpg" alt="userimg" class="avatar-35 rounded-circle img-fluid">
-                                                </div>
-                                                <div class="comment-data-block ml-3">
-                                                    <h6>Monty Carlo</h6>
-                                                    <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                                                    <div class="d-flex flex-wrap align-items-center comment-activity">
-                                                        <a href="javascript:void();">like</a>
-                                                        <a href="javascript:void();">reply</a>
-                                                        <a href="javascript:void();">translate</a>
-                                                        <span> 5 min </span>
+                                        @foreach (var comm in item.Comments)
+                                        {
+                                            <li class="mb-2">
+                                                <div class="d-flex flex-wrap">
+                                                    <div class="user-img">
+                                                        <img src="~/assets/images/@comm.Author.ProfilePicture" alt="userimg" class="avatar-35 rounded-circle img-fluid">
+                                                    </div>
+                                                    <div class="comment-data-block ml-3">
+                                                        <h6>@comm.Author.Name @comm.Author.Surname </h6>
+                                                        <p class="mb-0">@comm.Text</p>
+                                                        <div class="d-flex flex-wrap align-items-center comment-activity">
+                                                            <a href="#">like</a>
+                                                            <a href="#" id="openFormLink">reply</a>
+                                                            <span> @comm.CreatedAt.Humanize() </span>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="d-flex flex-wrap">
-                                                <div class="user-img">
-                                                    <img src="~/assets/images/user/03.jpg" alt="userimg" class="avatar-35 rounded-circle img-fluid">
-                                                </div>
-                                                <div class="comment-data-block ml-3">
-                                                    <h6>Paul Molive</h6>
-                                                    <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                                                    <div class="d-flex flex-wrap align-items-center comment-activity">
-                                                        <a href="javascript:void();">like</a>
-                                                        <a href="javascript:void();">reply</a>
-                                                        <span> 5 min </span>
+                                                <div class="replies" style="margin-left: 36px;">
+                                                    @foreach (var reply in comm.Replies.Take(3)) // Only take the first 5 replies
+                                                    {
+                                                        <div class="d-flex flex-wrap">
+
+                                                            <div class="comment-data-block ml-3">
+
+                                                                <h6>@reply.Author.Name @reply.Author.Surname <span style="color: #808080; font-style: italic; font-weight: lighter;"> @reply.CreatedAt.Humanize() </span></h6>
+                                                                <p class="mb-0">@reply.Text</p>
+
+                                                            </div>
+                                                        </div>
+                                                    }
+
+                                                    <div class="load-more-container">
+                                                        <div class="additional-replies" id="additional-replies-@comm.Id" style="display: none;">
+                                                            @foreach (var reply in comm.Replies.Skip(3))
+                                                            {
+                                                                <div class="d-flex flex-wrap">
+                                                                    <div class="comment-data-block ml-3">
+                                                                        <h6>@reply.Author.Name @reply.Author.Surname <span style="color: #808080; font-style: italic; font-weight: lighter;"> @reply.CreatedAt.Humanize() </span></h6>
+                                                                        <p class="mb-0">@reply.Text</p>
+                                                                    </div>
+                                                                </div>
+                                                            }
+                                                        </div>
+                                                        @if (comm.Replies.Count() > 3)
+                                                        {
+
+                                                            <button class="btn btn-link load-more-button" style="margin-left: 2px;" data-comment-id="@comm.Id">Load More</button>
+                                                        }
+
                                                     </div>
+
+                                                    <script>
+                                                        $(document).ready(function () {
+                                                            $(".load-more-button").off("click").on("click", function (event) {
+                                                                event.preventDefault();
+                                                                var commentId = $(this).data("comment-id");
+                                                                console.log("Load more button clicked for comment id: " + commentId);
+                                                                var additionalReplies = $("#additional-replies-" + commentId);
+                                                                console.log("Is additional replies visible? " + additionalReplies.is(":visible"));
+                                                                additionalReplies.stop().slideToggle();
+                                                            });
+                                                        });
+                                                    </script>
+
+
+
                                                 </div>
-                                            </div>
-                                        </li>
+
+
+                                                @await Html.PartialAsync("_CreateReplyForm", new CreateReplyVM { CommentId = comm.Id })
+
+                                            </li>
+
+                                        }
                                     </ul>
-                                    @await Html.PartialAsync("_CreateCommentForm", new CreateCommentVM{PostId = item.Id})
+                                    @await Html.PartialAsync("_CreateCommentForm", new CreateCommentVM { PostId = item.Id })
                                     @* <form class="comment-text d-flex align-items-center mt-3" asp-controller="Comment" asp-action="CreateComment" method="post">
-                                        <input asp-for="CreateCommentVM.Text" class="form-control rounded">
-                                        <input asp-for="CreateCommentVM.PostId" value="@item.Id" hidden/>
-                                        <div class="comment-attagement d-flex">
-                                            <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                                        </div>
-                                    </form>  *@
+                                <input asp-for="CreateCommentVM.Text" class="form-control rounded">
+                                <input asp-for="CreateCommentVM.PostId" value="@item.Id" hidden/>
+                                <div class="comment-attagement d-flex">
+                                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                </div>
+                                </form>  *@
                                 </div>
                             </div>
                         </div>
@@ -433,4 +533,61 @@
         </div>
     </div>
 </div>
-<!-- Include timeago.js from CDN -->
+
+@section likescripts {
+    <script>
+        $(document).ready(function () {
+            console.log("Script loaded");
+
+            $(document).on('click', '.likeToggle', function (e) {
+                e.preventDefault();
+
+                console.log("Like/Unlike button clicked");
+
+                var likeToggleElement = $(this);
+                var postId = likeToggleElement.data('post-id');
+                var liked = likeToggleElement.data('liked');
+                var postElement = likeToggleElement.closest('.like-section');
+                var likeCountElement = postElement.find('.total-like-block span');
+                var likersList = postElement.find('.dropdown-menu');
+
+                // Toggle the state
+                likeToggleElement.data('liked', !liked);
+                likeToggleElement.find('.toggle-text').text(liked ? 'Like' : 'Unlike');
+
+                // Send AJAX request to the server to update the database
+                $.ajax({
+                    url: liked ? '/Post/UnlikePost' : '/Post/LikePost',
+                    type: 'POST',
+                    data: { postId: postId },
+                    success: function (data) {
+                        console.log("AJAX success");
+
+                        // Update the like count
+                        var newLikeCount = parseInt(likeCountElement.text());
+                        newLikeCount += liked ? -1 : 1;
+                        likeCountElement.text(newLikeCount);
+
+                        // Update likers list
+                        if (data.likes && data.likes.length > 0) {
+                            likersList.empty();
+                            $.each(data.likes, function (index, like) {
+                                var likerName = like.liker.name + ' ' + like.liker.surname;
+                                likersList.append('<a class="dropdown-item">' + likerName + '</a>');
+                            });
+                        } else {
+                            likersList.empty();
+                            likersList.append('<a class="dropdown-item">No likes for now</a>');
+                        }
+
+                        // Server successfully updated, you may handle additional tasks if needed
+                    },
+                    error: function (error) {
+                        console.error('Error:', error);
+                        // Handle errors if necessary
+                    }
+                });
+            });
+        });
+    </script>
+}

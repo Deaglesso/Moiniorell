@@ -11,12 +11,14 @@ namespace Moiniorell.Persistence.Implementations.Services
     {
         private readonly IMapper _mapper;
         private readonly ICommentRepository _commentRepo;
+        private readonly IReplyRepository _replyRepo;
         private readonly IHttpContextAccessor _http;
 
-        public CommentService(IMapper mapper, ICommentRepository commentRepo, IHttpContextAccessor http)
+        public CommentService(IMapper mapper, ICommentRepository commentRepo, IReplyRepository replyRepo, IHttpContextAccessor http)
         {
             _mapper = mapper;
             _commentRepo = commentRepo;
+            _replyRepo = replyRepo;
             _http = http;
         }
 
@@ -30,6 +32,18 @@ namespace Moiniorell.Persistence.Implementations.Services
             await _commentRepo.CreateAsync(comment);
             await _commentRepo.SaveChangesAsync();
             
+            return str;
+        }
+        public async Task<List<string>> CreateReply(CreateReplyVM vm)
+        {
+            List<string> str = new List<string>();
+            Reply reply = _mapper.Map<Reply>(vm);
+
+            reply.AuthorId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            reply.RepliedCommentId = vm.CommentId;
+            await _replyRepo.CreateAsync(reply);
+            await _replyRepo.SaveChangesAsync();
+
             return str;
         }
     }

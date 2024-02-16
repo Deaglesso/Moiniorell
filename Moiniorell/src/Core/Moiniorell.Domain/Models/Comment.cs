@@ -14,6 +14,8 @@ namespace Moiniorell.Domain.Models
         public AppUser? Author { get; set; }
         public int? CommentedPostId { get; set; }
         public Post? CommentedPost { get; set; }
+        public ICollection<Reply>? Replies { get; set; }
+        public ICollection<CommentLike>? CommentLikes { get; set; }
 
 
     }

@@ -10,7 +10,8 @@ namespace Moiniorell.Application.Abstractions.Services
     {
         Task<List<string>> Register(IUrlHelper url,RegisterVM vm);
         Task<List<string>> SendVerificationMail(IUrlHelper url,LoginVM vm);
-
+        Task<List<string>> ForgotPassword(IUrlHelper Url, ForgotPasswordVM model);
+        Task<IdentityResult> ResetPasswordAsync(string email, string token, string password);
         Task<List<string>> Login(IUrlHelper url, LoginVM vm);
         Task<List<string>> LoginNoPass(string username);
         Task<IdentityResult> ConfirmEmail(string email,string token);

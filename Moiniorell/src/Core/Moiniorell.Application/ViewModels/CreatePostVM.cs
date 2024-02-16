@@ -12,7 +12,7 @@ namespace Moiniorell.Application.ViewModels
     {
         public IFormFile? File { get; set; }
         [Required]
-        [MinLength(5)]
+        [MinLength(1)]
         public string Text { get; set; }
     }
 }

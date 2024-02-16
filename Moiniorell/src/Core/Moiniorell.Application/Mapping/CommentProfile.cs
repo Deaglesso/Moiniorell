@@ -14,6 +14,7 @@ namespace Moiniorell.Application.Mapping
         public CommentProfile()
         {
             CreateMap<CreateCommentVM, Comment>();
+            CreateMap<CreateReplyVM, Reply>();
 
         }
     }
