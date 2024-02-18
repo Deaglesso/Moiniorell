@@ -9,19 +9,21 @@ namespace Moiniorell.Controllers
 {
     public class ProfileController : Controller
     {
-        private readonly IAuthService _service;
+        private readonly IAuthService _authService;
         private readonly IMapper _mapper;
+        private readonly IUserService _userService;
 
-        public ProfileController(IAuthService service, IMapper mapper)
+        public ProfileController(IAuthService authService, IMapper mapper, IUserService userService)
         {
-            _service = service;
+            _authService = authService;
             _mapper = mapper;
+            _userService = userService;
         }
 
         public async Task<IActionResult> User(string username)
         {
 
-            AppUser user = await _service.GetUser(username);
+            AppUser user = await _userService.GetUser(username);
             if (user == null)
             {
                 return NotFound();
@@ -32,7 +34,7 @@ namespace Moiniorell.Controllers
 
         public async Task<IActionResult> Edit(string username)
         {
-            AppUser user = await _service.GetUser(username);
+            AppUser user = await _userService.GetUser(username);
             if (user.UserName != HttpContext.User.Identity.Name)
             {
                 return BadRequest();
@@ -47,14 +49,14 @@ namespace Moiniorell.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(EditProfileVM vm)
         {
-            AppUser user = await _service.GetUser(HttpContext.User.Identity.Name);
+            AppUser user = await _userService.GetUser(HttpContext.User.Identity.Name);
             if (!ModelState.IsValid)
             {
                 vm.ProfilePicture = user.ProfilePicture;
                 return View(vm);
 
             }
-            var res = await _service.UpdateUser(user, vm);
+            var res = await _userService.UpdateUser(user, vm);
             if (res.Any())
             {
                 foreach (var item in res)
@@ -65,23 +67,33 @@ namespace Moiniorell.Controllers
                 vm.ProfilePicture = user.ProfilePicture;
                 return View(vm);
             }
-            await _service.Logout();
+            await _authService.Logout();
 
-            await _service.LoginNoPass(user.UserName);
+            await _authService.LoginNoPass(user.UserName);
             return RedirectToAction("Index", "Home");
         }
 
         public async Task<IActionResult> Follow(string followeeId)
         {
-            await _service.Follow(followeeId);
-            AppUser user = await _service.GetUserById(followeeId);
+            await _userService.Follow(followeeId);
+            AppUser user = await _userService.GetUserById(followeeId);
             return RedirectToAction("User","Profile",new { username = user.UserName});
         }
         public async Task<IActionResult> Unfollow(string followeeId)
         {
-            await _service.Unfollow(followeeId);
-            AppUser user = await _service.GetUserById(followeeId);
+            await _userService.Unfollow(followeeId);
+            AppUser user = await _userService.GetUserById(followeeId);
             return RedirectToAction("User", "Profile", new { username = user.UserName });
+        }
+        public async Task<IActionResult> AcceptFollow(string followId,string followerId)
+        {
+            await _userService.AcceptRequest(followId,followerId);
+            return RedirectToAction("Index", "Home");
+        }
+        public async Task<IActionResult> RejectFollow(string followId, string followerId)
+        {
+            await _userService.RejectRequest(followId, followerId);
+            return RedirectToAction("Index", "Home");
         }
     }
 }

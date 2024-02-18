@@ -1,0 +1,1993 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Moiniorell.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Moiniorell.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\app\\email-compose.html",
+      "PackagePath": "staticwebassets\\assets\\app\\email-compose.html"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\app\\index.html",
+      "PackagePath": "staticwebassets\\assets\\app\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\Chart.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\Chart.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\assets\\css\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\animate.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\developer.css",
+      "PackagePath": "staticwebassets\\assets\\css\\developer.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\dripicons.css",
+      "PackagePath": "staticwebassets\\assets\\css\\dripicons.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\flatpickr.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\flatpickr.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\assets\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\ionicons.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\ionicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\line-awesome.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\line-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\assets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\assets\\css\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\remixicon.css",
+      "PackagePath": "staticwebassets\\assets\\css\\remixicon.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\assets\\css\\responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\select2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\slick-theme.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\typography.css",
+      "PackagePath": "staticwebassets\\assets\\css\\typography.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\css\\variable.css",
+      "PackagePath": "staticwebassets\\assets\\css\\variable.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\dripicons-v2.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\dripicons-v2.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\dripicons-v2.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\dripicons-v2.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\dripicons-v2.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\dripicons-v2.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\dripicons-v2.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\dripicons-v2.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\ionicons.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\ionicons.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\ionicons.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\ionicons.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\ionicons.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\ionicons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\ionicons.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\ionicons.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-brands-400.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-brands-400.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-brands-400.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-regular-400.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-regular-400.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-regular-400.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-solid-900.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-solid-900.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-solid-900.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\la-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\la-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\remixicon.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\remixicon.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\remixicon.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\remixicon.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\remixicon.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\slick.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slick.eot"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\slick.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slick.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\slick.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slick.ttf"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fonts\\slick.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\slick.woff"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\bootstrap\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\bootstrap\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\bootstrap\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\bootstrap\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\bootstrap\\main.css",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\bootstrap\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\bootstrap\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\bootstrap\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\bootstrap\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\bootstrap\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\bootstrap\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\bootstrap\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\bootstrap\\main.min.css",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\bootstrap\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\bootstrap\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\bootstrap\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\bootstrap\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\bootstrap\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales-all.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales-all.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales-all.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales-all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\af.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\af.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ar-dz.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ar-dz.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ar-kw.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ar-kw.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ar-ly.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ar-ly.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ar-ma.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ar-ma.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ar-sa.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ar-sa.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ar-tn.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ar-tn.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ar.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ar.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\bg.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\bg.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\bs.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\bs.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ca.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ca.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\cs.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\cs.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\da.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\da.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\de.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\de.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\el.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\el.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\en-au.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\en-au.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\en-gb.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\en-gb.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\en-nz.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\en-nz.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\es-us.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\es-us.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\es.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\et.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\et.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\eu.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\eu.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\fa.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\fi.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\fi.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\fr-ca.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\fr-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\fr-ch.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\fr-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\fr.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\fr.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\gl.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\gl.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\he.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\he.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\hi.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\hi.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\hr.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\hr.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\hu.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\hu.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\id.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\id.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\is.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\is.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\it.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\it.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ja.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ja.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ka.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ka.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\kk.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\kk.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ko.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\lb.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\lb.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\lt.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\lt.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\lv.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\lv.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\mk.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\mk.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ms.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ms.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\nb.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\nb.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\nl.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\nl.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\nn.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\nn.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\pl.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\pl.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\pt-br.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\pt-br.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\pt.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\pt.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ro.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ro.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\ru.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\ru.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\sk.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\sk.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\sl.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\sl.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\sq.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\sq.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\sr-cyrl.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\sr.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\sr.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\sv.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\sv.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\th.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\th.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\tr.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\tr.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\uk.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\uk.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\vi.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\vi.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\zh-cn.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\locales\\zh-tw.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\locales\\zh-tw.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\main.css",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\main.min.css",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\core\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\core\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\daygrid\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\daygrid\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\daygrid\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\daygrid\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\daygrid\\main.css",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\daygrid\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\daygrid\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\daygrid\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\daygrid\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\daygrid\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\daygrid\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\daygrid\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\daygrid\\main.min.css",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\daygrid\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\daygrid\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\daygrid\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\daygrid\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\daygrid\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\google-calendar\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\google-calendar\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\google-calendar\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\google-calendar\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\google-calendar\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\google-calendar\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\google-calendar\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\google-calendar\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\google-calendar\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\google-calendar\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\google-calendar\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\google-calendar\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\google-calendar\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\google-calendar\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\interaction\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\interaction\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\interaction\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\interaction\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\interaction\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\interaction\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\interaction\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\interaction\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\interaction\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\interaction\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\interaction\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\interaction\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\interaction\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\interaction\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\list\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\list\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\list\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\list\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\list\\main.css",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\list\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\list\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\list\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\list\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\list\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\list\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\list\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\list\\main.min.css",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\list\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\list\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\list\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\list\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\list\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\luxon\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\luxon\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\luxon\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\luxon\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\luxon\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\luxon\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\luxon\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\luxon\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\luxon\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\luxon\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\luxon\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\luxon\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\luxon\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\luxon\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment-timezone\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment-timezone\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment-timezone\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment-timezone\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment-timezone\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment-timezone\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment-timezone\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment-timezone\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment-timezone\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment-timezone\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment-timezone\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment-timezone\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment-timezone\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment-timezone\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\moment\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\moment\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\rrule\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\rrule\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\rrule\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\rrule\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\rrule\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\rrule\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\rrule\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\rrule\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\rrule\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\rrule\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\rrule\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\rrule\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\rrule\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\rrule\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\timegrid\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\timegrid\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\timegrid\\README.md",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\timegrid\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\timegrid\\main.css",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\timegrid\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\timegrid\\main.d.ts",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\timegrid\\main.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\timegrid\\main.esm.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\timegrid\\main.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\timegrid\\main.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\timegrid\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\timegrid\\main.min.css",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\timegrid\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\timegrid\\main.min.js",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\timegrid\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\fullcalendar\\timegrid\\package.json",
+      "PackagePath": "staticwebassets\\assets\\fullcalendar\\timegrid\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\03e037ec-e9e4-41a5-aac9-56bcb99b5f61nopic.png",
+      "PackagePath": "staticwebassets\\assets\\images\\03e037ec-e9e4-41a5-aac9-56bcb99b5f61nopic.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\0ec699ce-8740-4462-9f6e-05b2257ec20ftQgsI94.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\0ec699ce-8740-4462-9f6e-05b2257ec20ftQgsI94.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\122071d5-9ea5-4082-9594-050762182cc3nah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\122071d5-9ea5-4082-9594-050762182cc3nah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\1fda9e22-8b8e-4a1a-8942-ee4c1a6e0754nah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\1fda9e22-8b8e-4a1a-8942-ee4c1a6e0754nah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\2fdfbfed-1769-4ca1-945e-b44c5594e05fnopic.png",
+      "PackagePath": "staticwebassets\\assets\\images\\2fdfbfed-1769-4ca1-945e-b44c5594e05fnopic.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\33716022-8055-4a2b-bd50-74467143b2ednah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\33716022-8055-4a2b-bd50-74467143b2ednah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\35942133-b599-4e58-b38c-088c36d7c123nopic.png",
+      "PackagePath": "staticwebassets\\assets\\images\\35942133-b599-4e58-b38c-088c36d7c123nopic.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\35eb9470-a324-466c-84b2-95e40732d1645m.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\35eb9470-a324-466c-84b2-95e40732d1645m.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\37db1b16-45c4-421b-a686-e249e3e9473flms.png",
+      "PackagePath": "staticwebassets\\assets\\images\\37db1b16-45c4-421b-a686-e249e3e9473flms.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\3f140222-35ae-4bd4-8fb9-4db6c87c6056canka.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\3f140222-35ae-4bd4-8fb9-4db6c87c6056canka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\3f67d7bb-81a8-43fd-89de-6fc8da9c9535lms.png",
+      "PackagePath": "staticwebassets\\assets\\images\\3f67d7bb-81a8-43fd-89de-6fc8da9c9535lms.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\43b5a54a-4787-4a48-904f-ab959ff4b6891171858.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\43b5a54a-4787-4a48-904f-ab959ff4b6891171858.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\45bcde76-b163-4952-8a3a-3337df1ad223canka.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\45bcde76-b163-4952-8a3a-3337df1ad223canka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\4c303a67-dd6c-4019-afbd-7e978c9a6875nah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\4c303a67-dd6c-4019-afbd-7e978c9a6875nah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\4f10797a-80af-4c09-baae-73a90a9e59becanka.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\4f10797a-80af-4c09-baae-73a90a9e59becanka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\5c0f1145-1b56-4aaa-849b-c13ded59c12esbpost.png",
+      "PackagePath": "staticwebassets\\assets\\images\\5c0f1145-1b56-4aaa-849b-c13ded59c12esbpost.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\5c0f7daf-f8f1-417c-a833-00de5f0c76c3canka.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\5c0f7daf-f8f1-417c-a833-00de5f0c76c3canka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\6076cf59-2d43-415c-b405-2ee318c9898dcanka.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\6076cf59-2d43-415c-b405-2ee318c9898dcanka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\64f54fce-ca4a-4c92-a23b-efa1b72655a9WIN_20240217_11_13_48_Pro.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\64f54fce-ca4a-4c92-a23b-efa1b72655a9WIN_20240217_11_13_48_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\67d21d03-57a3-4e63-8182-78f160c3e5d4lms.png",
+      "PackagePath": "staticwebassets\\assets\\images\\67d21d03-57a3-4e63-8182-78f160c3e5d4lms.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\6a7e84ba-7c8a-4b11-a25f-1b784503ec21nah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\6a7e84ba-7c8a-4b11-a25f-1b784503ec21nah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\73409088-0246-48c5-ab94-a64de60a07ffcanka.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\73409088-0246-48c5-ab94-a64de60a07ffcanka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\7643807e-76c0-4e81-9bc6-a0528b0f47eclms.png",
+      "PackagePath": "staticwebassets\\assets\\images\\7643807e-76c0-4e81-9bc6-a0528b0f47eclms.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\7c8a9889-b94b-4443-801d-290bf48ed0c9smpp.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\7c8a9889-b94b-4443-801d-290bf48ed0c9smpp.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\85d0b9a1-d78a-4374-b0cf-c82baeef3b50zuzu.webp",
+      "PackagePath": "staticwebassets\\assets\\images\\85d0b9a1-d78a-4374-b0cf-c82baeef3b50zuzu.webp"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\88fe6df6-ea19-4e06-860f-557047f5d441lms.png",
+      "PackagePath": "staticwebassets\\assets\\images\\88fe6df6-ea19-4e06-860f-557047f5d441lms.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\8a6dd364-259f-4d1a-b22f-f12bfcc78052nah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\8a6dd364-259f-4d1a-b22f-f12bfcc78052nah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\8c2e2d15-6632-43b5-92e1-c896f83353535m.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\8c2e2d15-6632-43b5-92e1-c896f83353535m.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\9eb5ec41-ef7e-455b-abbd-639f936859e35m.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\9eb5ec41-ef7e-455b-abbd-639f936859e35m.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\ad3f93e3-42b8-4f91-84be-735938f989ffnah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\ad3f93e3-42b8-4f91-84be-735938f989ffnah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\aeaba69d-b198-4933-9bd8-4634bf6faa23tQgsI94.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\aeaba69d-b198-4933-9bd8-4634bf6faa23tQgsI94.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\bday.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\bday.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\c88e4678-6d23-48ec-90f0-f4be2a669ce5nah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\c88e4678-6d23-48ec-90f0-f4be2a669ce5nah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\ca3ac584-8172-4954-a62e-939d603ee82clms.png",
+      "PackagePath": "staticwebassets\\assets\\images\\ca3ac584-8172-4954-a62e-939d603ee82clms.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\cfdbb337-2bed-475b-8c9d-fd54af3154e9nah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cfdbb337-2bed-475b-8c9d-fd54af3154e9nah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\d1226113-2337-4b3f-975c-ea9ca15b47b5nah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\d1226113-2337-4b3f-975c-ea9ca15b47b5nah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\e5f08743-cf6a-47b2-b122-df3d6f9fb475canka.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\e5f08743-cf6a-47b2-b122-df3d6f9fb475canka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\e6bb70a5-543f-4fdb-bf04-9488b0dfbe26canka.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\e6bb70a5-543f-4fdb-bf04-9488b0dfbe26canka.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\efce91f1-0ffd-41d4-84b2-59a39299ec1anah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\efce91f1-0ffd-41d4-84b2-59a39299ec1anah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\error\\01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\error\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\error\\02.png",
+      "PackagePath": "staticwebassets\\assets\\images\\error\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\f218aaf1-6254-4d2e-ba3b-ad1a571019f2nah.png",
+      "PackagePath": "staticwebassets\\assets\\images\\f218aaf1-6254-4d2e-ba3b-ad1a571019f2nah.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\f40addf2-019b-4478-afbb-16aa755364105m.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\f40addf2-019b-4478-afbb-16aa755364105m.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\images\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\01.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\02.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\02.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\03.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\03.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\04.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\04.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\05.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\05.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\06.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\06.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\07.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\07.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\08.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\08.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\09.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\09.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\10.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\11.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\12.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\12.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\13.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\entire-page.png",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\entire-page.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\expand-window.json",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\expand-window.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\icon\\open-letter.json",
+      "PackagePath": "staticwebassets\\assets\\images\\icon\\open-letter.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\loader.png",
+      "PackagePath": "staticwebassets\\assets\\images\\loader.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\login\\1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\login\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\login\\2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\login\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\login\\3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\login\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\login\\mail.png",
+      "PackagePath": "staticwebassets\\assets\\images\\login\\mail.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\logo-full.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-full.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\logo-full2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-full2.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\logo-white.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo-white.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\nopic.png",
+      "PackagePath": "staticwebassets\\assets\\images\\nopic.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\08.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\09.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\10.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\100.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\100.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\11.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\12.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\13.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\14.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\15.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\16.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\17.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\18.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\19.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\20.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\21.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\22.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\23.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\24.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\24.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\25.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\25.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\26.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\26.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\27.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\27.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\28.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\28.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\42.png",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\42.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\43.png",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\43.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\44.png",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\44.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\45.png",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\45.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\46.png",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\46.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\47.png",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\47.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\48.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\48.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\51.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\51.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\52.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\52.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\53.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\53.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\54.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\54.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\55.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\55.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\56.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\56.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\57.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\57.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\58.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\58.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\59.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\59.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\60.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\60.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\61.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\61.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\62.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\62.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\63.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\63.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\64.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\64.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\65.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\65.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\bgprofile.png",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\bgprofile.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\g1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\g1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\g2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\g2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\g3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\g3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\g4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\g4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\g5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\g5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\g6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\g6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\g7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\g7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\g8.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\g8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\g9.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\g9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\gi-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\gi-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\gi-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\gi-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\gi-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\gi-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\gi-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\gi-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\gi-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\gi-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\gi-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\gi-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\gi-7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\gi-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\gi-8.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\gi-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\gi-9.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\gi-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\img-success.png",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\img-success.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\l1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\l1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\l2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\l2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\l3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\l3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\l4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\l4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\l5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\l5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\l6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\l6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\man.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\man.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\n1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\n1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\n2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\n2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\n3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\n3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\n4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\n4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\n5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\n5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\n6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\n6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\n7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\n7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\n8.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\n8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\p1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\p1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\p2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\p2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\p3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\p3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\p4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\p4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\p5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\p5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\page-load-loader.gif",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\page-load-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\profile-bg2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\profile-bg2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\profile-bg3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\profile-bg3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\profile-bg4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\profile-bg4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\profile-bg5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\profile-bg5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\profile-bg6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\profile-bg6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\profile-bg7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\profile-bg7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\profile-bg8.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\profile-bg8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\profile-bg9.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\profile-bg9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\r1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\r1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\r2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\r2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\r3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\r3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\r4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\r4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\r5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\r5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\r6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\r6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\r7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\r7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\r8.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\r8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\s1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\s1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\s2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\s2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\s3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\s3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\s4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\s4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\s5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\s5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\tag_blue.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\tag_blue.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\page-img\\tag_red.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\page-img\\tag_red.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\04.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\04.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\05.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\05.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\07.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\07.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\08.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\08.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\09.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\09.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\10.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\11.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\12.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\12.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\13.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\14.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\14.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\data.json",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\data.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\data1.json",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\data1.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\data2.json",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\data2.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\flag-01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\flag-01.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\flag-02.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\flag-02.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\flag-03.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\flag-03.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\flag-04.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\flag-04.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\flag-05.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\flag-05.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\flag-06.png",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\flag-06.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\img-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\img-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\img-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\img-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\jpg.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\jpg.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\match-code.json",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\match-code.json"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\xml.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\xml.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\small\\zip.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\small\\zip.svg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\03.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\04.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\05.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\06.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\07.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\07.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\08.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\08.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\09.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\09.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\10.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\11.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\11.png",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\12.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\13.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\14.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\15.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\16.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\16.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\17.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\17.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\18.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\19.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\19.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\user-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\user-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\user-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\user-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\user-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\user-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\user-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\user-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\user-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\user-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\user\\user-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\user\\user-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\animated.js",
+      "PackagePath": "staticwebassets\\assets\\js\\animated.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\apexcharts.js",
+      "PackagePath": "staticwebassets\\assets\\js\\apexcharts.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\bodymovin.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bodymovin.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\chart-custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\chart-custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\charts.js",
+      "PackagePath": "staticwebassets\\assets\\js\\charts.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\core.js",
+      "PackagePath": "staticwebassets\\assets\\js\\core.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\countdown.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\countdown.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\jquery.appear.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.appear.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\kelly.js",
+      "PackagePath": "staticwebassets\\assets\\js\\kelly.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\lottie.js",
+      "PackagePath": "staticwebassets\\assets\\js\\lottie.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\maps.js",
+      "PackagePath": "staticwebassets\\assets\\js\\maps.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\raphael-min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\raphael-min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\select2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\smooth-scrollbar.js",
+      "PackagePath": "staticwebassets\\assets\\js\\smooth-scrollbar.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\worldHigh.js",
+      "PackagePath": "staticwebassets\\assets\\js\\worldHigh.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\worldLow.js",
+      "PackagePath": "staticwebassets\\assets\\js\\worldLow.js"
+    },
+    {
+      "Id": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\wow.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Moiniorell.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Moiniorell.props",
+      "PackagePath": "build\\Moiniorell.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Moiniorell.props",
+      "PackagePath": "buildMultiTargeting\\Moiniorell.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Moiniorell.props",
+      "PackagePath": "buildTransitive\\Moiniorell.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

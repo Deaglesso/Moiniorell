@@ -4,16 +4,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
+using Moiniorell.Persistence.Implementations.Services;
+using Newtonsoft.Json;
 
 namespace Moiniorell.Controllers;
 
 public class UserController : Controller
 {
     private readonly IAuthService _service;
+    private readonly IUserService _userService;
 
-    public UserController(IAuthService service)
+    public UserController(IAuthService service, IUserService userService)
     {
         _service = service;
+        _userService = userService;
     }
 
     public IActionResult Register()
@@ -62,7 +66,28 @@ public class UserController : Controller
         return View(vm);
 
     }
+    [HttpGet]
+    public async Task<IActionResult> GetUser(string username)
+    {
+        var user = await _userService.GetUserForUI(username);
+        var me = await _userService.GetUser(User.Identity.Name);
+       
+        if (!me.Followers.Any(x => x.Follower.Id == user.Id))
+        {
+            return BadRequest();
 
+        }
+        if (user == null)
+        {
+            return NotFound(); 
+        }
+        JsonSerializerSettings settings = new JsonSerializerSettings
+        {
+            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+        };
+        string json = JsonConvert.SerializeObject(user,settings);
+        return Ok(json);
+    }
     public IActionResult Login()
     {
         if (User.Identity.IsAuthenticated)

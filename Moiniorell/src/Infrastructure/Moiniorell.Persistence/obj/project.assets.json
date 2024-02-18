@@ -44,6 +44,23 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Connections.Abstractions/6.0.27": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Features": "6.0.27",
+          "System.IO.Pipelines": "6.0.3"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.Connections.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Connections.Abstractions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/6.0.26": {
         "type": "package",
         "compile": {
@@ -115,6 +132,23 @@
         },
         "buildMultiTargeting": {
           "buildMultiTargeting/Microsoft.AspNetCore.Identity.UI.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.SignalR.Common/6.0.27": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Connections.Abstractions": "6.0.27",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.AspNetCore.SignalR.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.SignalR.Common.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.CSharp/4.7.0": {
@@ -381,6 +415,19 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Features/6.0.27": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Extensions.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Features.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.Extensions.FileProviders.Abstractions/6.0.0": {
@@ -797,6 +844,22 @@
           }
         }
       },
+      "System.IO.Pipelines/6.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
       "System.Runtime.Caching/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -1071,6 +1134,27 @@
         "logo.png"
       ]
     },
+    "Microsoft.AspNetCore.Connections.Abstractions/6.0.27": {
+      "sha512": "z6fjlGehsyWUNBIolStPnqsTHoQtuRcjZpzLszC5brWJ6gIeYUJwzDfcmkMgzGe7OrksWiRbL9h+cdTI+sghXg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.connections.abstractions/6.0.27",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Connections.Abstractions.dll",
+        "lib/net461/Microsoft.AspNetCore.Connections.Abstractions.xml",
+        "lib/net6.0/Microsoft.AspNetCore.Connections.Abstractions.dll",
+        "lib/net6.0/Microsoft.AspNetCore.Connections.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Connections.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Connections.Abstractions.xml",
+        "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.AspNetCore.Connections.Abstractions.xml",
+        "microsoft.aspnetcore.connections.abstractions.6.0.27.nupkg.sha512",
+        "microsoft.aspnetcore.connections.abstractions.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.26": {
       "sha512": "+D2bhCplByJBtAuutU8rYTM+98fWlX83ORZRuv6lX6ABwGTLJyVPA0N13wDooMmR4yNYoFDQ8RgkXzttJ80gRA==",
       "type": "package",
@@ -1240,6 +1324,25 @@
         "staticwebassets/V5/lib/jquery/dist/jquery.js",
         "staticwebassets/V5/lib/jquery/dist/jquery.min.js",
         "staticwebassets/V5/lib/jquery/dist/jquery.min.map"
+      ]
+    },
+    "Microsoft.AspNetCore.SignalR.Common/6.0.27": {
+      "sha512": "h6QSV2Qx8iJo6XTR4aT/IVCFDEmqgTr5ANIWRt2LSE0dikktlOEuC9COLZNPrdCJxod4y1pMOFTtWKdSowfuPA==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.signalr.common/6.0.27",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.SignalR.Common.dll",
+        "lib/net461/Microsoft.AspNetCore.SignalR.Common.xml",
+        "lib/net6.0/Microsoft.AspNetCore.SignalR.Common.dll",
+        "lib/net6.0/Microsoft.AspNetCore.SignalR.Common.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.SignalR.Common.xml",
+        "microsoft.aspnetcore.signalr.common.6.0.27.nupkg.sha512",
+        "microsoft.aspnetcore.signalr.common.nuspec"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -1614,6 +1717,25 @@
         "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Features/6.0.27": {
+      "sha512": "R5x31+JobriOiCeveY2hBTlKLMTGLly4bk06xhT3ngSg8kGfkXwryuIYuyk4aGBcvdOIXDFI9xjHyoJEXIxO8A==",
+      "type": "package",
+      "path": "microsoft.extensions.features/6.0.27",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.Extensions.Features.dll",
+        "lib/net461/Microsoft.Extensions.Features.xml",
+        "lib/net6.0/Microsoft.Extensions.Features.dll",
+        "lib/net6.0/Microsoft.Extensions.Features.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Features.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Features.xml",
+        "microsoft.extensions.features.6.0.27.nupkg.sha512",
+        "microsoft.extensions.features.nuspec"
       ]
     },
     "Microsoft.Extensions.FileProviders.Abstractions/6.0.0": {
@@ -2188,6 +2310,31 @@
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
+    "System.IO.Pipelines/6.0.3": {
+      "sha512": "ryTgF+iFkpGZY1vRQhfCzX0xTdlV3pyaTTqRu2ETbEv+HlV7O6y7hyQURnghNIXvctl5DuZ//Dpks6HdL/Txgw==",
+      "type": "package",
+      "path": "system.io.pipelines/6.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/netcoreapp2.0/System.IO.Pipelines.targets",
+        "buildTransitive/netcoreapp3.1/_._",
+        "lib/net461/System.IO.Pipelines.dll",
+        "lib/net461/System.IO.Pipelines.xml",
+        "lib/net6.0/System.IO.Pipelines.dll",
+        "lib/net6.0/System.IO.Pipelines.xml",
+        "lib/netcoreapp3.1/System.IO.Pipelines.dll",
+        "lib/netcoreapp3.1/System.IO.Pipelines.xml",
+        "lib/netstandard2.0/System.IO.Pipelines.dll",
+        "lib/netstandard2.0/System.IO.Pipelines.xml",
+        "system.io.pipelines.6.0.3.nupkg.sha512",
+        "system.io.pipelines.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "System.Runtime.Caching/4.7.0": {
       "sha512": "NdvNRjTPxYvIEhXQszT9L9vJhdQoX6AQ0AlhjTU+5NqFQVuacJTfhPVAvtGWNA2OJCqRiR/okBcZgMwI6MqcZg==",
       "type": "package",
@@ -2565,6 +2712,7 @@
     "net6.0": [
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.26",
       "Microsoft.AspNetCore.Identity.UI >= 6.0.26",
+      "Microsoft.AspNetCore.SignalR.Common >= 6.0.27",
       "Microsoft.EntityFrameworkCore >= 6.0.26",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.26",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.26",
@@ -2573,19 +2721,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Omen\\.nuget\\packages\\": {}
+    "C:\\Users\\Said\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj",
       "projectName": "Moiniorell.Persistence",
-      "projectPath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj",
-      "packagesPath": "C:\\Users\\Omen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\obj\\",
+      "projectPath": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj",
+      "packagesPath": "C:\\Users\\Said\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Omen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Said\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2599,11 +2747,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj": {
-              "projectPath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj"
+            "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj": {
+              "projectPath": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj"
             },
-            "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj"
+            "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj"
             }
           }
         }
@@ -2612,6 +2760,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2625,6 +2778,10 @@
           "Microsoft.AspNetCore.Identity.UI": {
             "target": "Package",
             "version": "[6.0.26, )"
+          },
+          "Microsoft.AspNetCore.SignalR.Common": {
+            "target": "Package",
+            "version": "[6.0.27, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -2657,7 +2814,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

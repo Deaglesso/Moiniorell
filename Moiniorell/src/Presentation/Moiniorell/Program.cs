@@ -1,6 +1,7 @@
 
 using Moiniorell.Persistence.ServiceRegistration;
 using Moiniorell.Application.ServiceRegistration;
+using Moiniorell.Persistence.Hubs;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,9 +29,24 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=User}/{action=Login}/{id?}");
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<ChatHub>("/chatHub");
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Chat}/{action=Index}/{id?}");
+});
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<OnlineUsersHub>("/onlineUsersHub");
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+});
+
 
 app.Run();

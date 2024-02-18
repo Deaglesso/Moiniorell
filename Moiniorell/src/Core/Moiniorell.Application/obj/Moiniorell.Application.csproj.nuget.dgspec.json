@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj": {}
+    "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj": {
+    "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj",
         "projectName": "Moiniorell.Application",
-        "projectPath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj",
-        "packagesPath": "C:\\Users\\Omen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Application\\obj\\",
+        "projectPath": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj",
+        "packagesPath": "C:\\Users\\Said\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Omen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Said\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Moiniorell.Domain.csproj": {
-                "projectPath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Moiniorell.Domain.csproj"
+              "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Moiniorell.Domain.csproj": {
+                "projectPath": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Moiniorell.Domain.csproj"
               }
             }
           }
@@ -38,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -72,21 +77,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Moiniorell.Domain.csproj": {
+    "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Moiniorell.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Moiniorell.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Moiniorell.Domain.csproj",
         "projectName": "Moiniorell.Domain",
-        "projectPath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Moiniorell.Domain.csproj",
-        "packagesPath": "C:\\Users\\Omen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Core\\Moiniorell.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Moiniorell.Domain.csproj",
+        "packagesPath": "C:\\Users\\Said\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Omen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Said\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -106,6 +111,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -133,7 +143,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

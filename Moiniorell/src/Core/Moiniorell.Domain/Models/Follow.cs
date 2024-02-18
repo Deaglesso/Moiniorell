@@ -13,5 +13,6 @@ namespace Moiniorell.Domain.Models
         public string FolloweeId { get; set; }
         public AppUser Follower { get; set; }
         public AppUser Followee { get; set; }
+        public bool Status { get; set; }
     }
 }

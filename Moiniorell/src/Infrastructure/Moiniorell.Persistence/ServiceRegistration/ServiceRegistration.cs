@@ -21,6 +21,8 @@ namespace Moiniorell.Persistence.ServiceRegistration
             AddIdentity(services);
 
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IUserService, UserService>();
+
             services.AddScoped<IPostService, PostService>();
             services.AddScoped<ICommentService, CommentService>();
 
@@ -36,6 +38,8 @@ namespace Moiniorell.Persistence.ServiceRegistration
 
 
             services.AddScoped<IEmailService, EmailService>();
+            services.AddSignalR();
+
 
         }
 

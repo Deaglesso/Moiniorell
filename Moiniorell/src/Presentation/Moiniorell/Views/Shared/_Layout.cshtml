@@ -1,6 +1,9 @@
-﻿@inject UserManager<AppUser> _userManager
+﻿@using Microsoft.EntityFrameworkCore
+@inject UserManager<AppUser> _userManager
 @{
-    AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+    AppUser user = await _userManager.Users
+                .Include(u => u.Followers).ThenInclude(x => x.Follower).Include(x => x.Followees).ThenInclude(x => x.Followee).Include(x => x.Posts).ThenInclude(p => p.Comments).ThenInclude(c => c.Replies).Include(x => x.Posts).ThenInclude(p => p.Likes)
+                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name); ;
 }
 <!doctype html> 
 <html lang="en">
@@ -240,77 +243,28 @@
                                             <div class="bg-primary p-3">
                                                 <h5 class="mb-0 text-white">Friend Request<small class="badge  badge-light float-right pt-1">4</small></h5>
                                             </div>
+                                            @foreach (var item in user.Followees.Where(f=>f.Status==false))
+                                            {
+                                                
                                             <div class="iq-friend-request">
                                                 <div class="iq-sub-card iq-sub-card-big d-flex align-items-center justify-content-between">
                                                     <div class="d-flex align-items-center">
                                                         <div class="">
-                                                            <img class="avatar-40 rounded" src="~/assets/images/user/01.jpg" alt="">
+                                                            <img class="avatar-40 rounded" src="~/assets/images/@item.Followee.ProfilePicture" alt="">
                                                         </div>
                                                         <div class="media-body ml-3">
-                                                            <h6 class="mb-0 ">Jaques Amole</h6>
-                                                            <p class="mb-0">40  friends</p>
+                                                                <h6 class="mb-0 ">@item.Followee.Name @item.Followee.Surname</h6>
+                                                                <p class="mb-0">@item.Followee.UserName</p>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex align-items-center">
-                                                        <a href="javascript:void();" class="mr-3 btn btn-primary rounded">Confirm</a>
-                                                        <a href="javascript:void();" class="mr-3 btn btn-secondary rounded">Delete Request</a>
+                                                        <a asp-controller="Profile" asp-action="AcceptFollow" asp-route-followId="@item.FolloweeId" asp-route-followerId="@item.FollowerId" class="mr-3 btn btn-primary rounded">Confirm</a>
+                                                            <a asp-controller="Profile" asp-action="DeclineFollow" asp-route-followId="@item.Id"  class="mr-3 btn btn-secondary rounded">Delete Request</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="iq-friend-request">
-                                                <div class="iq-sub-card iq-sub-card-big d-flex align-items-center justify-content-between">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="">
-                                                            <img class="avatar-40 rounded" src="~/assets/images/user/02.jpg" alt="">
-                                                        </div>
-                                                        <div class="media-body ml-3">
-                                                            <h6 class="mb-0 ">Lucy Tania</h6>
-                                                            <p class="mb-0">12  friends</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <a href="javascript:void();" class="mr-3 btn btn-primary rounded">Confirm</a>
-                                                        <a href="javascript:void();" class="mr-3 btn btn-secondary rounded">Delete Request</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="iq-friend-request">
-                                                <div class="iq-sub-card iq-sub-card-big d-flex align-items-center justify-content-between">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="">
-                                                            <img class="avatar-40 rounded" src="~/assets/images/user/03.jpg" alt="">
-                                                        </div>
-                                                        <div class="media-body ml-3">
-                                                            <h6 class="mb-0 ">Manny Petty</h6>
-                                                            <p class="mb-0">3  friends</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <a href="javascript:void();" class="mr-3 btn btn-primary rounded">Confirm</a>
-                                                        <a href="javascript:void();" class="mr-3 btn btn-secondary rounded">Delete Request</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="iq-friend-request">
-                                                <div class="iq-sub-card iq-sub-card-big d-flex align-items-center justify-content-between">
-                                                    <div class="d-flex align-items-center">
-                                                        <div class="">
-                                                            <img class="avatar-40 rounded" src="~/assets/images/user/04.jpg" alt="">
-                                                        </div>
-                                                        <div class="media-body ml-3">
-                                                            <h6 class="mb-0 ">Marsha Mello</h6>
-                                                            <p class="mb-0">15  friends</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <a href="javascript:void();" class="mr-3 btn btn-primary rounded">Confirm</a>
-                                                        <a href="javascript:void();" class="mr-3 btn btn-secondary rounded">Delete Request</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="text-center">
-                                                <a href="#" class="mr-3 btn text-primary">View More Request</a>
-                                            </div>
+                                            }
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -523,7 +477,7 @@
     </div>
     <!-- Wrapper END -->
     <!-- Footer -->
-    <footer class="bg-white iq-footer">
+    <footer class="bg-white iq-footer" style="width: 100%; padding-left: 0; padding-right: 0;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
@@ -538,6 +492,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Footer END -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -587,7 +542,29 @@
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.5.0/croppie.js"></script>
     @await RenderSectionAsync("likescripts",false);
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.10/signalr.min.js"></script>
 
+    <script>
+        // Establish the connection to the hub
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/onlineUsersHub") // Replace with your hub URL
+            .build();
+
+        // Define a method to handle updates from the server
+        connection.on("UpdateOnlineUsers", function (/* data from server */) {
+            // Update your UI or perform any necessary actions
+            console.log("Online users updated:", /* handle data */);
+        });
+
+        // Start the connection
+        connection.start()
+            .then(function () {
+                console.log("Connected to OnlineUsersHub");
+            })
+            .catch(function (err) {
+                console.error(err.toString());
+            });
+    </script>
 
 
 </body>

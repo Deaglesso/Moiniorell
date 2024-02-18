@@ -56,6 +56,8 @@ namespace Moiniorell.Persistence.Implementations.Services
                 
             }
             post.AuthorId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            AppUser user =await _userManager.FindByIdAsync(post.AuthorId);
+            user.PostCount++;
             await _postRepo.CreateAsync(post);
             await _postRepo.SaveChangesAsync();
             return str;
@@ -91,7 +93,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             var currentUser = await _userManager.Users
                 .SingleOrDefaultAsync(u => u.Id == currentUserId);
 
-            var posts = _postRepo.GetAll(p => p.AuthorId == currentUserId, nameof(Post.Author), nameof(Post.Comments), nameof(Post.Likes)).OrderByDescending(p => p.CreatedAt).ToList();
+            var posts = _postRepo.GetAll(p => p.AuthorId == currentUserId, nameof(Post.Author), nameof(Post.Comments), nameof(Post.Likes), "Comments.Replies").OrderByDescending(p => p.CreatedAt).ToList();
 
             return posts;
         }

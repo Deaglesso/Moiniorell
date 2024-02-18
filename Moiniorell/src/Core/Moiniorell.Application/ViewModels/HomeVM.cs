@@ -10,7 +10,7 @@ namespace Moiniorell.Application.ViewModels
     public class HomeVM
     {
         public List<Post> Posts { get; set; }
-        public CreatePostVM? CreatePostVM { get; set; }
+        public CreatePostVM? CreatePostVM { get; set; } 
         public CreateCommentVM CreateCommentVM { get; set; } = new CreateCommentVM();
         public CreateReplyVM CreateReplyVM { get; set; } = new CreateReplyVM();
 

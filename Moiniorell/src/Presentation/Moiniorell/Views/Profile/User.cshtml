@@ -4,8 +4,8 @@
 @model AppUser
 
 @{
-    bool isFollowing = Model.Followees.Any(x => x.FollowerId == User.FindFirstValue(ClaimTypes.NameIdentifier));
-} 
+    bool isFollowing = Model.Followees.Any(x => x.FollowerId == User.FindFirstValue(ClaimTypes.NameIdentifier) && x.Status == true);
+}
 
 <div id="content-page" class="content-page">
     <div class="container">
@@ -15,7 +15,7 @@
                     <div class="iq-card-body profile-page p-0">
                         <div class="profile-header">
                             <div class="cover-container">
-                                <img src="~/assets/images/page-img/profile-bg1.jpg" alt="profile-bg" class="rounded img-fluid">
+                                <img src="~/assets/images/page-img/bgprofile.png" alt="profile-bg" class="rounded img-fluid">
 
                             </div>
                             <div class="user-detail text-center mb-3">
@@ -48,7 +48,6 @@
                                         <div class="social-links">
                                             <ul class="header-nav d-flex flex-wrap justify-start p-0 m-0">
                                                 <li><a asp-action="Edit" asp-route-username="@Model.UserName"><i class="ri-pencil-line"></i></a></li>
-                                                <li><a href="javascript:void();"><i class="ri-settings-4-line"></i></a></li>
                                             </ul>
                                         </div>
 
@@ -57,23 +56,39 @@
                                     {
                                         if (!isFollowing)
                                         {
-                                            <div class="social-links">
-                                            <ul class="header-nav d-flex flex-wrap justify-start p-0 m-0">
-                                                <a asp-controller="Profile" asp-action="Follow" asp-route-followeeId="@Model.Id"><li class=" rounded p-2  mr-3"> Follow</li></a>
+                                            if (Model.Followees.Any(x => x.FollowerId == User.FindFirstValue(ClaimTypes.NameIdentifier)))
+                                            {
+                                                <div class="social-links">
+                                                    <ul class="header-nav d-flex flex-wrap justify-start p-0 m-0">
+                                                        <a asp-controller="Profile" asp-action="Unfollow" asp-route-followeeId="@Model.Id">
+                                                        <li class=" rounded p-2  mr-3"> Remove Request</li></a>
 
-                                            </ul>
-                                        </div>
+                                                    </ul>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                
+                                            <div class="social-links">
+                                                <ul class="header-nav d-flex flex-wrap justify-start p-0 m-0">
+                                                    <a asp-controller="Profile" asp-action="Follow" asp-route-followeeId="@Model.Id">
+                                                    <li class=" rounded p-2  mr-3"> Follow</li></a>
+
+                                                </ul>
+                                            </div>
+                                            }
                                         }
                                         else
                                         {
                                             <div class="social-links">
-                                            <ul class="header-nav d-flex flex-wrap justify-start p-0 m-0">
-                                                <a asp-controller="Profile" asp-action="Unfollow" asp-route-followeeId="@Model.Id"><li class=" rounded p-2  mr-3"> Unfollow</li></a>
+                                                <ul class="header-nav d-flex flex-wrap justify-start p-0 m-0">
+                                                    <a asp-controller="Profile" asp-action="Unfollow" asp-route-followeeId="@Model.Id">
+                                                    <li class=" rounded p-2  mr-3"> Unfollow</li></a>
 
-                                            </ul>
-                                        </div>
+                                                </ul>
+                                            </div>
                                         }
-                                        
+
 
                                     }
                                 </div>
@@ -81,463 +96,545 @@
                         </div>
                     </div>
                 </div>
-                <div class="iq-card">
-                    <div class="iq-card-body p-0">
-                        <div class="user-tabing">
-                            <ul class="nav nav-pills d-flex align-items-center justify-content-center profile-feed-items p-0 m-0">
-                                <li class="col-sm-3 p-0">
-                                    <a class="nav-link active" data-toggle="pill" href="#timeline">Posts</a>
-                                </li>
-                                <li class="col-sm-3 p-0">
-                                    <a class="nav-link" data-toggle="pill" href="#about">About</a>
-                                </li>
-                                <li class="col-sm-3 p-0">
-                                    <a class="nav-link" data-toggle="pill" href="#friends">friends</a>
-                                </li>
-                                
-                            </ul>
+                @if (Model.IsPrivate == true && isFollowing == false && Model.UserName != User.Identity.Name)
+                {
+
+                }
+                else
+                {
+
+                    <div class="iq-card">
+                        <div class="iq-card-body p-0">
+                            <div class="user-tabing">
+                                <ul class="nav nav-pills d-flex align-items-center justify-content-center profile-feed-items p-0 m-0">
+                                    <li class="col-sm-3 p-0">
+                                        <a class="nav-link active" data-toggle="pill" href="#timeline">Posts</a>
+                                    </li>
+                                    <li class="col-sm-3 p-0">
+                                        <a class="nav-link" data-toggle="pill" href="#about">About</a>
+                                    </li>
+                                    <li class="col-sm-3 p-0">
+                                        <a class="nav-link" data-toggle="pill" href="#friends">friends</a>
+                                    </li>
+
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
             </div>
-            <div class="col-sm-12">
-                <div class="tab-content">
-                    <div class="tab-pane fade active show" id="timeline" role="tabpanel">
-                        <div class="iq-card-body p-0">
-                            <div class="row">
-                                <div class="col-lg-4">
-                                    
-                                    <div class="iq-card">
-                                        <div class="iq-card-header d-flex justify-content-between">
-                                            <div class="iq-header-title">
-                                                <h4 class="card-title">Information</h4>
+            @if (Model.IsPrivate == true && isFollowing == false && Model.UserName != User.Identity.Name)
+            {
+                <div class="col-sm-12">
+                    <div class="container text-center">
+                        <div class="mt-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24">
+                                <path d="M17 9.761v-4.761c0-2.761-2.238-5-5-5-2.763 0-5 2.239-5 5v4.761c-1.827 1.466-3 3.714-3 6.239 0 4.418 3.582 8 8 8s8-3.582 8-8c0-2.525-1.173-4.773-3-6.239zm-8-4.761c0-1.654 1.346-3 3-3s3 1.346 3 3v3.587c-.927-.376-1.938-.587-3-.587s-2.073.211-3 .587v-3.587zm3 17c-3.309 0-6-2.691-6-6s2.691-6 6-6 6 2.691 6 6-2.691 6-6 6zm2-6c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="mb-4">Private account</h3> <!-- Add margin bottom utility class for spacing -->
+                    </div>
+                </div>
+
+            }
+            else
+            {
+                <div class="col-sm-12">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="timeline" role="tabpanel">
+                            <div class="iq-card-body p-0">
+                                <div class="row">
+                                    <div class="col-lg-4">
+
+                                        <div class="iq-card">
+                                            <div class="iq-card-header d-flex justify-content-between">
+                                                <div class="iq-header-title">
+                                                    <h4 class="card-title">Information</h4>
+                                                </div>
+
                                             </div>
-                                            
-                                        </div>
-                                        <div class="iq-card-body">
-                                            <div class="row">
-                                                
-                                                <div class="col-sm-12">
-                                                    <div class="event-post position-relative">
-                                                        <div class="job-icon-position mt-2">
-                                                            <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><i class="ri-book-open-fill"></i></div>
+                                            <div class="iq-card-body">
+                                                <div class="row">
+
+                                                    <div class="col-sm-12">
+                                                        <div class="event-post position-relative">
+                                                            <div class="job-icon-position mt-2">
+                                                                <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><i class="ri-book-open-fill"></i></div>
+                                                            </div>
+                                                            <div class="iq-card-body text-center p-2">
+                                                                <h5>Biography</h5>
+                                                                <p>@Model.Biography</p>
+                                                            </div>
                                                         </div>
-                                                        <div class="iq-card-body text-center p-2">
-                                                            <h5>Biography</h5>
-                                                            <p>@Model.Biography</p>
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <div class="event-post position-relative mt-3">
+                                                            <div class="job-icon-position">
+                                                                <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><i class="ri-calendar-fill"></i></div>
+                                                            </div>
+                                                            <div class="iq-card-body text-center p-2">
+                                                                <h5>Birth Day</h5>
+                                                                <p>@Model.BirthDate.ToString("dd/MM/yyyy")</p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-12">
-                                                    <div class="event-post position-relative mt-3">
-                                                        <div class="job-icon-position">
-                                                            <div class="job-icon bg-primary p-2 d-inline-block rounded-circle"><i class="ri-calendar-fill"></i></div>
-                                                        </div>
-                                                        <div class="iq-card-body text-center p-2">
-                                                            <h5>Birth Day</h5>
-                                                            <p>@Model.BirthDate.ToString("dd/MM/yyyy")</p>
-                                                        </div>
-                                                    </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="iq-card">
+                                            <div class="iq-card-header d-flex justify-content-between">
+                                                <div class="iq-header-title">
+                                                    <h4 class="card-title">Friends</h4>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="iq-card">
-                                        <div class="iq-card-header d-flex justify-content-between">
-                                            <div class="iq-header-title">
-                                                <h4 class="card-title">Photos</h4>
-                                            </div>
-                                            <div class="iq-card-header-toolbar d-flex align-items-center">
-                                                <p class="m-0"><a href="javacsript:void();">Add Photo </a></p>
-                                            </div>
-                                        </div>
-                                        <div class="iq-card-body">
-                                            <ul class="profile-img-gallary d-flex flex-wrap p-0 m-0">
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3"><a href="javascript:void();"><img src="~/assets/images/page-img/g1.jpg" alt="gallary-image" class="img-fluid" /></a></li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3"><a href="javascript:void();"><img src="~/assets/images/page-img/g2.jpg" alt="gallary-image" class="img-fluid" /></a></li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3"><a href="javascript:void();"><img src="~/assets/images/page-img/g3.jpg" alt="gallary-image" class="img-fluid" /></a></li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3"><a href="javascript:void();"><img src="~/assets/images/page-img/g4.jpg" alt="gallary-image" class="img-fluid" /></a></li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3"><a href="javascript:void();"><img src="~/assets/images/page-img/g5.jpg" alt="gallary-image" class="img-fluid" /></a></li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3"><a href="javascript:void();"><img src="~/assets/images/page-img/g6.jpg" alt="gallary-image" class="img-fluid" /></a></li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-0"><a href="javascript:void();"><img src="~/assets/images/page-img/g7.jpg" alt="gallary-image" class="img-fluid" /></a></li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-0"><a href="javascript:void();"><img src="~/assets/images/page-img/g8.jpg" alt="gallary-image" class="img-fluid" /></a></li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-0"><a href="javascript:void();"><img src="~/assets/images/page-img/g9.jpg" alt="gallary-image" class="img-fluid" /></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="iq-card">
-                                        <div class="iq-card-header d-flex justify-content-between">
-                                            <div class="iq-header-title">
-                                                <h4 class="card-title">Friends</h4>
-                                            </div>
-                                            <div class="iq-card-header-toolbar d-flex align-items-center">
-                                                <p class="m-0"><a href="javacsript:void();">Add New </a></p>
-                                            </div>
-                                        </div>
-                                        <div class="iq-card-body">
-                                            <ul class="profile-img-gallary d-flex flex-wrap p-0 m-0">
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3">
-                                                    <a href="javascript:void();">
-                                                        <img src="~/assets/images/user/05.jpg" alt="gallary-image" class="img-fluid" />
-                                                    </a>
-                                                    <h6 class="mt-2">Anna Rexia</h6>
-                                                </li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3">
-                                                    <a href="javascript:void();"><img src="~/assets/images/user/06.jpg" alt="gallary-image" class="img-fluid" /></a>
-                                                    <h6 class="mt-2">Tara Zona</h6>
-                                                </li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3">
-                                                    <a href="javascript:void();"><img src="~/assets/images/user/07.jpg" alt="gallary-image" class="img-fluid" /></a>
-                                                    <h6 class="mt-2">Polly Tech</h6>
-                                                </li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3">
-                                                    <a href="javascript:void();"><img src="~/assets/images/user/08.jpg" alt="gallary-image" class="img-fluid" /></a>
-                                                    <h6 class="mt-2">Bill Emia</h6>
-                                                </li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3">
-                                                    <a href="javascript:void();"><img src="~/assets/images/user/09.jpg" alt="gallary-image" class="img-fluid" /></a>
-                                                    <h6 class="mt-2">Moe Fugga</h6>
-                                                </li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-3">
-                                                    <a href="javascript:void();"><img src="~/assets/images/user/10.jpg" alt="gallary-image" class="img-fluid" /></a>
-                                                    <h6 class="mt-2">Hal Appeno </h6>
-                                                </li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-0">
-                                                    <a href="javascript:void();"><img src="~/assets/images/user/07.jpg" alt="gallary-image" class="img-fluid" /></a>
-                                                    <h6 class="mt-2">Zack Lee</h6>
-                                                </li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-0">
-                                                    <a href="javascript:void();"><img src="~/assets/images/user/06.jpg" alt="gallary-image" class="img-fluid" /></a>
-                                                    <h6 class="mt-2">Terry Aki</h6>
-                                                </li>
-                                                <li class="col-md-4 col-6 pl-2 pr-0 pb-0">
-                                                    <a href="javascript:void();"><img src="~/assets/images/user/05.jpg" alt="gallary-image" class="img-fluid" /></a>
-                                                    <h6 class="mt-2">Greta Life</h6>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-8">
-                                    <div class="iq-card">
-                                        <div class="iq-card-body">
-                                            @foreach (var item in Model.Posts.OrderByDescending(x=>x.CreatedAt))
-                                            {
 
-                                                <div class="col-sm-12">
-                                                    <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
-                                                        <div class="iq-card-body">
-                                                            <div class="user-post-data">
-                                                                <div class="d-flex flex-wrap">
-                                                                    <div class="media-support-user-img mr-3">
-                                                                        <img class="rounded-circle img-fluid" src="~/assets/images/@item.Author.ProfilePicture" alt="">
-                                                                    </div>
-                                                                    <div class="media-support-info mt-2">
-                                                                        <h5 class="mb-0 d-inline-block"><a href="#" class="">@item.Author.Name @item.Author.Surname</a></h5>
-                                                                        <p class="mb-0 d-inline-block">Add New Post</p>
-                                                                        <p class="mb-0 text-primary">
-                                                                            <span class="time-ago">@item.CreatedAt.Humanize()</span>
-                                                                        </p>
+                                            </div>
+                                            <div class="iq-card-body">
+                                                <ul class="profile-img-gallary d-flex flex-wrap p-0 m-0">
+                                                    @foreach (var friend in Model.Followees.Where(follower => Model.Followers.Any(followee => follower.FollowerId == followee.FolloweeId)))
+                                                    {
+                                                        <li class="col-md-4 col-6 pl-2 pr-0 pb-3">
+                                                            <a asp-action="User" asp-controller="Profile" asp-route-username="@friend.Followee.UserName">
+                                                                <img src="~/assets/images/@friend.Followee.ProfilePicture" alt="gallary-image" class="img-fluid" />
+                                                            </a>
+                                                            <h6 class="mt-2">@friend.Followee.Name @friend.Followee.Surname</h6>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="iq-card">
+                                            <div class="iq-card-body">
+
+                                                @foreach (var item in Model.Posts.OrderByDescending(x => x.CreatedAt))
+                                                {
+
+
+                                                    <div class="col-sm-12">
+                                                        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+                                                            <div class="iq-card-body">
+                                                                <div class="user-post-data">
+                                                                    <div class="d-flex flex-wrap">
+                                                                        <div class="media-support-user-img mr-3">
+                                                                            <img class="rounded-circle img-fluid" src="~/assets/images/@item.Author.ProfilePicture" alt="">
+                                                                        </div>
+                                                                        <div class="media-support-info mt-2">
+                                                                            <h5 class="mb-0 d-inline-block"><a href="#" class="">@item.Author.Name @item.Author.Surname</a></h5>
+                                                                            <p class="mb-0 d-inline-block">Add New Post</p>
+                                                                            <p class="mb-0 text-primary">
+                                                                                <span class="time-ago">@item.CreatedAt.Humanize()</span>
+                                                                            </p>
+                                                                        </div>
+                                                                        @if (Model.UserName == User.Identity.Name)
+                                                                        {
+
+                                                                            <div style="text-align: right;">
+                                                                                <a asp-controller="Post" asp-action="DeletePost" asp-route-postId="@item.Id"><i class=" fa fa-trash"></i></a>
+                                                                            </div>
+                                                                        }
+
 
                                                                     </div>
-                                                                    @if (Model.UserName == User.Identity.Name)
+                                                                </div>
+                                                                <div class="mt-3">
+                                                                    <p>@item.Text</p>
+                                                                </div>
+                                                                <div class="user-post">
+                                                                    <div class="d-flex justify-content-center">
+                                                                        <div style="width: 640px; height: 480px;">
+
+                                                                            <img src="~/assets/images/@item.Image" alt="post-image" class="img-fluid rounded zoom-image" style="width: 640px; height: 480px; object-fit: contain;">
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="comment-area mt-3">
+                                                                    <div class="d-flex justify-content-between align-items-center">
+                                                                        <div class="like-block position-relative d-flex align-items-center">
+                                                                            <div class="d-flex align-items-center like-section" data-post-id="@item.Id">
+                                                                                <div class="like-data">
+                                                                                    <div class="dropdown">
+                                                                                        @if (item.Likes.Any(like => like.LikerId == Model.Id))
+                                                                                        {
+                                                                                            <span>
+                                                                                                <a href="#" class="likeToggle" data-post-id="@item.Id" data-liked="true">
+                                                                                                    <img src="~/assets/images/icon/01.png" class="img-fluid" alt="">
+                                                                                                    <span class="toggle-text">@((item.Likes.Any(like => like.LikerId == Model.Id)) ? "Unlike" : "Like")</span>
+                                                                                                </a>
+                                                                                            </span>
+                                                                                        }
+                                                                                        else
+                                                                                        {
+                                                                                            <span>
+                                                                                                <a href="#" class="likeToggle" data-post-id="@item.Id" data-liked="false">
+                                                                                                    <img src="~/assets/images/icon/01.png" class="img-fluid" alt="">
+                                                                                                    <span class="toggle-text">@((item.Likes.Any(like => like.LikerId == Model.Id)) ? "Unlike" : "Like")</span>
+                                                                                                </a>
+                                                                                            </span>
+                                                                                        }
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <div class="total-like-block ml-2 mr-3">
+                                                                                    <div class="dropdown">
+                                                                                        <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                                                                            @item.LikeCount
+                                                                                        </span>
+                                                                                        <div class="dropdown-menu">
+                                                                                            @if (item.Likes.Any())
+                                                                                            {
+                                                                                                @foreach (var like in item.Likes.TakeLast(5))
+                                                                                                {
+                                                                                                    <a class="dropdown-item">@like.Liker.Name @like.Liker.Surname</a>
+                                                                                                }
+                                                                                            }
+                                                                                            else
+                                                                                            {
+                                                                                                <a class="dropdown-item">No likes for now</a>
+                                                                                            }
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            @*  <div class="d-flex align-items-center">
+                                                                    <div class="like-data">
+                                                                    <div class="dropdown">
+                                                                    @if (item.Likes.Any(like => like.LikerId == user.Id))
                                                                     {
-                                                                        
-                                                                    <div style="text-align: right;">
-                                                                            <a asp-controller="Post" asp-action="DeletePost" asp-route-postId="@item.Id"><i class=" fa fa-trash"></i></a>
-                                                                    </div>
+                                                                    <span>
+                                                                    <a href="#" class="unlikeButton" data-post-id="@item.Id">
+                                                                    <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Unlike
+                                                                    </a>
+                                                                    </span>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                    <span>
+                                                                    <a href="#" class="likeButton" data-post-id="@item.Id">
+                                                                    <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Like
+                                                                    </a>
+                                                                    </span>
                                                                     }
 
 
-                                                                </div>
-
-                                                            </div>
-                                                            <div class="mt-3">
-                                                                <p>@item.Text</p>
-                                                            </div>
-                                                            <div class="user-post">
-                                                                <div class="d-flex justify-content-center">
-                                                                    <div style="width: 640px; height: 480px;">
-
-                                                                        <img src="~/assets/images/@item.Image" alt="post-image" class="img-fluid rounded zoom-image" style="width: 640px; height: 480px; object-fit: contain;">
 
                                                                     </div>
-                                                                </div>
-                                                            </div>
+                                                                    </div>
+                                                                    <div class="total-like-block ml-2 mr-3">
+                                                                    <div class="dropdown">
+                                                                    <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                                                    @item.LikeCount
+                                                                    </span>
+                                                                    <div class="dropdown-menu">
+                                                                    @if (item.Likes.Any())
+                                                                    {
 
+                                                                    @foreach (var like in item.Likes.TakeLast(5))
+                                                                    {
+                                                                    <a class="dropdown-item">@like.Liker.Name @like.Liker.Surname</a>
+                                                                    }
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                    <a class="dropdown-item">No likes for now</a>
 
-                                                            <div class="comment-area mt-3">
-                                                                <div class="d-flex justify-content-between align-items-center">
-                                                                    <div class="like-block position-relative d-flex align-items-center">
-                                                                        <div class="d-flex align-items-center">
-                                                                            <div class="like-data">
-                                                                                <div class="dropdown">
-                                                                                    @if (item.Likes.Any(like => like.LikerId == Model.Id))
-                                                                                    {
-                                                                                        <span>
-                                                                                            <a asp-controller="Post" asp-action="UnlikePost" asp-route-postId="@item.Id">
-                                                                                                <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Unlike
-                                                                                            </a>
-                                                                                        </span>
-                                                                                    }
-                                                                                    else
-                                                                                    {
-
-                                                                                        <span>
-                                                                                            <a asp-controller="Post" asp-action="LikePost" asp-route-postId="@item.Id">
-                                                                                                <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Like
-                                                                                            </a>
-                                                                                        </span>
-                                                                                    }
-
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="total-like-block ml-2 mr-3">
+                                                                    }
+                                                                    </div>
+                                                                    </div>
+                                                                    </div>
+                                                                    </div> *@
+                                                                            <div class="total-comment-block">
                                                                                 <div class="dropdown">
                                                                                     <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                                                                                        @item.LikeCount
+                                                                                        @if (item.Comments is not null)
+                                                                                        {
+                                                                                            <span>@item.Comments.Count() Comments</span>
+
+                                                                                        }
+                                                                                        else
+                                                                                        {
+                                                                                            <span> No comments </span>
+                                                                                        }
                                                                                     </span>
+                                                                                    <div class="dropdown-menu">
+                                                                                        @foreach (var comuser in item.Comments.TakeLast(5))
+                                                                                        {
+                                                                                            <a class="dropdown-item">@comuser.Author.Name @comuser.Author.Surname</a>
+                                                                                        }
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
 
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="total-comment-block">
-                                                                            <div class="dropdown">
-                                                                                <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
-                                                                                    20 Comment
-                                                                                </span>
-                                                                                <div class="dropdown-menu">
-                                                                                    <a class="dropdown-item" href="#">Max Emum</a>
-                                                                                    <a class="dropdown-item" href="#">Bill Yerds</a>
-                                                                                    <a class="dropdown-item" href="#">Hap E. Birthday</a>
-                                                                                    <a class="dropdown-item" href="#">Tara Misu</a>
-                                                                                    <a class="dropdown-item" href="#">Midge Itz</a>
-                                                                                    <a class="dropdown-item" href="#">Sal Vidge</a>
-                                                                                    <a class="dropdown-item" href="#">Other</a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
                                                                     </div>
+                                                                    <hr>
+                                                                    <ul class="post-comments p-0 m-0">
+                                                                        @foreach (var comm in item.Comments)
+                                                                        {
+                                                                            <li class="mb-2">
+                                                                                <div class="d-flex flex-wrap">
+                                                                                    <div class="user-img">
+                                                                                        <img src="~/assets/images/@comm.Author.ProfilePicture" alt="userimg" class="avatar-35 rounded-circle img-fluid">
+                                                                                    </div>
+                                                                                    <div class="comment-data-block ml-3">
+                                                                                        <h6>@comm.Author.Name @comm.Author.Surname </h6>
+                                                                                        <p class="mb-0">@comm.Text</p>
+                                                                                        <div class="d-flex flex-wrap align-items-center comment-activity">
+                                                                                            <a href="#">like</a>
+                                                                                            <a href="#" id="openFormLink">reply</a>
+                                                                                            <span> @comm.CreatedAt.Humanize() </span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="replies" style="margin-left: 36px;">
+                                                                                    @foreach (var reply in comm.Replies.Take(3)) // Only take the first 5 replies
+                                                                                    {
+                                                                                        <div class="d-flex flex-wrap">
 
+                                                                                            <div class="comment-data-block ml-3">
+
+                                                                                                <h6>@reply.Author.Name @reply.Author.Surname <span style="color: #808080; font-style: italic; font-weight: lighter;"> @reply.CreatedAt.Humanize() </span></h6>
+                                                                                                <p class="mb-0">@reply.Text</p>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    }
+
+                                                                                    <div class="load-more-container">
+                                                                                        <div class="additional-replies" id="additional-replies-@comm.Id" style="display: none;">
+                                                                                            @foreach (var reply in comm.Replies.Skip(3))
+                                                                                            {
+                                                                                                <div class="d-flex flex-wrap">
+                                                                                                    <div class="comment-data-block ml-3">
+                                                                                                        <h6>@reply.Author.Name @reply.Author.Surname <span style="color: #808080; font-style: italic; font-weight: lighter;"> @reply.CreatedAt.Humanize() </span></h6>
+                                                                                                        <p class="mb-0">@reply.Text</p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            }
+                                                                                        </div>
+                                                                                        @if (comm.Replies.Count() > 3)
+                                                                                        {
+
+                                                                                            <button class="btn btn-link load-more-button" style="margin-left: 2px;" data-comment-id="@comm.Id">Load More</button>
+                                                                                        }
+
+                                                                                    </div>
+
+                                                                                    <script>
+                                                                                        $(document).ready(function () {
+                                                                                            $(".load-more-button").off("click").on("click", function (event) {
+                                                                                                event.preventDefault();
+                                                                                                var commentId = $(this).data("comment-id");
+                                                                                                console.log("Load more button clicked for comment id: " + commentId);
+                                                                                                var additionalReplies = $("#additional-replies-" + commentId);
+                                                                                                console.log("Is additional replies visible? " + additionalReplies.is(":visible"));
+                                                                                                additionalReplies.stop().slideToggle();
+                                                                                            });
+                                                                                        });
+                                                                                    </script>
+
+
+
+                                                                                </div>
+
+
+                                                                                @await Html.PartialAsync("_CreateReplyForm", new CreateReplyVM { CommentId = comm.Id })
+
+                                                                            </li>
+
+                                                                        }
+                                                                    </ul>
+                                                                    @await Html.PartialAsync("_CreateCommentForm", new CreateCommentVM { PostId = item.Id })
+                                                                    @* <form class="comment-text d-flex align-items-center mt-3" asp-controller="Comment" asp-action="CreateComment" method="post">
+                                                            <input asp-for="CreateCommentVM.Text" class="form-control rounded">
+                                                            <input asp-for="CreateCommentVM.PostId" value="@item.Id" hidden/>
+                                                            <div class="comment-attagement d-flex">
+                                                            <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                                                            </div>
+                                                            </form>  *@
                                                                 </div>
-                                                                <hr>
-                                                                <ul class="post-comments p-0 m-0">
-                                                                    <li class="mb-2">
-                                                                        <div class="d-flex flex-wrap">
-                                                                            <div class="user-img">
-                                                                                <img src="~/assets/images/user/02.jpg" alt="userimg" class="avatar-35 rounded-circle img-fluid">
-                                                                            </div>
-                                                                            <div class="comment-data-block ml-3">
-                                                                                <h6>Monty Carlo</h6>
-                                                                                <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                                                                                <div class="d-flex flex-wrap align-items-center comment-activity">
-                                                                                    <a href="javascript:void();">like</a>
-                                                                                    <a href="javascript:void();">reply</a>
-                                                                                    <a href="javascript:void();">translate</a>
-                                                                                    <span> 5 min </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="d-flex flex-wrap">
-                                                                            <div class="user-img">
-                                                                                <img src="~/assets/images/user/03.jpg" alt="userimg" class="avatar-35 rounded-circle img-fluid">
-                                                                            </div>
-                                                                            <div class="comment-data-block ml-3">
-                                                                                <h6>Paul Molive</h6>
-                                                                                <p class="mb-0">Lorem ipsum dolor sit amet</p>
-                                                                                <div class="d-flex flex-wrap align-items-center comment-activity">
-                                                                                    <a href="javascript:void();">like</a>
-                                                                                    <a href="javascript:void();">reply</a>
-                                                                                    <span> 5 min </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                                <form class="comment-text d-flex align-items-center mt-3" action="javascript:void(0);">
-                                                                    <input type="text" class="form-control rounded">
-                                                                    <div class="comment-attagement d-flex">
-                                                                        <a href="javascript:void();"><i class="ri-link mr-3"></i></a>
-                                                                        <a href="javascript:void();"><i class="ri-user-smile-line mr-3"></i></a>
-                                                                        <a href="javascript:void();"><i class="ri-camera-line mr-3"></i></a>
-                                                                    </div>
-                                                                </form>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            }
+
+                                                }
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="about" role="tabpanel">
-                        <div class="iq-card">
-                            <div class="iq-card-body">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <ul class="nav nav-pills basic-info-items list-inline d-block p-0 m-0">
+                        <div class="tab-pane fade" id="about" role="tabpanel">
+                            <div class="iq-card">
+                                <div class="iq-card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <ul class="nav nav-pills basic-info-items list-inline d-block p-0 m-0">
+                                                <li>
+                                                    <a class="nav-link active" data-toggle="pill" href="#basicinfo">Contact and Basic Info</a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="nav-link" data-toggle="pill" href="#details">Details About You</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-9 pl-4">
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade active show" id="basicinfo" role="tabpanel">
+                                                    <h4>Contact Information</h4>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <h6>Email</h6>
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <p class="mb-0">@Model.Email</p>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <h6>Mobile</h6>
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <p class="mb-0">@Model.PhoneNumber</p>
+                                                        </div>
+                                                        <div class="col-3">
+                                                            <h6>Address</h6>
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <p class="mb-0">@Model.Address</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <h4 class="mt-3">Basic Information</h4>
+                                                    <hr>
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <h6>Birth Date</h6>
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <p class="mb-0">@Model.BirthDate.ToShortDateString()</p>
+                                                        </div>
+
+                                                        <div class="col-3">
+                                                            <h6>Gender</h6>
+                                                        </div>
+                                                        <div class="col-9">
+                                                            <p class="mb-0">@Model.Gender</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="details" role="tabpanel">
+                                                    <h4 class="mb-3">Biography</h4>
+                                                    <p>@Model.Biography</p>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="friends" role="tabpanel">
+                            <div class="iq-card">
+                                <div class="iq-card-body">
+                                    <h2>Friends</h2>
+                                    <div class="friend-list-tab mt-2">
+                                        <ul class="nav nav-pills d-flex align-items-center justify-content-left friend-list-items p-0 mb-2">
                                             <li>
-                                                <a class="nav-link active" data-toggle="pill" href="#basicinfo">Contact and Basic Info</a>
+                                                <a class="nav-link active" data-toggle="pill" href="#all-friends">Followers</a>
                                             </li>
 
                                             <li>
-                                                <a class="nav-link" data-toggle="pill" href="#details">Details About You</a>
+                                                <a class="nav-link" data-toggle="pill" href="#following">Following</a>
                                             </li>
                                         </ul>
-                                    </div>
-                                    <div class="col-md-9 pl-4">
                                         <div class="tab-content">
-                                            <div class="tab-pane fade active show" id="basicinfo" role="tabpanel">
-                                                <h4>Contact Information</h4>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col-3">
-                                                        <h6>Email</h6>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p class="mb-0">@Model.Email</p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <h6>Mobile</h6>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p class="mb-0">@Model.PhoneNumber</p>
-                                                    </div>
-                                                    <div class="col-3">
-                                                        <h6>Address</h6>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p class="mb-0">@Model.Address</p>
-                                                    </div>
-                                                </div>
-
-                                                <h4 class="mt-3">Basic Information</h4>
-                                                <hr>
-                                                <div class="row">
-                                                    <div class="col-3">
-                                                        <h6>Birth Date</h6>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p class="mb-0">@Model.BirthDate.ToShortDateString()</p>
-                                                    </div>
-
-                                                    <div class="col-3">
-                                                        <h6>Gender</h6>
-                                                    </div>
-                                                    <div class="col-9">
-                                                        <p class="mb-0">@Model.Gender</p>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="tab-pane fade" id="details" role="tabpanel">
-                                                <h4 class="mb-3">Biography</h4>
-                                                <p>@Model.Biography</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="friends" role="tabpanel">
-                        <div class="iq-card">
-                            <div class="iq-card-body">
-                                <h2>Friends</h2>
-                                <div class="friend-list-tab mt-2">
-                                    <ul class="nav nav-pills d-flex align-items-center justify-content-left friend-list-items p-0 mb-2">
-                                        <li>
-                                            <a class="nav-link active" data-toggle="pill" href="#all-friends">Followers</a>
-                                        </li>
-
-                                        <li>
-                                            <a class="nav-link" data-toggle="pill" href="#following">Following</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane fade active show" id="all-friends" role="tabpanel">
-                                            <div class="iq-card-body p-0">
-                                                <div class="row">
-                                                    @foreach (var item in Model.Followees)
-                                                    {
-                                                        var mutualFriendsCount = Model.Followers.Count(f => item.Followee.Followers.Any(follower => follower.FollowerId == f.FollowerId));
-                                                        <div class="col-md-6 col-lg-6 mb-3">
-                                                            <div class="iq-friendlist-block">
-                                                                <div class="d-flex align-items-center justify-content-between">
-                                                                    <div class="d-flex align-items-center">
-                                                                        <a href="#">
-                                                                            <img src="~/assets/images/@item.Followee.ProfilePicture" alt="profile-img" class="img-fluid">
-                                                                        </a>
-                                                                        <div class="friend-info ml-3">
-                                                                            <h5>@item.Followee.Name @item.Followee.Surname</h5>
-                                                                            <p class="mb-0">@mutualFriendsCount mutual</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="iq-card-header-toolbar d-flex align-items-center">
-                                                                        <div class="dropdown">
-                                                                            <span class="dropdown-toggle btn btn-secondary mr-2" id="dropdownMenuButton01" data-toggle="dropdown" aria-expanded="true" role="button">
-                                                                                <i class="ri-check-line mr-1 text-white font-size-16"></i> Friend
-                                                                            </span>
-                                                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton01">
-                                                                                <a class="dropdown-item" href="#">Get Notification</a>
-                                                                                <a class="dropdown-item" href="#">Close Friend</a>
-                                                                                <a class="dropdown-item" href="#">Unfollow</a>
-                                                                                <a class="dropdown-item" href="#">Unfriend</a>
-                                                                                <a class="dropdown-item" href="#">Block</a>
+                                            <div class="tab-pane fade active show" id="all-friends" role="tabpanel">
+                                                <div class="iq-card-body p-0">
+                                                    <div class="row">
+                                                        @foreach (var item in Model.Followees)
+                                                        {
+                                                            var mutualFriendsCount = Model.Followers.Count(f => item.Followee.Followers.Any(follower => follower.FollowerId == f.FollowerId));
+                                                            <div class="col-md-6 col-lg-6 mb-3">
+                                                                <div class="iq-friendlist-block">
+                                                                    <div class="d-flex align-items-center justify-content-between">
+                                                                        <div class="d-flex align-items-center">
+                                                                            <a href="#">
+                                                                                <img src="~/assets/images/@item.Followee.ProfilePicture" alt="profile-img" class="img-fluid">
+                                                                            </a>
+                                                                            <div class="friend-info ml-3">
+                                                                                <h5>@item.Followee.Name @item.Followee.Surname</h5>
+                                                                                <p class="mb-0">@mutualFriendsCount mutual</p>
                                                                             </div>
+                                                                        </div>
+                                                                        <div class="iq-card-header-toolbar d-flex align-items-center">
+                                                                            @* <div class="dropdown">
+                                                                    <span class="dropdown-toggle btn btn-secondary mr-2" id="dropdownMenuButton01" data-toggle="dropdown" aria-expanded="true" role="button">
+                                                                    <i class="ri-check-line mr-1 text-white font-size-16"></i> Friend
+                                                                    </span>
+                                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton01">
+                                                                    <a class="dropdown-item" href="#">Get Notification</a>
+                                                                    <a class="dropdown-item" href="#">Close Friend</a>
+                                                                    <a class="dropdown-item" href="#">Unfollow</a>
+                                                                    <a class="dropdown-item" href="#">Unfriend</a>
+                                                                    <a class="dropdown-item" href="#">Block</a>
+                                                                    </div>
+                                                                    </div> *@
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    }
-                                                    
+                                                        }
+
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="tab-pane fade" id="following" role="tabpanel">
-                                            <div class="iq-card-body p-0">
-                                                <div class="row">
-                                                    @foreach (var item in Model.Followers)
-                                                    {
-                                                        <div class="col-md-6 col-lg-6 mb-3">
-                                                            <div class="iq-friendlist-block">
-                                                                <div class="d-flex align-items-center justify-content-between">
-                                                                    <div class="d-flex align-items-center">
-                                                                        <a href="#">
-                                                                            <img src="~/assets/images/@item.Follower.ProfilePicture" alt="profile-img" class="img-fluid">
-                                                                        </a>
-                                                                        <div class="friend-info ml-3">
-                                                                            <h5>@item.Follower.Name @item.Follower.Surname</h5>
-                                                                            <p class="mb-0">15  friends</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="iq-card-header-toolbar d-flex align-items-center">
-                                                                        <div class="dropdown">
-                                                                            <span class="dropdown-toggle btn btn-secondary mr-2" id="dropdownMenuButton01" data-toggle="dropdown" aria-expanded="true" role="button">
-                                                                                <i class="ri-check-line mr-1 text-white font-size-16"></i> Friend
-                                                                            </span>
-                                                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton01">
-                                                                                <a class="dropdown-item" href="#">Get Notification</a>
-                                                                                <a class="dropdown-item" href="#">Close Friend</a>
-                                                                                <a class="dropdown-item" href="#">Unfollow</a>
-                                                                                <a class="dropdown-item" href="#">Unfriend</a>
-                                                                                <a class="dropdown-item" href="#">Block</a>
+                                            <div class="tab-pane fade" id="following" role="tabpanel">
+                                                <div class="iq-card-body p-0">
+                                                    <div class="row">
+                                                        @foreach (var item in Model.Followers)
+                                                        {
+                                                            var mutualFriendsCount = Model.Followers.Count(f => item.Followee.Followers.Any(follower => follower.FollowerId == f.FollowerId));
+
+                                                            <div class="col-md-6 col-lg-6 mb-3">
+                                                                <div class="iq-friendlist-block">
+                                                                    <div class="d-flex align-items-center justify-content-between">
+                                                                        <div class="d-flex align-items-center">
+                                                                            <a href="#">
+                                                                                <img src="~/assets/images/@item.Follower.ProfilePicture" alt="profile-img" class="img-fluid">
+                                                                            </a>
+                                                                            <div class="friend-info ml-3">
+                                                                                <h5>@item.Follower.Name @item.Follower.Surname</h5>
+                                                                                <p class="mb-0">@mutualFriendsCount mutual friends</p>
                                                                             </div>
+                                                                        </div>
+                                                                        <div class="iq-card-header-toolbar d-flex align-items-center">
+                                                                            @* <div class="dropdown">
+                                                                    <span class="dropdown-toggle btn btn-secondary mr-2" id="dropdownMenuButton01" data-toggle="dropdown" aria-expanded="true" role="button">
+                                                                    <i class="ri-check-line mr-1 text-white font-size-16"></i> Friend
+                                                                    </span>
+                                                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton01">
+                                                                    <a class="dropdown-item" href="#">Get Notification</a>
+                                                                    <a class="dropdown-item" href="#">Close Friend</a>
+                                                                    <a class="dropdown-item" href="#">Unfollow</a>
+                                                                    <a class="dropdown-item" href="#">Unfriend</a>
+                                                                    <a class="dropdown-item" href="#">Block</a>
+                                                                    </div>
+                                                                    </div> *@
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    }
+                                                        }
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -547,10 +644,65 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-12 text-center">
-                <img src="~/assets/images/page-img/page-load-loader.gif" alt="loader" style="height: 100px;">
-            </div>
+            }
+
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        console.log("Script loaded");
+
+        $(document).on('click', '.likeToggle', function (e) {
+            e.preventDefault();
+
+            console.log("Like/Unlike button clicked");
+
+            var likeToggleElement = $(this);
+            var postId = likeToggleElement.data('post-id');
+            var liked = likeToggleElement.data('liked');
+            var postElement = likeToggleElement.closest('.like-section');
+            var likeCountElement = postElement.find('.total-like-block span');
+            var likersList = postElement.find('.dropdown-menu');
+
+            // Toggle the state
+            likeToggleElement.data('liked', !liked);
+            likeToggleElement.find('.toggle-text').text(liked ? 'Like' : 'Unlike');
+
+            // Send AJAX request to the server to update the database
+            $.ajax({
+                url: liked ? '/Post/UnlikePost' : '/Post/LikePost',
+                type: 'POST',
+                data: { postId: postId },
+                success: function (data) {
+                    console.log("AJAX success");
+
+                    // Update the like count
+                    var newLikeCount = parseInt(likeCountElement.text());
+                    newLikeCount += liked ? -1 : 1;
+                    likeCountElement.text(newLikeCount);
+
+                    // Update likers list
+                    if (data.likes && data.likes.length > 0) {
+                        likersList.empty();
+                        $.each(data.likes, function (index, like) {
+                            var likerName = like.liker.name + ' ' + like.liker.surname;
+                            likersList.append('<a class="dropdown-item">' + likerName + '</a>');
+                        });
+                    } else {
+                        likersList.empty();
+                        likersList.append('<a class="dropdown-item">No likes for now</a>');
+                    }
+
+                    // Server successfully updated, you may handle additional tasks if needed
+                },
+                error: function (error) {
+                    console.error('Error:', error);
+                    // Handle errors if necessary
+                }
+            });
+        });
+    });
+</script>

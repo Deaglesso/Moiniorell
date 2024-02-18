@@ -1,7 +1,7 @@
 ﻿@model CreateCommentVM
 
 <form class="comment-text d-flex align-items-center mt-3" asp-controller="Comment" asp-action="CreateComment" method="post">
-    <input asp-for="Text" class="form-control rounded" placeholder="@(string.IsNullOrWhiteSpace(ViewData.ModelState["Text"]?.Errors.FirstOrDefault()?.ErrorMessage) ? " Write your comment here" : ViewData.ModelState["Text"]?.Errors.FirstOrDefault()?.ErrorMessage)">
+    <input asp-for="Text" class="form-control rounded" placeholder="@(string.IsNullOrWhiteSpace(ViewData.ModelState["Text"]?.Errors.FirstOrDefault()?.ErrorMessage) ? " Write your comment" : ViewData.ModelState["Text"]?.Errors.FirstOrDefault()?.ErrorMessage)">
     <span asp-validation-for="Text" hidden></span>
 
     <input asp-for="PostId"  hidden/>

@@ -166,6 +166,9 @@ namespace Moiniorell.Persistence.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Availability")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Biography")
                         .HasColumnType("nvarchar(max)");
 
@@ -193,9 +196,6 @@ namespace Moiniorell.Persistence.Migrations
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsOnline")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsPrivate")
@@ -353,6 +353,9 @@ namespace Moiniorell.Persistence.Migrations
 
                     b.Property<DateTime?>("ModifiedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
 
                     b.HasKey("FollowerId", "FolloweeId");
 
@@ -538,7 +541,7 @@ namespace Moiniorell.Persistence.Migrations
             modelBuilder.Entity("Moiniorell.Domain.Models.CommentLike", b =>
                 {
                     b.HasOne("Moiniorell.Domain.Models.Comment", "Comment")
-                        .WithMany()
+                        .WithMany("CommentLikes")
                         .HasForeignKey("CommentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -576,7 +579,7 @@ namespace Moiniorell.Persistence.Migrations
             modelBuilder.Entity("Moiniorell.Domain.Models.Like", b =>
                 {
                     b.HasOne("Moiniorell.Domain.Models.AppUser", "Liker")
-                        .WithMany()
+                        .WithMany("Likes")
                         .HasForeignKey("LikerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -609,7 +612,7 @@ namespace Moiniorell.Persistence.Migrations
                         .HasForeignKey("AuthorId");
 
                     b.HasOne("Moiniorell.Domain.Models.Comment", "RepliedComment")
-                        .WithMany()
+                        .WithMany("Replies")
                         .HasForeignKey("RepliedCommentId");
 
                     b.Navigation("Author");
@@ -625,7 +628,16 @@ namespace Moiniorell.Persistence.Migrations
 
                     b.Navigation("Followers");
 
+                    b.Navigation("Likes");
+
                     b.Navigation("Posts");
+                });
+
+            modelBuilder.Entity("Moiniorell.Domain.Models.Comment", b =>
+                {
+                    b.Navigation("CommentLikes");
+
+                    b.Navigation("Replies");
                 });
 
             modelBuilder.Entity("Moiniorell.Domain.Models.Post", b =>

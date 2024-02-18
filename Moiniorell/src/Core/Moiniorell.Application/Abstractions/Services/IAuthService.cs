@@ -16,13 +16,7 @@ namespace Moiniorell.Application.Abstractions.Services
         Task<List<string>> LoginNoPass(string username);
         Task<IdentityResult> ConfirmEmail(string email,string token);
         Task Logout();
-        Task<AppUser> GetUser(string username);
-        Task<AppUser> GetUserById(string userId);
-
-        Task<List<string>> UpdateUser(AppUser user,EditProfileVM vm);
-        Task<List<AppUser>> GetUsers(string searchTerm);
-        Task Follow(string userId);
-        Task Unfollow(string followedId);
+        
 
     }
 

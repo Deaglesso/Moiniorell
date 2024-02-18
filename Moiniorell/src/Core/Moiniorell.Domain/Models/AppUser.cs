@@ -22,7 +22,7 @@ namespace Moiniorell.Domain.Models
         public Gender Gender { get; set; }
         public string? Biography { get; set; }
         public bool IsPrivate { get; set; }
-        public bool IsOnline { get; set; }
+        public bool Availability { get; set; }
         public bool IsActive { get; set; }
         public string ProfilePicture { get; set; }
         public ICollection<Follow> Followers { get; set; }
@@ -35,6 +35,7 @@ namespace Moiniorell.Domain.Models
         {
             RegisteredAt = DateTime.UtcNow;
             ProfilePicture = "nopic.png";
+            Availability = true;
         }
     }
 }
