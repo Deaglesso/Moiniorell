@@ -1,11 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Logging;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
+using Moiniorell.Persistence.Hubs;
 using Moiniorell.Persistence.Implementations.Services;
 using Newtonsoft.Json;
+using System.Security.Claims;
 
 namespace Moiniorell.Controllers;
 
@@ -13,11 +16,13 @@ public class UserController : Controller
 {
     private readonly IAuthService _service;
     private readonly IUserService _userService;
+    private readonly IHubContext<ChatHub> _hubContext;
 
-    public UserController(IAuthService service, IUserService userService)
+    public UserController(IAuthService service, IUserService userService, IHubContext<ChatHub> hubContext)
     {
         _service = service;
         _userService = userService;
+        _hubContext = hubContext;
     }
 
     public IActionResult Register()
@@ -123,6 +128,8 @@ public class UserController : Controller
     public async Task<IActionResult> Logout()
     {
         await _service.Logout();
+        await _userService.RemoveAllUserConnections(HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
+        await _hubContext.Clients.All.SendAsync("OfflineUser", HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier));
         return RedirectToAction("Login", "User");
     }
 

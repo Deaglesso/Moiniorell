@@ -1,21 +1,19 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
+using Moiniorell.Domain.Models;
+using Moiniorell.Persistence.DAL;
 using Moiniorell.Persistence.Hubs;
 
 namespace Moiniorell.Controllers
 {
     public class ChatController : Controller
     {
-        private readonly IHubContext<ChatHub> _hubContext;
-
-        public ChatController(IHubContext<ChatHub> hubContext)
-        {
-            _hubContext = hubContext;
-        }
-
-        public IActionResult Index()
+        public ActionResult Index()
         {
             return View();
         }
+
     }
 }

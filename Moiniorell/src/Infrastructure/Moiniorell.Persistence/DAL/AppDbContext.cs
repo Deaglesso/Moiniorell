@@ -18,6 +18,8 @@ namespace Moiniorell.Persistence.DAL
         public DbSet<Reply> Replies { get; set; }
         public DbSet<CommentLike> CommentLikes { get; set; }
         public DbSet<Like> Likes { get; set; }
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<UserConnection> UserConnections { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

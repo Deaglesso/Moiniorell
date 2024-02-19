@@ -30,12 +30,15 @@ namespace Moiniorell.Domain.Models
         public ICollection<Follow> Followees { get; set; }
         public ICollection<Post> Posts { get; set; }
         public ICollection<Comment> Comments { get; set; }
+        public ICollection<UserConnection> UserConnections { get; set; }
 
+        public virtual ICollection<Message> Messages { get; set; }
         public AppUser()
         {
             RegisteredAt = DateTime.UtcNow;
             ProfilePicture = "nopic.png";
             Availability = true;
+            Messages = new HashSet<Message>();
         }
     }
 }

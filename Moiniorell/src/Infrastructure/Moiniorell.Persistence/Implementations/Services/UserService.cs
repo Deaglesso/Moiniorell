@@ -10,6 +10,7 @@ using Moiniorell.Infrastructure.Utilities.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.WebRequestMethods;
@@ -21,13 +22,15 @@ namespace Moiniorell.Persistence.Implementations.Services
         private readonly UserManager<AppUser> _userManager;
         private readonly IWebHostEnvironment _env;
         private readonly IFollowRepository _followRepo;
+        private readonly IUserConnectionRepository _userConnectionRepository;
         private readonly IHttpContextAccessor _http;
 
-        public UserService(UserManager<AppUser> userManager, IWebHostEnvironment env, IFollowRepository followRepo, IHttpContextAccessor http)
+        public UserService(UserManager<AppUser> userManager, IWebHostEnvironment env, IFollowRepository followRepo, IUserConnectionRepository userConnectionRepository, IHttpContextAccessor http)
         {
             _userManager = userManager;
             _env = env;
             _followRepo = followRepo;
+            _userConnectionRepository = userConnectionRepository;
             _http = http;
         }
 
@@ -100,7 +103,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             return new List<string>();
         }
 
-       
+
         public async Task Follow(string followedId)
         {
             string userId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
@@ -148,7 +151,7 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task<AppUser> GetUser(string username)
         {
             return await _userManager.Users
-                .Include(u => u.Followers).ThenInclude(x => x.Follower).Include(x => x.Followees).ThenInclude(x => x.Followee).Include(x => x.Posts).ThenInclude(p=>p.Comments).ThenInclude(c=>c.Replies).Include(x => x.Posts).ThenInclude(p => p.Likes)
+                .Include(u => u.Followers).ThenInclude(x => x.Follower).Include(x => x.Followees).ThenInclude(x => x.Followee).Include(x => x.Posts).ThenInclude(p => p.Comments).ThenInclude(c => c.Replies).Include(x => x.Posts).ThenInclude(p => p.Likes)
                 .FirstOrDefaultAsync(u => u.UserName == username);
         }
         public async Task<AppUser> GetUserForUI(string username)
@@ -166,9 +169,9 @@ namespace Moiniorell.Persistence.Implementations.Services
             return await _userManager.Users.Where(x => x.UserName.ToLower().Contains(searchTerm.ToLower()) || x.Name.ToLower().Contains(searchTerm.ToLower()) || x.Surname.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
         }
 
-        public async Task AcceptRequest(string followId,string followerId)
+        public async Task AcceptRequest(string followId, string followerId)
         {
-            Follow follow = await _followRepo.GetSingleAsync(x=>x.FolloweeId == followId && x.FollowerId == followerId);
+            Follow follow = await _followRepo.GetSingleAsync(x => x.FolloweeId == followId && x.FollowerId == followerId);
             follow.Status = true;
             await _followRepo.SaveChangesAsync();
 
@@ -179,6 +182,56 @@ namespace Moiniorell.Persistence.Implementations.Services
             Follow follow = await _followRepo.GetSingleAsync(x => x.FolloweeId == followId && x.FollowerId == followerId);
             _followRepo.Delete(follow);
             await _followRepo.SaveChangesAsync();
+        }
+
+        public List<UserDTO> GetUsersToChat()
+        {
+            return _userManager.Users.Include("UserConnections").Select(x => new UserDTO
+            {
+                UserId = x.Id,
+                Username = x.UserName,
+                Fullname = x.Name + " " + x.Surname,
+                IsOnline = x.UserConnections.Count > 0,
+            }).ToList();
+        }
+        public async Task<string> AddUserConnection(string ConnectionId)
+        {
+            var userId = _http.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            await _userConnectionRepository.CreateAsync(new UserConnection
+            {
+                ConnectionId = ConnectionId,
+                UserId = userId,
+            });
+            await _userConnectionRepository.SaveChangesAsync();
+            return userId;
+        }
+        public async Task<string> RemoveUserConnection(string ConnectionId)
+        {
+            string userId = "0";
+            var current = await _userConnectionRepository.GetSingleAsync(x => x.ConnectionId == ConnectionId);
+            if (current != null)
+            {
+                userId = current.UserId ?? "0";
+
+                _userConnectionRepository.Delete(current);
+                await _userConnectionRepository.SaveChangesAsync();
+            }
+            return userId;
+        }
+        public IList<string> GetUserConnections(string userId)
+        {
+            return _userConnectionRepository.GetAll(x => x.UserId == userId).Select(x => x.ConnectionId.ToString()).ToList();
+        }
+        public async Task RemoveAllUserConnections(string userId)
+        {
+            var current = _userConnectionRepository.GetAll(x => x.UserId == userId);
+            foreach (var item in current)
+            {
+
+                _userConnectionRepository.Delete(item);
+            }
+            await _userConnectionRepository.SaveChangesAsync();
         }
     }
 }

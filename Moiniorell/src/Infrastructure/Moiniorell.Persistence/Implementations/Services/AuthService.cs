@@ -108,7 +108,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             {
                 _http.HttpContext.Response.Cookies.Delete(cookie);
             }
-
+            
             await _signInManager.SignOutAsync();
 
         }

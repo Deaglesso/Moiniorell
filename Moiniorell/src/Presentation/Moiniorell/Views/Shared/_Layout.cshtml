@@ -3,7 +3,7 @@
 @{
     AppUser user = await _userManager.Users
                 .Include(u => u.Followers).ThenInclude(x => x.Follower).Include(x => x.Followees).ThenInclude(x => x.Followee).Include(x => x.Posts).ThenInclude(p => p.Comments).ThenInclude(c => c.Replies).Include(x => x.Posts).ThenInclude(p => p.Likes)
-                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name); ;
+                .FirstOrDefaultAsync(u => u.UserName == User.Identity.Name); 
 }
 <!doctype html> 
 <html lang="en">
@@ -542,7 +542,7 @@
     <script src="https://cdn.jsdelivr.net/npm/timeago.js@4.0.2/dist/timeago.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.5.0/croppie.js"></script>
     @await RenderSectionAsync("likescripts",false);
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.10/signalr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
 
     <script>
         // Establish the connection to the hub

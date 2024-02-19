@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Moiniorell.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f36ee4112f1fa66d1146b47fef053d13fdffb43c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ffe0271275234f03aae5399c202104aec06dd7a1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Moiniorell.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Moiniorell.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

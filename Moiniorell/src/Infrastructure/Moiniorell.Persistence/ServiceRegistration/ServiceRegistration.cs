@@ -33,6 +33,8 @@ namespace Moiniorell.Persistence.ServiceRegistration
             services.AddScoped<ILikeRepository, LikeRepository>();
             services.AddScoped<ICommentRepository, CommentRepository>();
             services.AddScoped<IReplyRepository, ReplyRepository>();
+            services.AddScoped<IUserConnectionRepository, UserConnectionRepository>();
+
 
 
 
