@@ -559,7 +559,7 @@
                                             <div class="tab-pane fade active show" id="all-friends" role="tabpanel">
                                                 <div class="iq-card-body p-0">
                                                     <div class="row">
-                                                        @foreach (var item in Model.Followees)
+                                                        @foreach (var item in Model.Followees.Where(x => x.Status == true))
                                                         {
                                                             var mutualFriendsCount = Model.Followers.Count(f => item.Followee.Followers.Any(follower => follower.FollowerId == f.FollowerId));
                                                             <div class="col-md-6 col-lg-6 mb-3">
@@ -600,7 +600,7 @@
                                             <div class="tab-pane fade" id="following" role="tabpanel">
                                                 <div class="iq-card-body p-0">
                                                     <div class="row">
-                                                        @foreach (var item in Model.Followers)
+                                                        @foreach (var item in Model.Followers.Where(x=>x.Status==true))
                                                         {
                                                             var mutualFriendsCount = Model.Followers.Count(f => item.Followee.Followers.Any(follower => follower.FollowerId == f.FollowerId));
 

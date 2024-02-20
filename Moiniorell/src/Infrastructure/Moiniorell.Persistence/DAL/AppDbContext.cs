@@ -7,7 +7,7 @@ using System.Reflection.Emit;
 namespace Moiniorell.Persistence.DAL
 {
     //public class AppDbContext : IdentityDbContext<AppUser,IdentityRole<int>,int>
-    
+
     public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions opt) : base(opt) { }
@@ -79,6 +79,17 @@ namespace Moiniorell.Persistence.DAL
                 .HasForeignKey(cId => cId.AuthorId)
                 .OnDelete(DeleteBehavior.Restrict);
             });
+            /*builder.Entity<Message>()
+                .HasOne(m => m.FromUser)
+                .WithMany(u => u.Messages)
+                .HasForeignKey(m => m.FromUserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<Message>()
+                .HasOne(m => m.ToUser)
+                .WithMany(u => u.Messages)
+                .HasForeignKey(m => m.ToUserId)
+                .OnDelete(DeleteBehavior.Restrict);*/
         }
 
     }

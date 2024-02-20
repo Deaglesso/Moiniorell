@@ -1,16 +1,140 @@
-﻿<div id="content-page" class="content-page">
+﻿@* <style>
+    body {
+        background-color: #f4f4f4;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+    }
+
+    /* Content Page */
+    #content-page {
+        margin-top: 20px;
+    }
+
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Row */
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    /* Col 10 */
+    .col-xs-10 {
+        flex: 0 0 83.333333%;
+        max-width: 83.333333%;
+    }
+
+    /* Chat Container */
+    .chat-container {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    /* Col 2 */
+    .col-xs-2 {
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+
+    /* Users List */
+    .users-list {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+    }
+</style> *@
+
+    <style >
+    .users-list {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 300px; /* Set a maximum width for the user list */
+        max-height: 80vh; /* Set a maximum height for the user list */
+        overflow-y: auto;
+        margin: 0 auto; /* Center the user list horizontally */
+    }
+
+    .user-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        margin-bottom: 10px; /* Add some spacing between user boxes */
+    }
+
+        .user-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 5px;
+        }
+
+        .user-box h5 {
+            margin: 0;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .user-box .is-online {
+            color: #4caf50;
+        }
+
+    .is-online {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-left: 0; 
+        border: 4px solid #4caf50; 
+    }
+        /* Apply different background colors to each user box */
+        .user-box:nth-child(even) {
+            background-color: #cfd8dc;
+        }
+
+        .user-box:nth-child(odd) {
+            background-color: #b0bec5;
+        }
+
+        .user-box:hover {
+            background-color: #e0e0e0;
+        }
+</style>
+
+
+
+
+<div id="content-page" class="content-page">
     <div class="container">
         <div class="row">
-            <div class="col-xs-10">
-                <div class="chat-container">
-                    <!-- chat box goes here -->
-                    Chat Boxes
-                </div>
-            </div>
+
             <div class="col-xs-2">
+                
                 <div class="users-list">
                     <!-- users list goes here -->
-                    User List
+                </div>
+            </div>
+            <div class="col-xs-10">
+
+                <div class="chat-container row" style="gap:10px;">
+                    <!-- chat box goes here -->
                 </div>
             </div>
         </div>
@@ -23,30 +147,39 @@
 <script>
     $(function () {
         var hub = new signalR.HubConnectionBuilder()
-            .withUrl("/chatHub") 
+            .withUrl("/chatHub")
             .build();
 
-        hub.on("ReceiveMessage", function (listUsers) {
+        hub.on("GetUsers", function (listUsers) {
             console.log("Received users:", listUsers);
             $('.users-list').html('');
             for (var i = 0; i < listUsers.length; i++) {
-                let online = listUsers[i].isOnline ? '<i class="fa fa-circle"></i>' : "";
-                $('.users-list').append('<div id="UserBox-' + listUsers[i].userId + '" class="user-box" onclick="openChatBox(' + listUsers[i].userId + ')">\
-                    <h5>'+ listUsers[i].fullname + '</h5>\
-                    <span class="is-online">'+ online + '</span>\
-                </div>');
+                var userIdString = listUsers[i].userId.toString();
+                let online = listUsers[i].isOnline ? 'is-online' : "";
+                $('.users-list').append('<div id="UserBox-' + userIdString + '" class="user-box" onclick="openChatBox(' + userIdString + ')">\
+                                <img src="/assets/images/'+ listUsers[i].profilePicture + '" class="img-fluid rounded-circle mr-3 '+ online +'" style="width:50px;height:50px;">\
+                        <h5>'+ listUsers[i].fullname + '</h5>\
+                    </div>');
             }
         });
+        $('.users-list').on('click', '.user-box', function () {
+            // Extract the userId from the clicked element's ID
+            var userId = $(this).attr('id').replace('UserBox-', '');
+            openChatBox(userId);
+        });
 
-        
+
         hub.on("UpdateOnlineUsers", function (userId) {
-            $('.users-list').find('#UserBox-' + userId + '').find('span[class="is-online"]').html('<i class="fa fa-circle"></i>');
+            $('.users-list').find('#UserBox-' + userId).find('img').addClass('is-online');
         });
-        hub.on("UpdateOfflineUsers", function (userId) {
-            $('.users-list').find('#UserBox-' + userId + '').find('span[class="is-online"]').html('');
 
+        hub.on("UpdateOfflineUsers", function (userId) {
+            $('.users-list').find('#UserBox-' + userId).find('img').removeClass('is-online');
         });
-        
+
+
+
+        hub.on("ReceiveMessage", receiveMessage);
 
         hub.start().then(function () {
             hub.invoke("GetUsersToChat");
@@ -54,4 +187,40 @@
             return console.error(err.toString());
         });
     });
+    function receiveMessage(userId, message) {
+
+        if ($('#DVChatBox-' + userId).length === 0) {
+            openChatBox(userId, false);
+        } else {
+            $('#DVChatBox-' + userId).find('.messages-list').append('<div class="dvmsg dvmsg-to"><span class="msg">' + message + '</span></div>');
+        }
+        $('#DVChatBox-' + userId).find('.messages-list').scrollTop(999999999999);
+        openChatBox(userId, false);
+    }
+    var lastOpenedChatBox = null;
+    function openChatBox(toUserId, closeCurrentTab = true) {
+        console.log("toUserId:", toUserId);
+        if (closeCurrentTab && lastOpenedChatBox) {
+            lastOpenedChatBox.remove();
+        }
+        fetch(`/Chat/GetChatbox?toUserId=${toUserId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            mode: 'cors', // You may need to adjust the mode based on your server setup
+        })
+            .then(response => response.text())
+            .then(res => {
+                if ($('#DVChatBox-' + toUserId).length === 0) {
+                    $('.chat-container').append(res);
+                } else {
+                    $('.chat-container').find('#DVChatBox-' + toUserId).replaceWith(res);
+                }
+                $('#DVChatBox-' + toUserId).find('.messages-list').scrollTop(999999999999);
+                lastOpenedChatBox = $('#DVChatBox-' + toUserId);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
 </script>

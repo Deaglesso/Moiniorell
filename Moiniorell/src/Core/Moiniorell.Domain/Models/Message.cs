@@ -11,13 +11,13 @@ namespace Moiniorell.Domain.Models
     public class Message:BaseEntity
 
     {
-        [Required]
-        public string UserName { get; set; }
-        [Required]
+        
         public string Text { get; set; }
-        public string UserId { get; set; }
-        public  AppUser User { get; set; }
+        public string FromUserId { get; set; }
+        public string ToUserId { get; set; }
 
-       
+
+
+
     }
 }

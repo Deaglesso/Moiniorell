@@ -60,5 +60,7 @@ namespace Moiniorell.Application.ViewModels
         [Phone(ErrorMessage = "Invalid phone number format")]
         public string? PhoneNumber { get; set; }
         public bool IsPrivate { get; set; }
+        public bool Availability { get; set; }
+
     }
 }

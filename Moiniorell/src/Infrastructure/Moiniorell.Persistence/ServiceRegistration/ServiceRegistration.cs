@@ -34,6 +34,8 @@ namespace Moiniorell.Persistence.ServiceRegistration
             services.AddScoped<ICommentRepository, CommentRepository>();
             services.AddScoped<IReplyRepository, ReplyRepository>();
             services.AddScoped<IUserConnectionRepository, UserConnectionRepository>();
+            services.AddScoped<IMessageRepository, MessageRepository>();
+
 
 
 

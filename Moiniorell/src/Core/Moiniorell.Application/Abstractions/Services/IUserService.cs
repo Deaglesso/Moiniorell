@@ -26,5 +26,7 @@ namespace Moiniorell.Application.Abstractions.Services
         Task<string> AddUserConnection(string ConnectionId);
         IList<string> GetUserConnections(string userId);
         Task RemoveAllUserConnections(string userId);
+        Task<ChatBoxModel> GetChatbox(string toUserId);
+        Task<bool> SendMessage(string toUserId, string message);
     }
 }

@@ -47,11 +47,18 @@ namespace Moiniorell.Persistence.Hubs
             var UserId = _http.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             List<UserDTO> users = _userService.GetUsersToChat(); 
-            Clients.Clients(_userService.GetUserConnections(UserId)).SendAsync("ReceiveMessage",users);
+            Clients.Clients(_userService.GetUserConnections(UserId)).SendAsync("GetUsers",users);
         }
         public async Task OfflineUser(string userId)
         {
             await Clients.All.SendAsync("BroadcastOfflineUser", userId);
+        }
+        public async Task ReceiveMessage(string fromUserId, string toUserId, string message)
+        {
+            
+            var connections = _userService.GetUserConnections(toUserId);
+
+            await _hubContext.Clients.Clients(connections).SendAsync("ReceiveMessage", fromUserId, message);
         }
     }
 }

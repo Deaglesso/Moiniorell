@@ -117,9 +117,19 @@
                                                 <span asp-validation-for="PhoneNumber"></span>
                                             </div>
                                             <div class="form-group col-sm-6">
-                                                <label asp-for="IsPrivate">Private account:</label>
-                                                <input asp-for="IsPrivate" class="form-control">
+                                                <label asp-for="Availability">Availability:</label>
+
+                                                @Html.DropDownListFor(model => model.Availability, new List<SelectListItem>()
+                                                {
+                                                new SelectListItem(){ Text = "Available", Value = "True"},
+                                                new SelectListItem(){ Text = "Do Not Disturb", Value = "False"},
+                                                }, new { @class = "form-control" })
                                             </div>
+                                            <div class="form-group col-sm-6 d-flex" style="align-items:flex-start">
+                                                <label asp-for="IsPrivate">Private account:</label>
+                                                <input asp-for="IsPrivate" class="form-control" style="width:15px;height:15px; margin-top:5px;margin-left:5px;">
+                                            </div>
+                                            
                                             
                                         </div>
                                         <button type="submit" class="btn btn-primary mr-2">Submit</button>

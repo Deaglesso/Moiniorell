@@ -1,0 +1,177 @@
+﻿@model ChatBoxModel
+
+<style>
+
+    .chat-box {
+        max-width: 100%;
+        width: 115vh;
+        height:80vh;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: 'Arial', sans-serif;
+        margin-left: 20px;
+        
+    }
+
+    /* Chat Box Header */
+    .chat-box-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #3498db;
+        color: #fff;
+        border-bottom: 1px solid #2980b9;
+        border-radius: 8px 8px 0 0;
+    }
+
+        .chat-box-header b {
+            margin-right: 10px;
+        }
+
+        .chat-box-header i {
+            cursor: pointer;
+        }
+
+    /* Messages List */
+    .messages-list {
+        max-height: 300px;
+        padding: 10px;
+        overflow: auto;
+    }
+
+    /* Message Styles */
+    .dvmsg {
+        max-width: 70%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+
+
+    .dvmsg-from {
+        display: flex;
+        justify-content: flex-start;
+        background-color: #3498db;
+        color: #fff;
+        margin-right: 30%;
+    }
+
+    .dvmsg-to {
+        display: flex;
+        justify-content: flex-end;
+        background-color: #ecf0f1;
+        color: #333;
+        margin-left: 30%;
+    }
+
+    /* Message Input */
+    .chat-box-input {
+        padding: 10px;
+        border-top: 1px solid #ccc;
+        /* height: 10px; */
+        height: auto;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+    }
+
+    .message-input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+        height: 50px;
+    }
+
+    .msg {
+        padding: 8px;
+        width: auto;
+        border-radius: 20px;
+    }
+    /* Hover Effect */
+    
+
+    /* Users List */
+
+    .textarea {
+        height: 30px;
+    }
+
+    textarea.form-control {
+        height: none;
+        height: 80px;
+    }
+    /* Responsive Design */
+
+</style>
+
+<div class="chat-box" id="DVChatBox-@Model.ToUser.UserId">
+    <div class="col-xs-12">
+        <div class="chat-box-header">
+            <b>@Model.ToUser.Username</b>
+            @Html.HiddenFor(m => m.ToUser.UserId, new { @id = "ToUserId" })
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <div class="messages-list">
+            @foreach (var message in Model.Messages)
+            {
+                <div class="dvmsg dvmsg-@message.Class"><span class="msg">@message.Message</span></div>
+            }
+        </div>
+    </div>
+    <div class="col-xs-12 chat-box-input">
+        <textarea class="message-input form-control" onkeyup="sendMessage(this, event);"></textarea>
+    </div>
+</div>
+
+
+<script>
+    function sendMessage(element, e) {
+        let message = $(element).val().trim();
+        let toUserId = $(element).closest('.chat-box').find('#ToUserId').val();
+
+        if (e.which === 13 && !e.shiftKey) {
+            e.preventDefault(); // Prevent the default behavior of Enter key (submitting the form)
+
+            if (!message) {
+                $(element).val('');
+                return;
+            }
+            
+            fetch(`/Chat/SendMessage?toUserId=${toUserId}&message=${encodeURIComponent(message)}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json;charset=utf-8'
+                },
+                mode: 'cors', // You may need to adjust the mode based on your server setup
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(res => {
+                    if (res === true) {
+                        $(element).closest('#DVChatBox-' + toUserId).find('.messages-list').append('<div class="dvmsg dvmsg-to"><span class="msg">' + message + '</span></div>');
+                        $(element).closest('#DVChatBox-' + toUserId).find('.messages-list').scrollTop(999999999999);
+                        $(element).val('');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    }
+
+
+</script>
+

@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Moiniorell.Application.Abstractions.Repositories;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
 using Moiniorell.Domain.Models;
 using Moiniorell.Infrastructure.Utilities.Extensions;
+using Moiniorell.Persistence.Hubs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,15 +25,19 @@ namespace Moiniorell.Persistence.Implementations.Services
         private readonly IWebHostEnvironment _env;
         private readonly IFollowRepository _followRepo;
         private readonly IUserConnectionRepository _userConnectionRepository;
+        private readonly IMessageRepository _messageRepository;
         private readonly IHttpContextAccessor _http;
+        private readonly IHubContext<ChatHub> _hubContext;
 
-        public UserService(UserManager<AppUser> userManager, IWebHostEnvironment env, IFollowRepository followRepo, IUserConnectionRepository userConnectionRepository, IHttpContextAccessor http)
+        public UserService(UserManager<AppUser> userManager, IWebHostEnvironment env, IFollowRepository followRepo, IUserConnectionRepository userConnectionRepository, IMessageRepository messageRepository, IHttpContextAccessor http, IHubContext<ChatHub> hubContext)
         {
             _userManager = userManager;
             _env = env;
             _followRepo = followRepo;
             _userConnectionRepository = userConnectionRepository;
+            _messageRepository = messageRepository;
             _http = http;
+            _hubContext = hubContext;
         }
 
         public async Task<List<string>> UpdateUser(AppUser user, EditProfileVM vm)
@@ -49,6 +55,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             user.UserName = vm.Username;
             user.ProfilePicture = vm.ProfilePicture;
             user.IsPrivate = vm.IsPrivate;
+            user.Availability = vm.Availability;
             if (user.Email != vm.Email)
             {
                 var eres = await _userManager.SetEmailAsync(user, vm.Email);
@@ -186,11 +193,12 @@ namespace Moiniorell.Persistence.Implementations.Services
 
         public List<UserDTO> GetUsersToChat()
         {
-            return _userManager.Users.Include("UserConnections").Select(x => new UserDTO
+            return _userManager.Users.Include("UserConnections").Where(x => x.Id != _http.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier)).Select(x => new UserDTO
             {
                 UserId = x.Id,
                 Username = x.UserName,
                 Fullname = x.Name + " " + x.Surname,
+                ProfilePicture = x.ProfilePicture,  
                 IsOnline = x.UserConnections.Count > 0,
             }).ToList();
         }
@@ -232,6 +240,56 @@ namespace Moiniorell.Persistence.Implementations.Services
                 _userConnectionRepository.Delete(item);
             }
             await _userConnectionRepository.SaveChangesAsync();
+        }
+        public async Task<ChatBoxModel> GetChatbox(string toUserId)
+        {
+            var userId = _http.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var toUser = _userManager.Users.FirstOrDefault(x => x.Id == toUserId);
+            var messages =  _messageRepository.GetAll(x => (x.FromUserId == userId && x.ToUserId == toUserId) || (x.FromUserId == toUserId && x.ToUserId == userId))
+                .OrderByDescending(x => x.CreatedAt)
+                .Skip(0)
+                .Take(50)
+                .Select(x => new MessageDTO
+                {
+                    Id = x.Id,
+                    Message = x.Text,
+                    Class = x.FromUserId == toUserId ? "from" : "to",
+                })
+                .OrderBy(x => x.Id)
+                .ToList();
+
+            return new ChatBoxModel
+            {
+                ToUser = ToUserDTO(toUser),
+                Messages = messages,
+            };
+        }
+        public UserDTO ToUserDTO(AppUser user)
+        {
+            return new UserDTO
+            {
+                Fullname = user.Name + " " + user.Surname,
+                UserId = user.Id,
+                Username = user.UserName,
+            };
+        }
+        public async Task<bool> SendMessage(string toUserId, string message)
+        {
+            try
+            {
+                string USER_ID = _http.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                await _messageRepository.CreateAsync(new Message
+                {
+                    FromUserId = USER_ID,
+                    ToUserId = toUserId,
+                    Text = message,
+                    CreatedAt = DateTime.Now
+                });
+                await _messageRepository.SaveChangesAsync();
+                await _hubContext.Clients.User(toUserId).SendAsync("ReceiveMessage", USER_ID, message);
+                return true;
+            }
+            catch { return false; }
         }
     }
 }
