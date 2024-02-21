@@ -11,5 +11,6 @@ namespace Moiniorell.Application.ViewModels
         public int Id { get; set; }
         public string Message { get; set; }
         public string Class { get; set; }
+        public DateTime Date { get; set; }
     }
 }

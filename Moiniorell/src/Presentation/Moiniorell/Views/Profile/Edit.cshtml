@@ -36,7 +36,7 @@
                                             <div class="col-md-12">
                                                 <div class="profile-img-edit">
                                                     <div> <input asp-for="ProfilePicture" hidden /></div>
-                                                    <img class="profile-pic" src="~/assets/images/@Model.ProfilePicture" alt="profile-pic">
+                                                    <img class="profile-pic" src="@Model.ProfilePicture" alt="profile-pic">
                                                     <div class="p-image">
                                                         <i class="ri-pencil-line upload-button"></i>
                                                         <input class="file-upload" asp-for="ProfilePictureFile" />

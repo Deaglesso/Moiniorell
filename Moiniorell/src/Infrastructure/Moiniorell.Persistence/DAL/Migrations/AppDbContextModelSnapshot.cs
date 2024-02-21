@@ -3,19 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Moiniorell.Persistence.DAL;
 
 #nullable disable
 
-namespace Moiniorell.Persistence.Migrations
+namespace Moiniorell.Persistence.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240217182314_availabilityOfUser")]
-    partial class availabilityOfUser
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -399,6 +397,45 @@ namespace Moiniorell.Persistence.Migrations
                     b.ToTable("Likes");
                 });
 
+            modelBuilder.Entity("Moiniorell.Domain.Models.Message", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FromUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ToUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Messages");
+                });
+
             modelBuilder.Entity("Moiniorell.Domain.Models.Post", b =>
                 {
                     b.Property<int>("Id")
@@ -470,6 +507,29 @@ namespace Moiniorell.Persistence.Migrations
                     b.HasIndex("RepliedCommentId");
 
                     b.ToTable("Replies");
+                });
+
+            modelBuilder.Entity("Moiniorell.Domain.Models.UserConnection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ConnectionId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserConnections");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -597,6 +657,13 @@ namespace Moiniorell.Persistence.Migrations
                     b.Navigation("Post");
                 });
 
+            modelBuilder.Entity("Moiniorell.Domain.Models.Message", b =>
+                {
+                    b.HasOne("Moiniorell.Domain.Models.AppUser", null)
+                        .WithMany("Messages")
+                        .HasForeignKey("AppUserId");
+                });
+
             modelBuilder.Entity("Moiniorell.Domain.Models.Post", b =>
                 {
                     b.HasOne("Moiniorell.Domain.Models.AppUser", "Author")
@@ -622,6 +689,17 @@ namespace Moiniorell.Persistence.Migrations
                     b.Navigation("RepliedComment");
                 });
 
+            modelBuilder.Entity("Moiniorell.Domain.Models.UserConnection", b =>
+                {
+                    b.HasOne("Moiniorell.Domain.Models.AppUser", "User")
+                        .WithMany("UserConnections")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Moiniorell.Domain.Models.AppUser", b =>
                 {
                     b.Navigation("Comments");
@@ -632,7 +710,11 @@ namespace Moiniorell.Persistence.Migrations
 
                     b.Navigation("Likes");
 
+                    b.Navigation("Messages");
+
                     b.Navigation("Posts");
+
+                    b.Navigation("UserConnections");
                 });
 
             modelBuilder.Entity("Moiniorell.Domain.Models.Comment", b =>

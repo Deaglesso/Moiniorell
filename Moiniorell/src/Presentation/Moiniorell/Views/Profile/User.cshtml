@@ -15,12 +15,12 @@
                     <div class="iq-card-body profile-page p-0">
                         <div class="profile-header">
                             <div class="cover-container">
-                                <img src="~/assets/images/page-img/bgprofile.png" alt="profile-bg" class="rounded img-fluid">
+                                <img src="https://res.cloudinary.com/dk8mhooq1/image/upload/v1708514376/rablwqwne3gqijpknncg.png" alt="profile-bg" class="rounded img-fluid">
 
                             </div>
                             <div class="user-detail text-center mb-3">
                                 <div class="profile-img">
-                                    <img src="~/assets/images/@Model.ProfilePicture" alt="profile-img" class="avatar-130 img-fluid" />
+                                    <img src="@Model.ProfilePicture" alt="profile-img" class="avatar-130 img-fluid" />
                                 </div>
                                 <div class="profile-detail">
                                     <h3 class="">@Model.Name @Model.Surname</h3>
@@ -195,7 +195,7 @@
                                                     {
                                                         <li class="col-md-4 col-6 pl-2 pr-0 pb-3">
                                                             <a asp-action="User" asp-controller="Profile" asp-route-username="@friend.Followee.UserName">
-                                                                <img src="~/assets/images/@friend.Followee.ProfilePicture" alt="gallary-image" class="img-fluid" />
+                                                                <img src="@friend.Followee.ProfilePicture" alt="gallary-image" class="img-fluid" />
                                                             </a>
                                                             <h6 class="mt-2">@friend.Followee.Name @friend.Followee.Surname</h6>
                                                         </li>
@@ -218,7 +218,7 @@
                                                                 <div class="user-post-data">
                                                                     <div class="d-flex flex-wrap">
                                                                         <div class="media-support-user-img mr-3">
-                                                                            <img class="rounded-circle img-fluid" src="~/assets/images/@item.Author.ProfilePicture" alt="">
+                                                                            <img class="rounded-circle img-fluid" src="@item.Author.ProfilePicture" alt="">
                                                                         </div>
                                                                         <div class="media-support-info mt-2">
                                                                             <h5 class="mb-0 d-inline-block"><a href="#" class="">@item.Author.Name @item.Author.Surname</a></h5>
@@ -245,7 +245,7 @@
                                                                     <div class="d-flex justify-content-center">
                                                                         <div style="width: 640px; height: 480px;">
 
-                                                                            <img src="~/assets/images/@item.Image" alt="post-image" class="img-fluid rounded zoom-image" style="width: 640px; height: 480px; object-fit: contain;">
+                                                                            <img src="@item.Image" alt="post-image" class="img-fluid rounded zoom-image" style="width: 640px; height: 480px; object-fit: contain;">
 
                                                                         </div>
                                                                     </div>
@@ -379,7 +379,7 @@
                                                                             <li class="mb-2">
                                                                                 <div class="d-flex flex-wrap">
                                                                                     <div class="user-img">
-                                                                                        <img src="~/assets/images/@comm.Author.ProfilePicture" alt="userimg" class="avatar-35 rounded-circle img-fluid">
+                                                                                        <img src="@comm.Author.ProfilePicture" alt="userimg" class="avatar-35 rounded-circle img-fluid">
                                                                                     </div>
                                                                                     <div class="comment-data-block ml-3">
                                                                                         <h6>@comm.Author.Name @comm.Author.Surname </h6>
@@ -567,7 +567,7 @@
                                                                     <div class="d-flex align-items-center justify-content-between">
                                                                         <div class="d-flex align-items-center">
                                                                             <a href="#">
-                                                                                <img src="~/assets/images/@item.Followee.ProfilePicture" alt="profile-img" class="img-fluid">
+                                                                                <img src="@item.Followee.ProfilePicture" alt="profile-img" class="img-fluid">
                                                                             </a>
                                                                             <div class="friend-info ml-3">
                                                                                 <h5>@item.Followee.Name @item.Followee.Surname</h5>
@@ -609,7 +609,7 @@
                                                                     <div class="d-flex align-items-center justify-content-between">
                                                                         <div class="d-flex align-items-center">
                                                                             <a href="#">
-                                                                                <img src="~/assets/images/@item.Follower.ProfilePicture" alt="profile-img" class="img-fluid">
+                                                                                <img src="@item.Follower.ProfilePicture" alt="profile-img" class="img-fluid">
                                                                             </a>
                                                                             <div class="friend-info ml-3">
                                                                                 <h5>@item.Follower.Name @item.Follower.Surname</h5>

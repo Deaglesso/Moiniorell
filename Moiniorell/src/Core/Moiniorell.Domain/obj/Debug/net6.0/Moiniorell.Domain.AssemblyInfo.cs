@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Moiniorell.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f67aa8d4ca7a6000d7f8fe52376b2fc58d5407b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f82540b09bcc07875c972f20b1f75db8777724a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Moiniorell.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Moiniorell.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

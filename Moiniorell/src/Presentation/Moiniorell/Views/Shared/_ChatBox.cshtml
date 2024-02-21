@@ -1,11 +1,12 @@
-﻿@model ChatBoxModel
+﻿@using Humanizer
+@model ChatBoxModel
 
 <style>
 
     .chat-box {
         max-width: 100%;
         width: 115vh;
-        height:80vh;
+        height: 80vh;
         background-color: #fff;
         border: 1px solid #ccc;
         border-radius: 8px;
@@ -13,7 +14,6 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         font-family: 'Arial', sans-serif;
         margin-left: 20px;
-        
     }
 
     /* Chat Box Header */
@@ -38,7 +38,7 @@
 
     /* Messages List */
     .messages-list {
-        max-height: 300px;
+        height: 55vh;
         padding: 10px;
         overflow: auto;
     }
@@ -49,7 +49,9 @@
         padding: 8px;
         margin-bottom: 10px;
         border-radius: 5px;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         word-wrap: break-word;
         word-break: break-all;
     }
@@ -93,12 +95,18 @@
     }
 
     .msg {
-        padding: 8px;
+        padding: 0px;
         width: auto;
         border-radius: 20px;
     }
-    /* Hover Effect */
-    
+
+    .msg-date {
+        display: block;
+        font-style: italic;
+        font-weight: lighter;
+        margin-left: auto;
+    }
+
 
     /* Users List */
 
@@ -125,7 +133,19 @@
         <div class="messages-list">
             @foreach (var message in Model.Messages)
             {
-                <div class="dvmsg dvmsg-@message.Class"><span class="msg">@message.Message</span></div>
+                <div class="dvmsg dvmsg-@message.Class">
+                    <span class="msg">@message.Message</span>
+                    <div class="msg-date">
+                        @if (@message.Date.Date == DateTime.Now.Date)
+                        {
+                            @message.Date.ToString("HH:mm")
+                        }
+                        else
+                        {
+                            @message.Date.ToString("yyyy.MM.dd HH:mm")
+                        }
+                    </div>
+                </div>
             }
         </div>
     </div>
@@ -147,7 +167,7 @@
                 $(element).val('');
                 return;
             }
-            
+
             fetch(`/Chat/SendMessage?toUserId=${toUserId}&message=${encodeURIComponent(message)}`, {
                 method: 'POST',
                 headers: {

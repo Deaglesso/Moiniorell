@@ -27,9 +27,10 @@ namespace Moiniorell.Persistence.Implementations.Services
         private readonly IUserConnectionRepository _userConnectionRepository;
         private readonly IMessageRepository _messageRepository;
         private readonly IHttpContextAccessor _http;
+        private readonly ICloudService _cloudService;
         private readonly IHubContext<ChatHub> _hubContext;
 
-        public UserService(UserManager<AppUser> userManager, IWebHostEnvironment env, IFollowRepository followRepo, IUserConnectionRepository userConnectionRepository, IMessageRepository messageRepository, IHttpContextAccessor http, IHubContext<ChatHub> hubContext)
+        public UserService(UserManager<AppUser> userManager, IWebHostEnvironment env, IFollowRepository followRepo, IUserConnectionRepository userConnectionRepository, IMessageRepository messageRepository, IHttpContextAccessor http, ICloudService cloudService, IHubContext<ChatHub> hubContext)
         {
             _userManager = userManager;
             _env = env;
@@ -37,6 +38,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             _userConnectionRepository = userConnectionRepository;
             _messageRepository = messageRepository;
             _http = http;
+            _cloudService = cloudService;
             _hubContext = hubContext;
         }
 
@@ -94,7 +96,8 @@ namespace Moiniorell.Persistence.Implementations.Services
                     str.Add("Max file size is 2 Mb");
                     return str;
                 }
-                user.ProfilePicture = await vm.ProfilePictureFile.CreateFileAsync(_env.WebRootPath, false, "assets", "images");
+                await _cloudService.FileDeleteAsync(user.ProfilePicture);
+                user.ProfilePicture = await _cloudService.FileCreateAsync(vm.ProfilePictureFile);
             }
 
 
@@ -254,6 +257,7 @@ namespace Moiniorell.Persistence.Implementations.Services
                     Id = x.Id,
                     Message = x.Text,
                     Class = x.FromUserId == toUserId ? "from" : "to",
+                    Date = x.CreatedAt
                 })
                 .OrderBy(x => x.Id)
                 .ToList();

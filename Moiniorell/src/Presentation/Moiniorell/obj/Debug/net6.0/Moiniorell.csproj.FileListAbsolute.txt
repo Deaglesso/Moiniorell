@@ -177,3 +177,4 @@ C:\Users\Said\Documents\Final\Moiniorell\src\Presentation\Moiniorell\bin\Debug\n
 C:\Users\Said\Documents\Final\Moiniorell\src\Presentation\Moiniorell\bin\Debug\net6.0\Microsoft.Owin.dll
 C:\Users\Said\Documents\Final\Moiniorell\src\Presentation\Moiniorell\bin\Debug\net6.0\Microsoft.Owin.Security.dll
 C:\Users\Said\Documents\Final\Moiniorell\src\Presentation\Moiniorell\bin\Debug\net6.0\Owin.dll
+C:\Users\Said\Documents\Final\Moiniorell\src\Presentation\Moiniorell\bin\Debug\net6.0\CloudinaryDotNet.dll

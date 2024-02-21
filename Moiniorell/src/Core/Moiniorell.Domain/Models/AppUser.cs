@@ -36,7 +36,7 @@ namespace Moiniorell.Domain.Models
         public AppUser()
         {
             RegisteredAt = DateTime.UtcNow;
-            ProfilePicture = "nopic.png";
+            ProfilePicture = "https://res.cloudinary.com/dk8mhooq1/image/upload/v1708514190/f8kgsgzed1whaih4gn90.png";
             Availability = true;
             Messages = new HashSet<Message>();
         }

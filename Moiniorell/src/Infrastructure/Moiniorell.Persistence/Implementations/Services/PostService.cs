@@ -8,12 +8,6 @@ using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
 using Moiniorell.Domain.Models;
 using Moiniorell.Infrastructure.Utilities.Extensions;
-using Moiniorell.Persistence.Implementations.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Moiniorell.Persistence.Implementations.Services
 {
@@ -23,15 +17,17 @@ namespace Moiniorell.Persistence.Implementations.Services
         private readonly ILikeRepository _likeRepo;
         private readonly IMapper _mapper;
         private readonly IWebHostEnvironment _env;
+        private readonly ICloudService _cloudService;
         private readonly IHttpContextAccessor _http;
         private readonly UserManager<AppUser> _userManager;
 
-        public PostService(IPostRepository postRepo, ILikeRepository likeRepo, IMapper mapper, IWebHostEnvironment env, IHttpContextAccessor http, UserManager<AppUser> userManager)
+        public PostService(IPostRepository postRepo, ILikeRepository likeRepo, IMapper mapper, IWebHostEnvironment env, ICloudService cloudService, IHttpContextAccessor http, UserManager<AppUser> userManager)
         {
             _postRepo = postRepo;
             _likeRepo = likeRepo;
             _mapper = mapper;
             _env = env;
+            _cloudService = cloudService;
             _http = http;
             _userManager = userManager;
         }
@@ -52,11 +48,11 @@ namespace Moiniorell.Persistence.Implementations.Services
                     str.Add("Max file size is 2 Mb");
                     return str;
                 }
-                post.Image = await vm.File.CreateFileAsync(_env.WebRootPath, true, "assets", "images");
-                
+                post.Image = await _cloudService.FileCreateAsync(vm.File);
+
             }
             post.AuthorId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-            AppUser user =await _userManager.FindByIdAsync(post.AuthorId);
+            AppUser user = await _userManager.FindByIdAsync(post.AuthorId);
             user.PostCount++;
             await _postRepo.CreateAsync(post);
             await _postRepo.SaveChangesAsync();
@@ -75,8 +71,8 @@ namespace Moiniorell.Persistence.Implementations.Services
 
             var followedUserIds = currentUser.Followers.Select(f => f.FolloweeId).ToList();
 
-            var posts = _postRepo.GetAll(p => followedUserIds.Contains(p.AuthorId) || p.AuthorId == currentUserId,nameof(Post.Author),nameof(Post.Comments), nameof(Post.Likes), "Comments.Replies").OrderByDescending(p => p.CreatedAt).ToList();
-            
+            var posts = _postRepo.GetAll(p => followedUserIds.Contains(p.AuthorId) || p.AuthorId == currentUserId, nameof(Post.Author), "Comments.Author", nameof(Post.Likes), "Comments.Replies").OrderByDescending(p => p.CreatedAt).ToList();
+
             return posts;
 
         }
@@ -84,7 +80,7 @@ namespace Moiniorell.Persistence.Implementations.Services
         {
 
 
-            return await _postRepo.GetSingleAsync(x=>x.Id == postId);
+            return await _postRepo.GetSingleAsync(x => x.Id == postId);
 
         }
         public async Task<List<Post>> GetMyPosts()
@@ -107,7 +103,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             var post = await _postRepo.GetSingleAsync(p => p.Id == postId);
 
             var existingLike = await _likeRepo.GetSingleAsync(l => l.PostId == postId && l.LikerId == currentUser.Id);
-            if(currentUser.Likes.Any(x => x.PostId == postId))
+            if (currentUser.Likes.Any(x => x.PostId == postId))
             {
                 return;
             }
@@ -152,6 +148,16 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task DeletePost(int postId)
         {
             var post = await _postRepo.GetSingleAsync(p => p.Id == postId);
+            var currentUserId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+
+            var currentUser = await _userManager.Users
+                .SingleOrDefaultAsync(u => u.Id == currentUserId);
+            currentUser.PostCount--;
+            if (post.Image is not null)
+            {
+
+                await _cloudService.FileDeleteAsync(post.Image);
+            }
             _postRepo.Delete(post);
             await _postRepo.SaveChangesAsync();
         }

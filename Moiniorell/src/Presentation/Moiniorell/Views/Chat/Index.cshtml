@@ -157,7 +157,7 @@
                 var userIdString = listUsers[i].userId.toString();
                 let online = listUsers[i].isOnline ? 'is-online' : "";
                 $('.users-list').append('<div id="UserBox-' + userIdString + '" class="user-box" onclick="openChatBox(' + userIdString + ')">\
-                                <img src="/assets/images/'+ listUsers[i].profilePicture + '" class="img-fluid rounded-circle mr-3 '+ online +'" style="width:50px;height:50px;">\
+                                <img src="'+ listUsers[i].profilePicture + '" class="img-fluid rounded-circle mr-3 '+ online +'" style="width:50px;height:50px;">\
                         <h5>'+ listUsers[i].fullname + '</h5>\
                     </div>');
             }

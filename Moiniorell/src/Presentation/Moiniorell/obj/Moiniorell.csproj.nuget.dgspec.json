@@ -265,6 +265,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.25.1, )"
+            },
             "Microsoft.AspNet.SignalR.Core": {
               "target": "Package",
               "version": "[2.4.3, )"

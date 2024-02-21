@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YoFxKkQ7Z2o1YiMdkCCNWY3S5v/fIEznIYQDnYu6YEE=",
+  "Hash": "A7bPCyD5Qf9yItmBefXOECrjV6MhwVlBi7kPk9f2vLQ=",
   "Source": "Moiniorell",
   "BasePath": "_content/Moiniorell",
   "Mode": "Default",
@@ -4957,6 +4957,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\9eb5ec41-ef7e-455b-abbd-639f936859e35m.jpg"
     },
     {
+      "Identity": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\a750458e-690f-4957-b25f-2dd0c8015b64shamamabob.png",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/a750458e-690f-4957-b25f-2dd0c8015b64shamamabob.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\a750458e-690f-4957-b25f-2dd0c8015b64shamamabob.png"
+    },
+    {
       "Identity": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\ad3f93e3-42b8-4f91-84be-735938f989ffnah.png",
       "SourceId": "Moiniorell",
       "SourceType": "Discovered",
@@ -5715,6 +5734,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\logo-white.png"
+    },
+    {
+      "Identity": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\mylogo.png",
+      "SourceId": "Moiniorell",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\",
+      "BasePath": "_content/Moiniorell",
+      "RelativePath": "assets/images/mylogo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\mylogo.png"
     },
     {
       "Identity": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\assets\\images\\nopic.png",

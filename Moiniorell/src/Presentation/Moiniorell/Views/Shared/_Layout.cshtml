@@ -11,7 +11,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>SocialV - Responsive Bootstrap 4 Admin Dashboard Template</title>
+    <title>Moiniorell</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="~/assets/images/favicon.ico" />
     <!-- Bootstrap CSS -->
@@ -202,7 +202,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light p-0">
                     <div class="iq-navbar-logo d-flex justify-content-between">
                         <a asp-controller="Home" asp-action="Index">
-                            <img src="~/assets/images/logo.png" class="img-fluid" alt="">
+                            <img src="~/assets/images/logo.png" class="img-fluid"  alt="">
                             <span>Moiniorell</span>
                         </a>
                     </div>
@@ -224,7 +224,7 @@
                         <ul class="navbar-nav ml-auto navbar-list">
                             <li>
                                 <a asp-controller="Profile" asp-action="User" asp-route-username="@user.UserName" class="iq-waves-effect d-flex align-items-center">
-                                    <img src="~/assets/images/@user.ProfilePicture" class="img-fluid rounded-circle mr-3" alt="user">
+                                    <img src="@user.ProfilePicture" class="img-fluid rounded-circle mr-3" alt="user">
                                     <div class="caption">
                                         <h6 class="mb-0 line-height">@user.Name</h6>
                                     </div>
@@ -255,7 +255,7 @@
                                                 <div class="iq-sub-card iq-sub-card-big d-flex align-items-center justify-content-between">
                                                     <div class="d-flex align-items-center">
                                                         <div class="">
-                                                            <img class="avatar-40 rounded" src="~/assets/images/@item.Followee.ProfilePicture" alt="">
+                                                            <img class="avatar-40 rounded" src="@item.Followee.ProfilePicture" alt="">
                                                         </div>
                                                         <div class="media-body ml-3">
                                                                 <h6 class="mb-0 ">@item.Followee.Name @item.Followee.Surname</h6>
