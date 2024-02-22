@@ -38,17 +38,24 @@ namespace Moiniorell.Persistence.Implementations.Services
             Post post = _mapper.Map<Post>(vm);
             if (vm.File is not null)
             {
-                if (!vm.File.CheckFileType("image"))
+                if (vm.File.CheckFileType("image"))
                 {
-                    str.Add("Only images allowed");
+                    if (vm.File.CheckFileSize(2))
+                    {
+                        str.Add("Max file size is 2 Mb");
+                        return str;
+                    }
+                    post.Image = await _cloudService.FileCreateAsync(vm.File);
+                }
+                else if (vm.File.CheckFileType("video"))
+                {
+                    post.Image = await vm.File.CreateFileAsync(_env.WebRootPath,false,"assets","images");
+                }
+                else
+                {
+                    str.Add("Only images and videos allowed");
                     return str;
                 }
-                if (vm.File.CheckFileSize(2))
-                {
-                    str.Add("Max file size is 2 Mb");
-                    return str;
-                }
-                post.Image = await _cloudService.FileCreateAsync(vm.File);
 
             }
             post.AuthorId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;

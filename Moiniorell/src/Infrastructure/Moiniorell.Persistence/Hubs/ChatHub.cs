@@ -2,15 +2,7 @@
 using Microsoft.AspNetCore.SignalR;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
-using Moiniorell.Domain.Models;
-using Moiniorell.Persistence.Implementations.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Net.WebRequestMethods;
 
 namespace Moiniorell.Persistence.Hubs
 {

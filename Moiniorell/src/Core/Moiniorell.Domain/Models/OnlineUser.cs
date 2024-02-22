@@ -9,7 +9,7 @@ namespace Moiniorell.Domain.Models
 
     public class OnlineUser
     {
-        public string ConnectionId { get; set; }
+        public List<string> ConnectionIds { get; set; }
         public string Username { get; set; }
     }
 

@@ -1,4 +1,6 @@
 ﻿@using Humanizer
+@using Microsoft.Win32
+@using System.IO
 @inject UserManager<AppUser> _userManager
 @{
     AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
@@ -154,12 +156,48 @@
                                     <div class="d-flex justify-content-center">
                                         @if (item.Image is not null)
                                         {
-                                            
-                                        <div style="width: 640px; height: 480px;">
+                                            string contentType = GetContentType(item.Image);
+                                             string GetContentType(string fileName)
+                                            {
+                                                string extension = System.IO.Path.GetExtension(item.Image);
+                                                string contentType = Registry.GetValue(@"HKEY_CLASSES_ROOT\" + extension, "Content Type", null) as string;
 
-                                            <img src="@item.Image" alt="post-image" class="img-fluid rounded zoom-image" style="width: 640px; height: 480px; object-fit: contain;">
+                                                return contentType ?? "application/octet-stream";
+                                            }
+                                           if (contentType.Contains("image"))
+                                            {
+                                                <div style="width: 640px; height: 480px;">
 
-                                        </div>
+                                                    <img src="@item.Image" alt="post-image" class="img-fluid rounded zoom-image" style="width: 640px; height: 480px; object-fit: contain;">
+                                                </div>
+                                            }
+                                            else
+                                            {
+
+                                                <style>
+                                                    .vjs-big-play-button {
+                                                        top: 50% !important;
+                                                        left: 50% !important;
+                                                        transform: translate(-50%, -50%) !important;
+                                                    }
+                                                </style>
+
+                                                <div class="video-js-instance">
+                                                    <video id="@($"my-video-{item.Id}")"
+                                                           class="video-js"
+                                                           controls
+                                                           preload="auto"
+                                                           width="640"
+                                                           height="360"
+                                                           data-setup='{}'>
+                                                        <source src="~/assets/images/@item.Image" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                </div>
+
+                                                
+                                            }
+                                       
                                         }
                                     </div>
                                 </div>
@@ -298,13 +336,11 @@
                                                         <h6>@comm.Author.Name @comm.Author.Surname </h6>
                                                         <p class="mb-0">@comm.Text</p>
                                                         <div class="d-flex flex-wrap align-items-center comment-activity">
-                                                            <a href="#">like</a>
-                                                            <a href="#" id="openFormLink">reply</a>
                                                             <span> @comm.CreatedAt.Humanize() </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="replies" style="margin-left: 36px;">
+                                                <div class="replies" style="margin-left: 56px;">
                                                     @foreach (var reply in comm.Replies.Take(3)) // Only take the first 5 replies
                                                     {
                                                         <div class="d-flex flex-wrap">
@@ -361,6 +397,7 @@
                                             </li>
 
                                         }
+                                        
                                     </ul>
                                     @await Html.PartialAsync("_CreateCommentForm", new CreateCommentVM { PostId = item.Id })
                                     @* <form class="comment-text d-flex align-items-center mt-3" asp-controller="Comment" asp-action="CreateComment" method="post">
@@ -376,7 +413,12 @@
                     </div>
 
                 }
-
+                <script>
+                    const videoElements = document.querySelectorAll('.video-js');
+                    videoElements.forEach((videoElement) => {
+                        videojs(videoElement);
+                    });
+                </script>
 
             </div>
             <div class="col-lg-3">

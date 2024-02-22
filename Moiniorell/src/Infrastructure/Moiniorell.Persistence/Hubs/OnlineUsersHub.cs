@@ -1,12 +1,7 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.SignalR;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Security.Claims;
 
 namespace Moiniorell.Persistence.Hubs
 {
@@ -23,28 +18,33 @@ namespace Moiniorell.Persistence.Hubs
 
         public override async Task OnConnectedAsync()
         {
-            // Get the username from the context or wherever you store it
             string username = Context.User.Identity.Name;
 
-            var onlineUser = new OnlineUser
+            if (OnlineUsers.Any(x => x.Username == username))
             {
-                ConnectionId = Context.ConnectionId,
-                Username = username,
-                // Set other user information as needed
-            };
-
-            OnlineUsers.Add(onlineUser);
+                OnlineUsers.FirstOrDefault(x => x.Username == username).ConnectionIds.Add(Context.ConnectionId);
+            }
+            else
+            {
+                var onlineUser = new OnlineUser
+                {
+                    ConnectionIds = new List<string>() { Context.ConnectionId },
+                    Username = username,
+                };
+                OnlineUsers.Add(onlineUser);
+            }
             await UpdateOnlineUsers();
             await base.OnConnectedAsync();
         }
 
         public override async Task OnDisconnectedAsync(Exception exception)
         {
-            var user = OnlineUsers.Find(u => u.ConnectionId == Context.ConnectionId);
+            //var user = OnlineUsers.Find(u => u.ConnectionId == Context.ConnectionId);
+            var username = Context.User?.Identity.Name;
 
-            if (user != null)
+            if (username != null)
             {
-                OnlineUsers.Remove(user);
+                OnlineUsers.RemoveAll(x=>x.Username==username);
                 await UpdateOnlineUsers();
             }
 

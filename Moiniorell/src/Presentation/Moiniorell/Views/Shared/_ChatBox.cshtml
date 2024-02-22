@@ -173,7 +173,7 @@
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8'
                 },
-                mode: 'cors', // You may need to adjust the mode based on your server setup
+                mode: 'cors', 
             })
                 .then(response => {
                     if (!response.ok) {
@@ -183,7 +183,15 @@
                 })
                 .then(res => {
                     if (res === true) {
-                        $(element).closest('#DVChatBox-' + toUserId).find('.messages-list').append('<div class="dvmsg dvmsg-to"><span class="msg">' + message + '</span></div>');
+                        var now = new Date();
+                        var hours = now.getHours();
+                        var minutes = now.getMinutes();
+                        
+                        var formattedHours = ('0' + hours).slice(-2);
+                        var formattedMinutes = ('0' + minutes).slice(-2);
+
+                        var currentTime = formattedHours + ':' + formattedMinutes;
+                        $(element).closest('#DVChatBox-' + toUserId).find('.messages-list').append('<div class="dvmsg dvmsg-to"><span class="msg">' + message + '</span> <div class="msg-date"> '+ currentTime +'</div> </div>');
                         $(element).closest('#DVChatBox-' + toUserId).find('.messages-list').scrollTop(999999999999);
                         $(element).val('');
                     }

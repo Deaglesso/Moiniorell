@@ -116,7 +116,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label asp-for="BirthDate">Your Birthdate</label>
-                                    <input type="date" class="form-control mb-0" asp-for="BirthDate" asp-format="{0:yyyy-MM-dd}">
+                                    <input type="date" class="form-control mb-0" asp-for="BirthDate" asp-format="{0:yyyy-MM-dd}" max="@DateTime.Now.AddYears(-18).ToString("yyyy-MM-dd")">
                                     <span asp-validation-for="BirthDate"></span>
                                 </div>
                             </div>
@@ -174,5 +174,20 @@
     <script src="~/assets/js/chart-custom.js"></script>
     <!-- Custom JavaScript -->
     <script src="~/assets/js/custom.js"></script>
+    <script>
+        var birthdayInput = document.querySelector('input[type="date"]');
+
+        birthdayInput.addEventListener('change', function () {
+            var selectedDate = new Date(this.value);
+            var minDate = new Date();
+            minDate.setFullYear(minDate.getFullYear() - 18);
+
+            if (selectedDate > minDate) {
+
+                alert('Persons under the age of 18 cannot register.');
+                this.value = '';
+            }
+        });
+    </script>
 </body>
 </html>

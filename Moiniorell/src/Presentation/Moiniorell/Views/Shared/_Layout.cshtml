@@ -23,7 +23,8 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="~/assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.5.0/croppie.css" />
-
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
 </head>
 <body class="sidebar-main-active right-column-fixed without-left-sidebar">
     <!-- loader Start -->
@@ -231,7 +232,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html" class="iq-waves-effect d-flex align-items-center">
+                                <a asp-controller="Home" asp-action="Index" class="iq-waves-effect d-flex align-items-center">
                                     <i class="ri-home-line"></i>
                                     @if (user.Followees.Where(f => f.Status == false).Any())
                                     {
@@ -274,7 +275,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                           @*  <li class="nav-item">
                                 <a href="#" class="search-toggle iq-waves-effect">
                                     <div id="lottie-beil"></div>
                                 </a>
@@ -335,11 +336,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            </li> *@
                             <li class="nav-item dropdown">
-                                <a href="#" class="search-toggle iq-waves-effect">
+                                <a asp-controller="Chat" asp-action="Index" class="search-toggle iq-waves-effect">
                                     <div id="lottie-mail"></div>
-                                    <span class="bg-primary count-mail"></span>
                                 </a>
                                 @* <div class="iq-sub-dropdown">vv
                                     <div class="iq-card shadow-none m-0">
@@ -406,8 +406,13 @@
                                     </div>
                                 </div> *@
                             </li>
+                            <li>
+                                <div class="d-inline-block w-100 text-center ">
+                                    <a class="bg-primary iq-sign-btn" asp-controller="User" asp-action="Logout" role="button"><i class="ri-login-box-line mb-2"></i></a>
+                                </div>
+                            </li>
                         </ul>
-                        <ul class="navbar-list">
+                        @* <ul class="navbar-list">
                             <li>
                                 <a href="#" class="search-toggle iq-waves-effect d-flex align-items-center">
                                     <i class="ri-arrow-down-s-fill"></i>
@@ -470,7 +475,7 @@
                                     </div>
                                 </div>
                             </li>
-                        </ul>
+                        </ul> *@
                     </div>
                 </nav>
             </div>
