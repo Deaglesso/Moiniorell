@@ -5,99 +5,96 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Moiniorell
 build_property.RootNamespace = Moiniorell
-build_property.ProjectDir = C:\Users\Said\Documents\Final\Moiniorell\src\Presentation\Moiniorell\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Presentation\Moiniorell\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Said\Documents\Final\Moiniorell\src\Presentation\Moiniorell
+build_property.MSBuildProjectDirectory = C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Presentation\Moiniorell
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Chat/Index.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Chat/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Home/ErrorPage.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Home/ErrorPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvclBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Home/Index.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Home/Search.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Home/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Profile/Edit.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Profile/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Profile/User.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Profile/User.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Shared/_ChatBox.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Shared/_ChatBox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaGF0Qm94LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Shared/_CreateCommentForm.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Shared/_CreateCommentForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVDb21tZW50Rm9ybS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Shared/_CreateReplyForm.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Shared/_CreateReplyForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DcmVhdGVSZXBseUZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Shared/_PostPartialView.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Shared/_PostPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qb3N0UGFydGlhbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/User/ConfirmEmail.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/User/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/User/ForgotPassword.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/User/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/User/ForgotPasswordConfirmation.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/User/ForgotPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/User/Login.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/User/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/User/Register.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/User/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/User/ResetPassword.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/User/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/User/ResetPasswordConfirmation.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/User/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/User/SuccessRegistration.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/User/SuccessRegistration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTdWNjZXNzUmVnaXN0cmF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/_ViewImports.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/_ViewStart.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Said/Documents/Final/Moiniorell/src/Presentation/Moiniorell/Views/Shared/_Layout.cshtml]
+[C:/Users/Omen/Desktop/New folder/Moiniorell/Moiniorell/src/Presentation/Moiniorell/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5yqj6dx9zh

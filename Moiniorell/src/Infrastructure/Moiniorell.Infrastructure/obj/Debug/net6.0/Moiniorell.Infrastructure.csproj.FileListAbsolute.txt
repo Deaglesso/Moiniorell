@@ -33,3 +33,20 @@ C:\Users\Said\Documents\Final\Moiniorell\src\Infrastructure\Moiniorell.Infrastru
 C:\Users\Said\Documents\Final\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\refint\Moiniorell.Infrastructure.dll
 C:\Users\Said\Documents\Final\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\Moiniorell.Infrastructure.pdb
 C:\Users\Said\Documents\Final\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\ref\Moiniorell.Infrastructure.dll
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\bin\Debug\net6.0\Moiniorell.Infrastructure.deps.json
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\bin\Debug\net6.0\Moiniorell.Infrastructure.dll
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\bin\Debug\net6.0\Moiniorell.Infrastructure.pdb
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\bin\Debug\net6.0\Moiniorell.Application.dll
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\bin\Debug\net6.0\Moiniorell.Domain.dll
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\bin\Debug\net6.0\Moiniorell.Application.pdb
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\bin\Debug\net6.0\Moiniorell.Domain.pdb
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\Moiniorell.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\Moiniorell.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\Moiniorell.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\Moiniorell.Infrastructure.AssemblyInfo.cs
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\Moiniorell.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\Moiniorell.Infrastructure.csproj.CopyComplete
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\Moiniorell.Infrastructure.dll
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\refint\Moiniorell.Infrastructure.dll
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\Moiniorell.Infrastructure.pdb
+C:\Users\Omen\Desktop\New folder\Moiniorell\Moiniorell\src\Infrastructure\Moiniorell.Infrastructure\obj\Debug\net6.0\ref\Moiniorell.Infrastructure.dll
