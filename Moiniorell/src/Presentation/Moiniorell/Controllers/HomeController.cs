@@ -1,16 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
-using Microsoft.EntityFrameworkCore;
 using Moiniorell.Application.Abstractions.Services;
 using Moiniorell.Application.ViewModels;
 using Moiniorell.Domain.Models;
-using Moiniorell.Infrastructure.Utilities.Extensions;
 using Moiniorell.Persistence.Hubs;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Formats.Jpeg;
-using SixLabors.ImageSharp.Processing;
-using System.Security.Claims;
 
 namespace Moiniorell.Controllers
 {
@@ -29,13 +23,20 @@ namespace Moiniorell.Controllers
             _userService = userService;
             _hubContext = hubContext;
         }
-
+        [HttpGet]
+        public async Task<IActionResult> LoadMorePosts(int page)
+        {
+            var posts = await _postService.GetPostsByPage(page, pageSize: 3);
+            //var posts = await _postService.GetPosts();
+            //Evvel butun postlari cekerdim ve istifade ederdim indi ise scroll ile load more edirem auto. Lakin buglar ola biler. Stable olan versiyasi butun postlari cekerekdi
+            return PartialView("_PostPartialView", posts);
+        }
         public async Task<IActionResult> Index()
         {
            
             HomeVM vm = new HomeVM
             {
-                Posts = await _postService.GetPosts(),
+                Posts = await _postService.GetPostsByPage(1, pageSize: 3),
             };
 
             return View(vm);

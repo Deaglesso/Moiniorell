@@ -3,20 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\infrastructure\\moiniorell.persistence\\implementations\\services\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|solutionrelative:src\\infrastructure\\moiniorell.persistence\\implementations\\services\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\infrastructure\\moiniorell.persistence\\implementations\\repositories\\generic\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|solutionrelative:src\\infrastructure\\moiniorell.persistence\\implementations\\repositories\\generic\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\infrastructure\\moiniorell.persistence\\implementations\\services\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|solutionrelative:src\\infrastructure\\moiniorell.persistence\\implementations\\services\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\core\\moiniorell.application\\abstractions\\repositories\\generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|solutionrelative:src\\core\\moiniorell.application\\abstractions\\repositories\\generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\infrastructure\\moiniorell.persistence\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|solutionrelative:src\\infrastructure\\moiniorell.persistence\\dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\infrastructure\\moiniorell.persistence\\serviceregistration\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|solutionrelative:src\\infrastructure\\moiniorell.persistence\\serviceregistration\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\views\\shared\\_postpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\views\\shared\\_postpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\core\\moiniorell.application\\abstractions\\services\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|solutionrelative:src\\core\\moiniorell.application\\abstractions\\services\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -47,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{2503B75B-05C3-4846-A60B-A42EBF6AE0CA}|src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj|solutionrelative:src\\infrastructure\\moiniorell.infrastructure\\implementations\\exceptionhandlerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\infrastructure\\moiniorell.persistence\\serviceregistration\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|solutionrelative:src\\infrastructure\\moiniorell.persistence\\serviceregistration\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\infrastructure\\moiniorell.persistence\\implementations\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|solutionrelative:src\\infrastructure\\moiniorell.persistence\\implementations\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -79,10 +107,6 @@
       "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2503B75B-05C3-4846-A60B-A42EBF6AE0CA}|src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\infrastructure\\moiniorell.infrastructure\\utilities\\extensions\\stringhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2503B75B-05C3-4846-A60B-A42EBF6AE0CA}|src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj|solutionrelative:src\\infrastructure\\moiniorell.infrastructure\\utilities\\extensions\\stringhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -93,10 +117,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\views\\home\\errorpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\views\\home\\errorpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\presentation\\moiniorell\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E6BB248-E1D5-47D8-AF66-B876FD3E2197}|src\\Presentation\\Moiniorell\\Moiniorell.csproj|solutionrelative:src\\presentation\\moiniorell\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2503B75B-05C3-4846-A60B-A42EBF6AE0CA}|src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\infrastructure\\moiniorell.infrastructure\\serviceregistration\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -125,10 +145,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\core\\moiniorell.application\\abstractions\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|solutionrelative:src\\core\\moiniorell.application\\abstractions\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\core\\moiniorell.application\\abstractions\\services\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|solutionrelative:src\\core\\moiniorell.application\\abstractions\\services\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\core\\moiniorell.application\\viewmodels\\createpostvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -275,14 +291,6 @@
       "RelativeMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|solutionrelative:src\\core\\moiniorell.application\\mapping\\commentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\core\\moiniorell.application\\abstractions\\repositories\\generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|solutionrelative:src\\core\\moiniorell.application\\abstractions\\repositories\\generic\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\infrastructure\\moiniorell.persistence\\implementations\\repositories\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7DC3F04-139D-47FF-B87B-61419EF84C82}|src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj|solutionrelative:src\\infrastructure\\moiniorell.persistence\\implementations\\repositories\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|c:\\users\\said\\documents\\final\\moiniorell\\src\\core\\moiniorell.application\\serviceregistration\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9CA344F3-1135-408E-83FA-E9B01FC4633F}|src\\Core\\Moiniorell.Application\\Moiniorell.Application.csproj|solutionrelative:src\\core\\moiniorell.application\\serviceregistration\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -424,11 +432,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "User.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Profile\\User.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Profile\\User.cshtml",
@@ -441,13 +449,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "src\\Presentation\\Moiniorell\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAJAAAAAAAAAAAAAAAJwAAAARAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAJwAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-02-21T06:24:20.448Z",
               "IsPinned": true,
@@ -455,20 +463,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\Generic\\Repository.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\Generic\\Repository.cs",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\Generic\\Repository.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\Generic\\Repository.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAzwBUAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T18:14:41.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "PostService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Services\\PostService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Services\\PostService.cs",
               "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Services\\PostService.cs",
               "RelativeToolTip": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Services\\PostService.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAAlwHkAAAAJAAAA",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAgwJAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-16T21:43:09.41Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\Generic\\IRepository.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\Generic\\IRepository.cs",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\Generic\\IRepository.cs",
+              "RelativeToolTip": "src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\Generic\\IRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T21:43:09.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Program.cs",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Program.cs",
+              "RelativeToolTip": "src\\Presentation\\Moiniorell\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAACEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T06:24:15.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "src\\Presentation\\Moiniorell\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T06:51:17.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Controllers\\UserController.cs",
@@ -481,46 +541,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "src\\Presentation\\Moiniorell\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAIBAAAAAAAAAAAhwA8BAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-02-20T07:10:38.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Post.cs",
-              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Post.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\Post.cs",
-              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Post.cs",
-              "RelativeToolTip": "src\\Core\\Moiniorell.Domain\\Models\\Post.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAiAAAA",
+              "DocumentIndex": 3,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\PostController.cs",
+              "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Controllers\\PostController.cs",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\PostController.cs",
+              "RelativeToolTip": "src\\Presentation\\Moiniorell\\Controllers\\PostController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-16T21:43:09.545Z",
+              "WhenOpened": "2024-02-16T21:43:09.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Comment.cs",
-              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Comment.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\Comment.cs",
-              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Comment.cs",
-              "RelativeToolTip": "src\\Core\\Moiniorell.Domain\\Models\\Comment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAgAAAA",
+              "DocumentIndex": 8,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\DAL\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\AppDbContext.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Moiniorell.Persistence\\DAL\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-16T21:43:09.619Z",
+              "WhenOpened": "2024-02-23T18:23:33.238Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
+              "Title": "ServiceRegistration.cs",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\ServiceRegistration\\ServiceRegistration.cs",
+              "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\ServiceRegistration\\ServiceRegistration.cs",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\ServiceRegistration\\ServiceRegistration.cs",
+              "RelativeToolTip": "src\\Infrastructure\\Moiniorell.Persistence\\ServiceRegistration\\ServiceRegistration.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T11:24:12.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Reply.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Reply.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\Reply.cs",
@@ -528,25 +588,71 @@
               "RelativeToolTip": "src\\Core\\Moiniorell.Domain\\Models\\Reply.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-16T21:43:09.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-16T21:43:09.675Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "src\\Presentation\\Moiniorell\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAmwCAAAAAIAAAA",
+              "DocumentIndex": 14,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Comment.cs",
+              "RelativeToolTip": "src\\Core\\Moiniorell.Domain\\Models\\Comment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T06:51:17.468Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-16T21:43:09.619Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Post.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\Post.cs",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Post.cs",
+              "RelativeToolTip": "src\\Core\\Moiniorell.Domain\\Models\\Post.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T21:43:09.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "src\\Presentation\\Moiniorell\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAIBAAAAAAAAAAAhwA8BAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-20T07:10:38.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_PostPartialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Shared\\_PostPartialView.cshtml",
+              "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Shared\\_PostPartialView.cshtml",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Shared\\_PostPartialView.cshtml",
+              "RelativeToolTip": "src\\Presentation\\Moiniorell\\Views\\Shared\\_PostPartialView.cshtml",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAAAEABAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-02-23T16:58:45.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IPostService.cs",
+              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IPostService.cs",
+              "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IPostService.cs",
+              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IPostService.cs",
+              "RelativeToolTip": "src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IPostService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-16T21:43:09.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ProfileController.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\ProfileController.cs",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Controllers\\ProfileController.cs",
@@ -554,12 +660,11 @@
               "RelativeToolTip": "src\\Presentation\\Moiniorell\\Controllers\\ProfileController.cs",
               "ViewState": "AQIAAFEAAAAAAAAAAAA7wFkAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T12:11:16.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-21T12:11:16.619Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 17,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Services\\UserService.cs",
@@ -571,19 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\ServiceRegistration\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\ServiceRegistration\\ServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\ServiceRegistration\\ServiceRegistration.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Moiniorell.Persistence\\ServiceRegistration\\ServiceRegistration.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAASwBIAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T11:24:12.57Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 18,
               "Title": "ExceptionHandlerService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Implementations\\ExceptionHandlerService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Infrastructure\\Implementations\\ExceptionHandlerService.cs",
@@ -595,7 +688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Services\\AuthService.cs",
@@ -607,7 +700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Implementations\\EmailService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Infrastructure\\Implementations\\EmailService.cs",
@@ -619,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\appsettings.json",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\appsettings.json",
@@ -631,7 +724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "ICommentService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Services\\ICommentService.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Services\\ICommentService.cs",
@@ -643,7 +736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "CommentService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Services\\CommentService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Services\\CommentService.cs",
@@ -655,7 +748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "CommentController.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\CommentController.cs",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Controllers\\CommentController.cs",
@@ -667,19 +760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "PostController.cs",
-              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\PostController.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Controllers\\PostController.cs",
-              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\PostController.cs",
-              "RelativeToolTip": "src\\Presentation\\Moiniorell\\Controllers\\PostController.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAqwCwAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-16T21:43:09.768Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "StringHelper.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Utilities\\Extensions\\StringHelper.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Infrastructure\\Utilities\\Extensions\\StringHelper.cs",
@@ -691,7 +772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 27,
               "Title": "FileValidator.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Utilities\\Extensions\\FileValidator.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Infrastructure\\Utilities\\Extensions\\FileValidator.cs",
@@ -703,7 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 28,
               "Title": "ErrorPage.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Home\\ErrorPage.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Home\\ErrorPage.cshtml",
@@ -715,19 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Program.cs",
-              "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Program.cs",
-              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Program.cs",
-              "RelativeToolTip": "src\\Presentation\\Moiniorell\\Program.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAAACEAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-21T06:24:15.799Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\ServiceRegistration\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Infrastructure\\ServiceRegistration\\ServiceRegistration.cs",
@@ -739,7 +808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "IExceptionHandlerService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IExceptionHandlerService.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IExceptionHandlerService.cs",
@@ -751,7 +820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IEmailService.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IEmailService.cs",
@@ -763,7 +832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "CloudService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Implementations\\CloudService.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Infrastructure\\Implementations\\CloudService.cs",
@@ -775,7 +844,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "ICloudService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Services\\ICloudService.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Services\\ICloudService.cs",
@@ -787,19 +856,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "IPostService.cs",
-              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IPostService.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IPostService.cs",
-              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IPostService.cs",
-              "RelativeToolTip": "src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IPostService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-16T21:43:09.727Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "Moiniorell.Infrastructure.csproj",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Infrastructure\\Moiniorell.Infrastructure.csproj",
@@ -811,7 +868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "CreatePostVM.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ViewModels\\CreatePostVM.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ViewModels\\CreatePostVM.cs",
@@ -823,7 +880,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 35,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IAuthService.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Services\\IAuthService.cs",
@@ -835,7 +892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 41,
               "Title": "OnlineUser.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\OnlineUser.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\OnlineUser.cs",
@@ -847,7 +904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "Search.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Home\\Search.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Home\\Search.cshtml",
@@ -859,7 +916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\User\\Register.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\User\\Register.cshtml",
@@ -871,7 +928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "OnlineUsersHub.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Hubs\\OnlineUsersHub.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Hubs\\OnlineUsersHub.cs",
@@ -883,7 +940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "ChatHub.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Hubs\\ChatHub.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Hubs\\ChatHub.cs",
@@ -895,7 +952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 42,
               "Title": "_ChatBox.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Shared\\_ChatBox.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Shared\\_ChatBox.cshtml",
@@ -907,7 +964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 43,
               "Title": "MessageDTO.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ViewModels\\MessageDTO.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ViewModels\\MessageDTO.cs",
@@ -919,7 +976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 44,
               "Title": "ChatController.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Controllers\\ChatController.cs",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Controllers\\ChatController.cs",
@@ -931,7 +988,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 45,
               "Title": "Moiniorell.csproj",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Moiniorell.csproj",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Moiniorell.csproj",
@@ -943,7 +1000,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 109,
               "Title": "20240221113255_initCloud.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240221113255_initCloud.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240221113255_initCloud.cs",
@@ -955,7 +1012,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 46,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\User\\Login.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\User\\Login.cshtml",
@@ -967,7 +1024,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 47,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\User\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\User\\ForgotPassword.cshtml",
@@ -979,7 +1036,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 48,
               "Title": "ConfirmEmail.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\User\\ConfirmEmail.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\User\\ConfirmEmail.cshtml",
@@ -991,7 +1048,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 50,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\_ViewImports.cshtml",
@@ -1003,7 +1060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 51,
               "Title": "_CreateCommentForm.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Shared\\_CreateCommentForm.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Shared\\_CreateCommentForm.cshtml",
@@ -1015,7 +1072,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 49,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\_ViewStart.cshtml",
@@ -1027,7 +1084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 52,
               "Title": "AppUser.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\AppUser.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\AppUser.cs",
@@ -1039,7 +1096,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 53,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Profile\\Edit.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Profile\\Edit.cshtml",
@@ -1051,7 +1108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 54,
               "Title": "Moiniorell.Persistence.csproj",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Moiniorell.Persistence.csproj",
@@ -1063,7 +1120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 55,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Message.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\Message.cs",
@@ -1075,7 +1132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 56,
               "Title": "EditProfileVM.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ViewModels\\EditProfileVM.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ViewModels\\EditProfileVM.cs",
@@ -1087,7 +1144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 57,
               "Title": "UserConnection.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\UserConnection.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\UserConnection.cs",
@@ -1099,7 +1156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 58,
               "Title": "IUserConnectionRepository.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\IUserConnectionRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\IUserConnectionRepository.cs",
@@ -1111,7 +1168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 59,
               "Title": "ReplyRepository.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\ReplyRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\ReplyRepository.cs",
@@ -1123,7 +1180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 105,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\chat\\js\\site.js",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\wwwroot\\chat\\js\\site.js",
@@ -1134,7 +1191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 106,
               "Title": "chat.js",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\chat\\js\\chat.js",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\wwwroot\\chat\\js\\chat.js",
@@ -1145,7 +1202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 107,
               "Title": "signalr.js",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\chat\\signalr\\signalr.js",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\wwwroot\\chat\\signalr\\signalr.js",
@@ -1156,7 +1213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 108,
               "Title": "signalrReqHandler.js",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\wwwroot\\chat\\js\\signalrReqHandler.js",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\wwwroot\\chat\\js\\signalrReqHandler.js",
@@ -1167,7 +1224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 60,
               "Title": "Follow.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Follow.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\Follow.cs",
@@ -1179,7 +1236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 61,
               "Title": "_CreateReplyForm.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\Shared\\_CreateReplyForm.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\Shared\\_CreateReplyForm.cshtml",
@@ -1191,7 +1248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 62,
               "Title": "AppUserProfile.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Mapping\\AppUserProfile.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Mapping\\AppUserProfile.cs",
@@ -1203,7 +1260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 63,
               "Title": "PostProfile.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Mapping\\PostProfile.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Mapping\\PostProfile.cs",
@@ -1215,7 +1272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 64,
               "Title": "ForgotPasswordConfirmation.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\User\\ForgotPasswordConfirmation.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\User\\ForgotPasswordConfirmation.cshtml",
@@ -1227,7 +1284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 66,
               "Title": "CreateCommentVM.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ViewModels\\CreateCommentVM.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ViewModels\\CreateCommentVM.cs",
@@ -1239,7 +1296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 65,
               "Title": "HomeVM.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ViewModels\\HomeVM.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ViewModels\\HomeVM.cs",
@@ -1251,7 +1308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 67,
               "Title": "ResetPasswordConfirmation.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\User\\ResetPasswordConfirmation.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\User\\ResetPasswordConfirmation.cshtml",
@@ -1263,7 +1320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 68,
               "Title": "ResetPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Views\\User\\ResetPassword.cshtml",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Views\\User\\ResetPassword.cshtml",
@@ -1275,7 +1332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 69,
               "Title": "ResetPasswordVM.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ViewModels\\ResetPasswordVM.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ViewModels\\ResetPasswordVM.cs",
@@ -1287,7 +1344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 70,
               "Title": "Like.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\Like.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\Like.cs",
@@ -1299,7 +1356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 71,
               "Title": "CommentProfile.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Mapping\\CommentProfile.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Mapping\\CommentProfile.cs",
@@ -1311,31 +1368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\Generic\\IRepository.cs",
-              "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\Generic\\IRepository.cs",
-              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\Generic\\IRepository.cs",
-              "RelativeToolTip": "src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\Generic\\IRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAABjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-16T21:43:09.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "CommentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\CommentRepository.cs",
-              "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\CommentRepository.cs",
-              "ToolTip": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\CommentRepository.cs",
-              "RelativeToolTip": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\CommentRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-16T21:43:09.717Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 73,
               "Title": "IPostRepository.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\IPostRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\IPostRepository.cs",
@@ -1347,7 +1380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 72,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ServiceRegistration\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ServiceRegistration\\ServiceRegistration.cs",
@@ -1359,7 +1392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 74,
               "Title": "CreateReplyVM.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ViewModels\\CreateReplyVM.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ViewModels\\CreateReplyVM.cs",
@@ -1371,7 +1404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 75,
               "Title": "ForgotPasswordVM.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ViewModels\\ForgotPasswordVM.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ViewModels\\ForgotPasswordVM.cs",
@@ -1383,7 +1416,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 76,
               "Title": "CommentLike.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Models\\CommentLike.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Models\\CommentLike.cs",
@@ -1395,7 +1428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 77,
               "Title": "ICommentRepository.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\ICommentRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\ICommentRepository.cs",
@@ -1407,7 +1440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 79,
               "Title": "ILikeRepository.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\ILikeRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\ILikeRepository.cs",
@@ -1419,7 +1452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 78,
               "Title": "IFollowRepository.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\IFollowRepository.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\Abstractions\\Repositories\\IFollowRepository.cs",
@@ -1431,7 +1464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 80,
               "Title": "PostRepository.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\PostRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\PostRepository.cs",
@@ -1443,7 +1476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 81,
               "Title": "LikeRepository.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\LikeRepository.cs",
               "RelativeDocumentMoniker": "src\\Infrastructure\\Moiniorell.Persistence\\Implementations\\Repositories\\LikeRepository.cs",
@@ -1455,7 +1488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 83,
               "Title": "20240208151844_rest1.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Migrations\\20240208151844_rest1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Migrations\\20240208151844_rest1.cs",
@@ -1466,7 +1499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 82,
               "Title": "20240208153015_rest2.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Migrations\\20240208153015_rest2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Migrations\\20240208153015_rest2.cs",
@@ -1477,7 +1510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 84,
               "Title": "20240208111038_commentfix2.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208111038_commentfix2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208111038_commentfix2.cs",
@@ -1488,7 +1521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 85,
               "Title": "20240208110924_commentfix1.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208110924_commentfix1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208110924_commentfix1.cs",
@@ -1499,7 +1532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 86,
               "Title": "20240208110629_commentfix.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208110629_commentfix.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208110629_commentfix.cs",
@@ -1510,7 +1543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 87,
               "Title": "20240208110513_PostCommentCreatedAgain5.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208110513_PostCommentCreatedAgain5.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208110513_PostCommentCreatedAgain5.cs",
@@ -1521,7 +1554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 88,
               "Title": "20240208110109_PostCommentCreatedAgain4.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208110109_PostCommentCreatedAgain4.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208110109_PostCommentCreatedAgain4.cs",
@@ -1532,7 +1565,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 89,
               "Title": "20240208105423_PostCommentCreatedAgain3.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208105423_PostCommentCreatedAgain3.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208105423_PostCommentCreatedAgain3.cs",
@@ -1543,7 +1576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 90,
               "Title": "20240208105115_PostCommentCreatedAgain2.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208105115_PostCommentCreatedAgain2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208105115_PostCommentCreatedAgain2.cs",
@@ -1554,7 +1587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 91,
               "Title": "20240208105041_PostCommentCreatedAgain1.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208105041_PostCommentCreatedAgain1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208105041_PostCommentCreatedAgain1.cs",
@@ -1565,7 +1598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 92,
               "Title": "20240208104823_PostCommentCreatedAgain.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208104823_PostCommentCreatedAgain.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208104823_PostCommentCreatedAgain.cs",
@@ -1576,7 +1609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 93,
               "Title": "20240208104344_PostCommentCreated2.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208104344_PostCommentCreated2.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208104344_PostCommentCreated2.cs",
@@ -1587,7 +1620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 94,
               "Title": "20240208104033_PostCommentCreated.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208104033_PostCommentCreated.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208104033_PostCommentCreated.cs",
@@ -1598,7 +1631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 95,
               "Title": "20240208104304_PostCommentCreated1.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208104304_PostCommentCreated1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\DAL\\Migrations\\20240208104304_PostCommentCreated1.cs",
@@ -1609,7 +1642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 96,
               "Title": "20240205112759_FollowerTableIdModified4.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Migrations\\20240205112759_FollowerTableIdModified4.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Migrations\\20240205112759_FollowerTableIdModified4.cs",
@@ -1620,7 +1653,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 97,
               "Title": "20240205113336_Test1.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Migrations\\20240205113336_Test1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Migrations\\20240205113336_Test1.cs",
@@ -1631,7 +1664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 98,
               "Title": "20240205113003_Test.cs",
               "DocumentMoniker": "C:\\Users\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Migrations\\20240205113003_Test.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Omen\\Documents\\SocialFinal\\Moiniorell\\src\\Infrastructure\\Moiniorell.Persistence\\Migrations\\20240205113003_Test.cs",
@@ -1642,7 +1675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 99,
               "Title": "LoginVM.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ViewModels\\LoginVM.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ViewModels\\LoginVM.cs",
@@ -1654,7 +1687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 100,
               "Title": "RegisterVM.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Application\\ViewModels\\RegisterVM.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Application\\ViewModels\\RegisterVM.cs",
@@ -1666,7 +1699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 101,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Enums\\Role.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Enums\\Role.cs",
@@ -1678,7 +1711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 102,
               "Title": "Gender.cs",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Core\\Moiniorell.Domain\\Enums\\Gender.cs",
               "RelativeDocumentMoniker": "src\\Core\\Moiniorell.Domain\\Enums\\Gender.cs",
@@ -1690,7 +1723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 103,
               "Title": "Moiniorell",
               "DocumentMoniker": "C:\\Users\\Said\\Documents\\Final\\Moiniorell\\src\\Presentation\\Moiniorell\\Moiniorell.csproj",
               "RelativeDocumentMoniker": "src\\Presentation\\Moiniorell\\Moiniorell.csproj",
@@ -1701,7 +1734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 104,
               "Title": "Microsoft.NET.Sdk.DefaultItems.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.DefaultItems.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.101\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.DefaultItems.targets",

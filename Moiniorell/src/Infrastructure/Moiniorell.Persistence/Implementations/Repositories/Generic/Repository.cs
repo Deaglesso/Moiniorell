@@ -47,7 +47,7 @@ namespace Moiniorell.Persistence.Implementations.Repositories.Generic
                 query = query.Include(include);
             }
 
-            return await query.FirstOrDefaultAsync();
+            return await query.AsSplitQuery().FirstOrDefaultAsync();
         }
 
         public async Task<bool> AnyAsync(Expression<Func<T, bool>> expression)

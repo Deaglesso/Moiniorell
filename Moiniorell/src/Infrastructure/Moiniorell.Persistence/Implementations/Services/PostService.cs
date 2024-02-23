@@ -118,6 +118,41 @@ namespace Moiniorell.Persistence.Implementations.Services
             return posts;
 
         }
+        public async Task<List<Post>> GetPostsByPage(int page = 1, int pageSize = 3)
+        {
+            var currentUserId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            var currentUser = await _userManager.Users
+                .Include(u => u.Followers)
+                .Include(u => u.Followees)
+                .SingleOrDefaultAsync(u => u.Id == currentUserId);
+
+            if (currentUser is null)
+            {
+                throw new Exception("User not found");
+            }
+
+            var followedUserIds = currentUser.Followers.Select(f => f.FolloweeId).ToList();
+
+            var postsQuery = _postRepo.GetAll(p => followedUserIds.Contains(p.AuthorId) || p.AuthorId == currentUserId,
+            nameof(Post.Author),
+            nameof(Post.Likes),
+            $"{nameof(Post.Likes)}.{nameof(Like.Liker)}",
+            nameof(Post.Comments),
+            $"{nameof(Post.Comments)}.{nameof(Comment.Author)}",
+            $"{nameof(Post.Comments)}.{nameof(Comment.Author)}.{nameof(AppUser.Followers)}",
+            $"{nameof(Post.Comments)}.{nameof(Comment.Replies)}",
+            $"{nameof(Post.Comments)}.{nameof(Comment.Replies)}.{nameof(Reply.Author)}").AsSplitQuery().AsNoTracking();
+
+            var posts = postsQuery
+                .OrderByDescending(p => p.CreatedAt)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
+            return posts;
+
+        }
+
         public async Task<Post> GetPost(int postId)
         {
 
@@ -198,7 +233,7 @@ namespace Moiniorell.Persistence.Implementations.Services
 
         public async Task DeletePost(int postId)
         {
-            var post = await _postRepo.GetSingleAsync(p => p.Id == postId,"Comments");
+            var post = await _postRepo.GetSingleAsync(p => p.Id == postId, "Comments");
             var currentUserId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
             if (post.AuthorId != currentUserId)
             {
@@ -217,7 +252,7 @@ namespace Moiniorell.Persistence.Implementations.Services
                 if (post.Image.Contains(".jpeg") || post.Image.Contains(".jpg") || post.Image.Contains(".png"))
                 {
 
-                await _cloudService.FileDeleteAsync(post.Image);
+                    await _cloudService.FileDeleteAsync(post.Image);
                 }
                 else
                 {
@@ -226,7 +261,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             }
             foreach (var comment in post.Comments)
             {
-                await _commentService.DeleteComment(comment.Id,true);
+                await _commentService.DeleteComment(comment.Id, true);
             }
             _postRepo.Delete(post);
             await _postRepo.SaveChangesAsync();

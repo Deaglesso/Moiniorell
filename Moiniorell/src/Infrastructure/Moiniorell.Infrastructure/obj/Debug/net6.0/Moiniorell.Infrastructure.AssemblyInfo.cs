@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Moiniorell.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+354b19526b5bcf062e621ccd8acbd795c0f1ff87")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b35846e7c1e125d589d462e4180ee227f0df37d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Moiniorell.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Moiniorell.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

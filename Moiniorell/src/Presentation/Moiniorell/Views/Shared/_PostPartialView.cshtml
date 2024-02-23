@@ -1,0 +1,321 @@
+﻿@using Humanizer
+@using Microsoft.Win32
+@using System.IO
+@inject UserManager<AppUser> _userManager
+@{
+    AppUser user = await _userManager.FindByNameAsync(User.Identity.Name);
+}
+@model List<Post>
+
+@foreach (var item in Model)
+
+{
+
+    <div class="col-sm-12">
+        <div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+            <div class="iq-card-body">
+                <div class="user-post-data">
+                    <div class="d-flex flex-wrap">
+                        <div class="media-support-user-img mr-3">
+                            <img class="rounded-circle img-fluid" src="@item.Author.ProfilePicture" alt="">
+                        </div>
+                        <div class="media-support-info mt-2">
+                            <h5 class="mb-0 d-inline-block"><a href="#" class="">@item.Author.Name @item.Author.Surname</a></h5>
+                            <p class="mb-0 d-inline-block">Add New Post</p>
+                            <p class="mb-0 text-primary">
+                                <span class="time-ago">@item.CreatedAt.Humanize()</span>
+                            </p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <p>@item.Text</p>
+                </div>
+                <div class="user-post">
+                    <div class="d-flex justify-content-center">
+                        @if (item.Image is not null)
+                        {
+                            string contentType = GetContentType(item.Image);
+                            string GetContentType(string fileName)
+                            {
+                                string extension = System.IO.Path.GetExtension(item.Image);
+                                string contentType = Registry.GetValue(@"HKEY_CLASSES_ROOT\" + extension, "Content Type", null) as string;
+
+                                return contentType ?? "application/octet-stream";
+                            }
+                            if (contentType.Contains("image"))
+                            {
+                                <div style="width: 640px; height: 480px;">
+
+                                    <img src="@item.Image" alt="post-image" class="img-fluid rounded zoom-image" style="width: 640px; height: 480px; object-fit: contain;">
+                                </div>
+                            }
+                            else
+                            {
+
+                                <style>
+                                    .vjs-big-play-button {
+                                        top: 50% !important;
+                                        left: 50% !important;
+                                        transform: translate(-50%, -50%) !important;
+                                    }
+                                </style>
+
+                                <div class="video-js-instance">
+                                    <video id="@($"my-video-{item.Id}")"
+                                           class="video-js"
+                                           controls
+                                           preload="auto"
+                                           width="640"
+                                           height="360"
+                                           data-setup='{}'>
+                                        <source src="~/assets/images/@item.Image" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+
+
+                            }
+
+                        }
+                    </div>
+                </div>
+
+
+                <div class="comment-area mt-3">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="like-block position-relative d-flex align-items-center">
+                            <div class="d-flex align-items-center like-section" data-post-id="@item.Id">
+                                <div class="like-data">
+                                    <div class="dropdown">
+                                        @if (item.Likes.Any(like => like.LikerId == user.Id))
+                                        {
+                                            <span>
+                                                <a href="#" class="likeToggle" data-post-id="@item.Id" data-liked="true">
+                                                    <img src="~/assets/images/icon/01.png" class="img-fluid" alt="">
+                                                    <span class="toggle-text">@((item.Likes.Any(like => like.LikerId == user.Id)) ? "Unlike" : "Like")</span>
+                                                </a>
+                                            </span>
+                                        }
+                                        else
+                                        {
+                                            <span>
+                                                <a href="#" class="likeToggle" data-post-id="@item.Id" data-liked="false">
+                                                    <img src="~/assets/images/icon/01.png" class="img-fluid" alt="">
+                                                    <span class="toggle-text">@((item.Likes.Any(like => like.LikerId == user.Id)) ? "Unlike" : "Like")</span>
+                                                </a>
+                                            </span>
+                                        }
+                                    </div>
+
+                                </div>
+                                <div class="total-like-block ml-2 mr-3">
+                                    <div class="dropdown">
+                                        <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                            @item.LikeCount
+                                        </span>
+                                        <div class="dropdown-menu">
+                                            @if (item.Likes.Any())
+                                            {
+                                                @foreach (var like in item.Likes.TakeLast(5))
+                                                {
+                                                    <a class="dropdown-item">@like.Liker.Name @like.Liker.Surname</a>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <a class="dropdown-item">No likes for now</a>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            @*  <div class="d-flex align-items-center">
+                        <div class="like-data">
+                        <div class="dropdown">
+                        @if (item.Likes.Any(like => like.LikerId == user.Id))
+                        {
+                        <span>
+                        <a href="#" class="unlikeButton" data-post-id="@item.Id">
+                        <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Unlike
+                        </a>
+                        </span>
+                        }
+                        else
+                        {
+                        <span>
+                        <a href="#" class="likeButton" data-post-id="@item.Id">
+                        <img src="~/assets/images/icon/01.png" class="img-fluid" alt=""> Like
+                        </a>
+                        </span>
+                        }
+
+
+
+                        </div>
+                        </div>
+                        <div class="total-like-block ml-2 mr-3">
+                        <div class="dropdown">
+                        <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                        @item.LikeCount
+                        </span>
+                        <div class="dropdown-menu">
+                        @if (item.Likes.Any())
+                        {
+
+                        @foreach (var like in item.Likes.TakeLast(5))
+                        {
+                        <a class="dropdown-item">@like.Liker.Name @like.Liker.Surname</a>
+                        }
+                        }
+                        else
+                        {
+                        <a class="dropdown-item">No likes for now</a>
+
+                        }
+                        </div>
+                        </div>
+                        </div>
+                        </div> *@
+                            <div class="total-comment-block">
+                                <div class="dropdown">
+                                    <span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">
+                                        @if (item.Comments is not null)
+                                        {
+                                            <span>@item.Comments.Count() Comments</span>
+
+                                        }
+                                        else
+                                        {
+                                            <span> No comments </span>
+                                        }
+                                    </span>
+                                    <div class="dropdown-menu">
+                                        @foreach (var comuser in item.Comments.TakeLast(5))
+                                        {
+                                            <a class="dropdown-item">@comuser.Author.Name @comuser.Author.Surname</a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr>
+                    <ul class="post-comments p-0 m-0">
+                        @foreach (var comm in item.Comments)
+                        {
+                            <li class="mb-2">
+                                <div class="d-flex flex-wrap">
+                                    <div class="user-img">
+                                        <img src="@comm.Author.ProfilePicture" alt="userimg" class="avatar-35 rounded-circle img-fluid">
+                                    </div>
+                                    <div class="comment-data-block ml-3">
+                                        <h6>@comm.Author.Name @comm.Author.Surname </h6>
+                                        <p class="mb-0">@comm.Text</p>
+                                        <div class="d-flex flex-wrap align-items-center comment-activity">
+                                            <span> @comm.CreatedAt.Humanize() </span>
+                                        </div>
+                                    </div>
+                                    @if (comm.AuthorId == user.Id)
+                                    {
+                                        <div style="text-align: right;margin-left:20px;">
+                                            <a asp-controller="Comment" asp-action="DeleteComment" asp-route-commentId="@comm.Id"><i class=" fa fa-trash"></i></a>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="replies" style="margin-left: 56px;">
+                                    @foreach (var reply in comm.Replies.Take(3))
+                                    {
+                                        <div class="d-flex flex-wrap">
+
+                                            <div class="comment-data-block ml-3">
+
+                                                <h6>@reply.Author.Name @reply.Author.Surname <span style="color: #808080; font-style: italic; font-weight: lighter;"> @reply.CreatedAt.Humanize() </span></h6>
+                                                <p class="mb-0">@reply.Text</p>
+
+                                            </div>
+                                            @if (reply.AuthorId == user.Id)
+                                            {
+                                                <div style="text-align: right;margin-left:20px;">
+                                                    <a asp-controller="Comment" asp-action="DeleteReply" asp-route-replyId="@reply.Id"><i class=" fa fa-trash"></i></a>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+
+                                    <div class="load-more-container">
+                                        <div class="additional-replies" id="additional-replies-@comm.Id" style="display: none;">
+                                            @foreach (var reply in comm.Replies.Skip(3))
+                                            {
+                                                <div class="d-flex flex-wrap">
+                                                    <div class="comment-data-block ml-3">
+                                                        <h6>@reply.Author.Name @reply.Author.Surname <span style="color: #808080; font-style: italic; font-weight: lighter;"> @reply.CreatedAt.Humanize() </span></h6>
+                                                        <p class="mb-0">@reply.Text</p>
+                                                    </div>
+                                                    @if (reply.AuthorId == user.Id)
+                                                    {
+                                                        <div style="text-align: right; margin-left:20px;">
+                                                            <a asp-controller="Comment" asp-action="DeleteReply" asp-route-replyId="@reply.Id"><i class=" fa fa-trash"></i></a>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            }
+                                        </div>
+                                        @if (comm.Replies.Count() > 3)
+                                        {
+
+                                            <button class="btn btn-link load-more-button" style="margin-left: 2px;" data-comment-id="@comm.Id">Load More</button>
+                                        }
+
+                                    </div>
+
+                                    <script>
+                                        $(document).ready(function () {
+                                            $(".load-more-button").off("click").on("click", function (event) {
+                                                event.preventDefault();
+                                                var commentId = $(this).data("comment-id");
+                                                console.log("Load more button clicked for comment id: " + commentId);
+                                                var additionalReplies = $("#additional-replies-" + commentId);
+                                                console.log("Is additional replies visible? " + additionalReplies.is(":visible"));
+                                                additionalReplies.stop().slideToggle();
+                                            });
+                                        });
+                                    </script>
+
+
+
+                                </div>
+
+
+                                @await Html.PartialAsync("_CreateReplyForm", new CreateReplyVM { CommentId = comm.Id })
+
+                            </li>
+
+                        }
+
+                    </ul>
+                    @await Html.PartialAsync("_CreateCommentForm", new CreateCommentVM { PostId = item.Id })
+                    @* <form class="comment-text d-flex align-items-center mt-3" asp-controller="Comment" asp-action="CreateComment" method="post">
+                <input asp-for="CreateCommentVM.Text" class="form-control rounded">
+                <input asp-for="CreateCommentVM.PostId" value="@item.Id" hidden/>
+                <div class="comment-attagement d-flex">
+                <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </div>
+                </form>  *@
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+<script>
+    const videoElements = document.querySelectorAll('.video-js');
+    videoElements.forEach((videoElement) => {
+        videojs(videoElement);
+    });
+</script>

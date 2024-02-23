@@ -13,6 +13,7 @@ namespace Moiniorell.Application.Abstractions.Services
         Task<List<string>> CreatePost(CreatePostVM vm);
 
         Task<List<Post>> GetPosts();
+        Task<List<Post>> GetPostsByPage(int page = 1, int pageSize = 3);
         Task<Post> GetPost(int postId);
 
         Task LikePost(int postId);
