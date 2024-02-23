@@ -113,7 +113,7 @@ namespace Moiniorell.Persistence.Implementations.Services
 
             var followedUserIds = currentUser.Followers.Select(f => f.FolloweeId).ToList();
 
-            var posts = _postRepo.GetAll(p => followedUserIds.Contains(p.AuthorId) || p.AuthorId == currentUserId, nameof(Post.Author), "Comments.Author", nameof(Post.Likes), "Comments.Replies").OrderByDescending(p => p.CreatedAt).ToList();
+            var posts = _postRepo.GetAll(p => followedUserIds.Contains(p.AuthorId) || p.AuthorId == currentUserId, nameof(Post.Author), "Comments.Author", "Likes.Liker", "Comments.Replies.Author").OrderByDescending(p => p.CreatedAt).ToList();
 
             return posts;
 
