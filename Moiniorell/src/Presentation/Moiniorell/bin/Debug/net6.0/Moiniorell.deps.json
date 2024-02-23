@@ -1055,6 +1055,7 @@
       },
       "Moiniorell.Infrastructure/1.0.0": {
         "dependencies": {
+          "CloudinaryDotNet": "1.25.1",
           "Moiniorell.Application": "1.0.0",
           "SixLabors.ImageSharp": "3.1.2"
         },

@@ -117,7 +117,10 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task Follow(string followedId)
         {
             string userId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-
+            if (userId is null)
+            {
+                throw new Exception("User not found");
+            }
             AppUser user = await _userManager.FindByIdAsync(userId);
             AppUser followed = await _userManager.FindByIdAsync(followedId);
 
@@ -142,7 +145,10 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task Unfollow(string followedId)
         {
             string userId = _http.HttpContext.User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-
+            if (userId is null)
+            {
+                throw new Exception("User not found");
+            }
             AppUser user = await _userManager.FindByIdAsync(userId);
             AppUser followed = await _userManager.FindByIdAsync(followedId);
 
@@ -160,29 +166,69 @@ namespace Moiniorell.Persistence.Implementations.Services
 
         public async Task<AppUser> GetUser(string username)
         {
-            return await _userManager.Users
-                .Include(u => u.Followers).ThenInclude(x => x.Follower).Include(x => x.Followees).ThenInclude(x => x.Followee).Include(x => x.Posts).ThenInclude(p => p.Comments).ThenInclude(c => c.Replies).Include(x => x.Posts).ThenInclude(p => p.Likes)
+           var user = await _userManager.Users
+                .Include("Followers.Follower").Include("Followees.Followee").Include("Posts.Comments.Replies").Include("Posts.Likes").Include("Posts.Comments.Author").Include("Posts.Comments.Replies.Author")
                 .FirstOrDefaultAsync(u => u.UserName == username);
+            if (user is null)
+            {
+                throw new Exception("User not found");
+            }
+            return user;
+
         }
         public async Task<AppUser> GetUserForUI(string username)
         {
-            return await _userManager.Users
+            var user = await _userManager.Users
                .FirstOrDefaultAsync(u => u.UserName == username);
+            if (user is null)
+            {
+                throw new Exception("User not found");
+            }
+            return user;
+
         }
         public async Task<AppUser> GetUserById(string userId)
         {
-            return await _userManager.FindByIdAsync(userId);
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user is null)
+            {
+                throw new Exception("User not found");
+            }
+            return user;
         }
         public async Task<List<AppUser>> GetUsers(string searchTerm)
         {
 
-            return await _userManager.Users.Where(x => x.UserName.ToLower().Contains(searchTerm.ToLower()) || x.Name.ToLower().Contains(searchTerm.ToLower()) || x.Surname.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
+            var user = await _userManager.Users.Where(x => x.UserName.ToLower().Contains(searchTerm.ToLower()) || x.Name.ToLower().Contains(searchTerm.ToLower()) || x.Surname.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
+            if (user is null)
+            {
+                throw new Exception("User not found");
+            }
+            return user;
         }
 
         public async Task AcceptRequest(string followId, string followerId)
         {
             Follow follow = await _followRepo.GetSingleAsync(x => x.FolloweeId == followId && x.FollowerId == followerId);
+            if (follow is null)
+            {
+                throw new Exception("Follow error");
+            }
             follow.Status = true;
+            var user = await _userManager.Users
+              .FirstOrDefaultAsync(u => u.Id == followId);
+            var userEd = await _userManager.Users
+              .FirstOrDefaultAsync(u => u.Id == followId);
+            if (user is null)
+            {
+                throw new Exception();
+            }
+            if (userEd is null)
+            {
+                throw new Exception();
+            }
+            user.FollowerCount++;
+            userEd.FollowingCount++;
             await _followRepo.SaveChangesAsync();
 
         }
@@ -190,6 +236,10 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task RejectRequest(string followId, string followerId)
         {
             Follow follow = await _followRepo.GetSingleAsync(x => x.FolloweeId == followId && x.FollowerId == followerId);
+            if (follow is null)
+            {
+                throw new Exception("Follow error");
+            }
             _followRepo.Delete(follow);
             await _followRepo.SaveChangesAsync();
         }
@@ -208,7 +258,10 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task<string> AddUserConnection(string ConnectionId)
         {
             var userId = _http.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
-
+            if (userId is null)
+            {
+                throw new Exception("User error");
+            }
             await _userConnectionRepository.CreateAsync(new UserConnection
             {
                 ConnectionId = ConnectionId,
@@ -247,7 +300,15 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task<ChatBoxModel> GetChatbox(string toUserId)
         {
             var userId = _http.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (userId is null)
+            {
+                throw new Exception("User error");
+            }
             var toUser = _userManager.Users.FirstOrDefault(x => x.Id == toUserId);
+            if (toUser is null)
+            {
+                throw new Exception("User error");
+            }
             var messages =  _messageRepository.GetAll(x => (x.FromUserId == userId && x.ToUserId == toUserId) || (x.FromUserId == toUserId && x.ToUserId == userId))
                 .OrderByDescending(x => x.CreatedAt)
                 .Skip(0)
@@ -282,6 +343,10 @@ namespace Moiniorell.Persistence.Implementations.Services
             try
             {
                 string USER_ID = _http.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (USER_ID is null)
+                {
+                    throw new Exception("Wrong id error");
+                }
                 await _messageRepository.CreateAsync(new Message
                 {
                     FromUserId = USER_ID,

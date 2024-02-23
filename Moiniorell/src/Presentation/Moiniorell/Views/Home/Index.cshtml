@@ -11,7 +11,7 @@
 <div id="content-page" class="content-page">
     <div class="container">
         <div class="row">
-                
+
             <div class="col-lg-9 row m-0 p-0">
                 <div class="col-sm-12">
                     <div id="post-modal-data" class="iq-card iq-card-block iq-card-stretch iq-card-height">
@@ -32,16 +32,9 @@
                                     <div class="row justify-content-end mt-3">
                                         <ul class="post-opt-block d-flex align-items-center list-inline m-0 p-0">
                                             <li class="iq-bg-primary rounded p-2 pointer mr-3">
-                                                @* <label for="fileInput" style="cursor: pointer;">
-                                                <img src="~/assets/images/small/07.png" alt="icon" class="img-fluid"> Photo (Must be 4:3 ratio)
-                                                </label>
-                                                <input type="file" id="fileInput" name="File" asp-for="CreatePostVM.File" style="opacity: 0; position: absolute; z-index: -1;" />
-                                                *@
-
                                                 <label for="fileInput" style="cursor: pointer;">
                                                     <img src="~/assets/images/small/07.png" alt="icon" class="img-fluid"> Photo/Video
                                                 </label>
-
                                                 <input type="file" id="fileInput" name="File" asp-for="CreatePostVM.File" style="opacity: 0; position: absolute; z-index: -1;" />
 
                                                 <div class="modal" id="cropModal" tabindex="-1" role="dialog">
@@ -58,63 +51,97 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-                                                <script>
-                                                    $(document).ready(function () {
-                                                        $('#fileInput').on('change', function (e) {
-                                                            var input = e.target;
-                                                            var reader = new FileReader();
-
-                                                            reader.onload = function () {
-                                                                var imageUrl = reader.result;
-                                                                console.log('Image loaded:', imageUrl);
-
-                                                                $('#croppie-container').empty();
-                                                                $('#cropModal').modal('show');
-
-                                                                var container = $('<div>').css({
-                                                                    'width': '640px',
-                                                                    'height': '480px',
-                                                                    'overflow': 'hidden',
-                                                                    'position': 'relative'
-                                                                });
-
-                                                                var img = $('<img>').attr('src', imageUrl).css({
-                                                                    'width': '100%',
-                                                                    'height': '100%',
-                                                                    'object-fit': 'cover',
-                                                                    'object-position': 'center'
-                                                                });
-
-                                                                container.append(img);
-                                                                $('#croppie-container').append(container);
-
-                                                                $('#cropButton').on('click', function () {
-                                                                    var croppedImageSrc = imageUrl;
-                                                                    console.log('Cropped Image:', croppedImageSrc);
-                                                                    $('#cropModal').modal('hide');
-                                                                });
-                                                            };
-
-                                                            reader.readAsDataURL(input.files[0]);
-                                                        });
-
-                                                        $('#cropModal').on('hidden.bs.modal', function () {
-                                                            $('#croppie-container').empty();
-                                                        });
-                                                    });
-                                                </script>
-
-
-
-
                                             </li>
                                         </ul>
 
+                                        <input type="hidden" name="Base64" asp-for="CreatePostVM.Base64" id="base64-image">
+
                                         <button class="btn btn-primary d-block" type="submit">Submit</button>
                                     </div>
+
+                                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js" integrity="sha384-fMKDH2D1hvCukp9NpKQRtT6L7OYAVLb/l3PxFfA5Of0RcbI2AnRNC1ELKAmwQiKR" crossorigin="anonymous"></script>
+
+                                    <script>
+                                        $(document).ready(function () {
+                                            var vanilla;
+                                            var imageUrl;
+
+                                            $('#fileInput').on('change', function (e) {
+                                                var input = e.target;
+                                                var file = input.files[0];
+
+                                                if (file) {
+                                                    if (isImage(file.type)) {
+                                                        handleImageUpload(file);
+                                                    } else if (isVideo(file.type)) {
+                                                        handleVideoUpload(file);
+                                                    }
+                                                }
+                                            });
+
+                                            $('#cropButton').on('click', function () {
+                                                if (vanilla) {
+                                                    vanilla.result({
+                                                        type: 'base64',
+                                                        format: 'jpeg'
+                                                    }).then(function (base64) {
+                                                        console.log('Cropped Image:', base64);
+                                                        $('#cropModal').modal('hide');
+                                                        $('#base64-image').val(base64);
+                                                    });
+                                                }
+                                            });
+
+                                            $('#cropModal').on('hidden.bs.modal', function () {
+                                                $('#croppie-container').empty();
+                                            });
+
+                                            function handleImageUpload(file) {
+                                                var reader = new FileReader();
+
+                                                reader.onload = function () {
+                                                    imageUrl = reader.result;
+                                                    console.log('Image loaded:', imageUrl);
+
+                                                    $('#croppie-container').empty();
+                                                    $('#cropModal').modal('show');
+
+                                                    vanilla = new Croppie(document.getElementById('croppie-container'), {
+                                                        viewport: { width: 320, height: 240 },
+                                                        boundary: { width: 640, height: 380 },
+                                                        showZoomer: false,
+                                                        enableOrientation: true
+                                                    });
+
+                                                    vanilla.bind({
+                                                        url: imageUrl,
+                                                        orientation: 0
+                                                    });
+                                                };
+
+                                                reader.readAsDataURL(file);
+                                            }
+
+                                            function handleVideoUpload(file) {
+                                                $('#base64-image').val('');
+                                                $('#cropModal').modal('hide');
+                                                $('#fileInput').attr('name', 'File');
+                                            }
+
+                                            function isImage(fileType) {
+                                                return fileType.startsWith('image/');
+                                            }
+
+                                            function isVideo(fileType) {
+                                                return fileType.startsWith('video/');
+                                            }
+                                        });
+                                    </script>
                                 </form>
+
+
+
 
 
 
@@ -157,14 +184,14 @@
                                         @if (item.Image is not null)
                                         {
                                             string contentType = GetContentType(item.Image);
-                                             string GetContentType(string fileName)
+                                            string GetContentType(string fileName)
                                             {
                                                 string extension = System.IO.Path.GetExtension(item.Image);
                                                 string contentType = Registry.GetValue(@"HKEY_CLASSES_ROOT\" + extension, "Content Type", null) as string;
 
                                                 return contentType ?? "application/octet-stream";
                                             }
-                                           if (contentType.Contains("image"))
+                                            if (contentType.Contains("image"))
                                             {
                                                 <div style="width: 640px; height: 480px;">
 
@@ -195,9 +222,9 @@
                                                     </video>
                                                 </div>
 
-                                                
+
                                             }
-                                       
+
                                         }
                                     </div>
                                 </div>
@@ -339,9 +366,15 @@
                                                             <span> @comm.CreatedAt.Humanize() </span>
                                                         </div>
                                                     </div>
+                                                    @if (comm.AuthorId==user.Id)
+                                                    {
+                                                        <div style="text-align: right;margin-left:20px;">
+                                                            <a asp-controller="Comment" asp-action="DeleteComment" asp-route-commentId="@comm.Id"><i class=" fa fa-trash"></i></a>
+                                                        </div>
+                                                    }
                                                 </div>
                                                 <div class="replies" style="margin-left: 56px;">
-                                                    @foreach (var reply in comm.Replies.Take(3)) // Only take the first 5 replies
+                                                    @foreach (var reply in comm.Replies.Take(3)) 
                                                     {
                                                         <div class="d-flex flex-wrap">
 
@@ -351,6 +384,12 @@
                                                                 <p class="mb-0">@reply.Text</p>
 
                                                             </div>
+                                                            @if (reply.AuthorId == user.Id)
+                                                            {
+                                                                <div style="text-align: right;margin-left:20px;">
+                                                                    <a asp-controller="Comment" asp-action="DeleteReply" asp-route-replyId="@reply.Id"><i class=" fa fa-trash"></i></a>
+                                                                </div>
+                                                            }
                                                         </div>
                                                     }
 
@@ -363,6 +402,12 @@
                                                                         <h6>@reply.Author.Name @reply.Author.Surname <span style="color: #808080; font-style: italic; font-weight: lighter;"> @reply.CreatedAt.Humanize() </span></h6>
                                                                         <p class="mb-0">@reply.Text</p>
                                                                     </div>
+                                                                    @if (reply.AuthorId == user.Id)
+                                                                    {
+                                                                        <div style="text-align: right; margin-left:20px;">
+                                                                            <a asp-controller="Comment" asp-action="DeleteReply" asp-route-replyId="@reply.Id"><i class=" fa fa-trash"></i></a>
+                                                                        </div>
+                                                                    }
                                                                 </div>
                                                             }
                                                         </div>
@@ -397,7 +442,7 @@
                                             </li>
 
                                         }
-                                        
+
                                     </ul>
                                     @await Html.PartialAsync("_CreateCommentForm", new CreateCommentVM { PostId = item.Id })
                                     @* <form class="comment-text d-flex align-items-center mt-3" asp-controller="Comment" asp-action="CreateComment" method="post">
@@ -429,13 +474,11 @@
                         </div>
                     </div>
                     <div class="iq-card-body">
-                            <ul id="onlineUsersList" class="media-story m-0 p-0">
-
-                           
+                        <ul id="onlineUsersList" class="media-story m-0 p-0">
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -458,11 +501,9 @@
                 var likeCountElement = postElement.find('.total-like-block span');
                 var likersList = postElement.find('.dropdown-menu');
 
-                // Toggle the state
                 likeToggleElement.data('liked', !liked);
                 likeToggleElement.find('.toggle-text').text(liked ? 'Like' : 'Unlike');
 
-                // Send AJAX request to the server to update the database
                 $.ajax({
                     url: liked ? '/Post/UnlikePost' : '/Post/LikePost',
                     type: 'POST',
@@ -470,12 +511,10 @@
                     success: function (data) {
                         console.log("AJAX success");
 
-                        // Update the like count
                         var newLikeCount = parseInt(likeCountElement.text());
                         newLikeCount += liked ? -1 : 1;
                         likeCountElement.text(newLikeCount);
 
-                        // Update likers list
                         if (data.likes && data.likes.length > 0) {
                             likersList.empty();
                             $.each(data.likes, function (index, like) {
@@ -487,11 +526,9 @@
                             likersList.append('<a class="dropdown-item">No likes for now</a>');
                         }
 
-                        // Server successfully updated, you may handle additional tasks if needed
                     },
                     error: function (error) {
                         console.error('Error:', error);
-                        // Handle errors if necessary
                     }
                 });
             });
@@ -511,17 +548,14 @@
 
     connection.start()
         .then(() => {
-            // Connection to SignalR hub successful
         })
         .catch((err) => console.error(err));
 
     function updateOnlineUsersList(onlineUsers) {
         const onlineUsersList = document.getElementById("onlineUsersList");
 
-        // Clear existing list items
         onlineUsersList.innerHTML = "";
 
-        // Add new list items for each online user
         onlineUsers.forEach(username => {
             fetch(`/User/GetUser?username=${username}`)
                 .then(response => {
@@ -533,23 +567,23 @@
                 .then(user => {
                     console.log(user);
                     var aval = "Do not disturb";
-                    if(user.Availability == true){
+                    if (user.Availability == true) {
                         aval = "Available";
                     }
                     const listItem = document.createElement("li");
                     listItem.className = "d-flex mb-4 align-items-center";
                     listItem.innerHTML += `<li class="d-flex mb-4 align-items-center active">
-                                        <img src="${user.ProfilePicture}" alt="story-img" class="rounded-circle img-fluid">
-                                    <div class="stories-data ml-3">
-                                            <h5>${user.Name} ${user.Surname}</h5>
-                                        <p class="mb-0">${aval}</p>
-                                    </div>
-                                </li>`;
+                                            <img src="${user.ProfilePicture}" alt="story-img" class="rounded-circle img-fluid">
+                                        <div class="stories-data ml-3">
+                                                <h5>${user.Name} ${user.Surname}</h5>
+                                            <p class="mb-0">${aval}</p>
+                                        </div>
+                                    </li>`;
                     onlineUsersList.appendChild(listItem);
                 })
                 .catch(error => console.error(error));
 
-            
+
         });
     }
 

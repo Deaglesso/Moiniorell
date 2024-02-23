@@ -11,6 +11,7 @@ namespace Moiniorell.Application.ViewModels
     public class CreatePostVM
     {
         public IFormFile? File { get; set; }
+        public string? Base64 { get; set; }
         [Required]
         [MinLength(1)]
         public string Text { get; set; }

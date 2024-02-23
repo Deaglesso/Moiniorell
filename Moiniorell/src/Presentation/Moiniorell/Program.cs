@@ -1,17 +1,19 @@
 
 using Moiniorell.Persistence.ServiceRegistration;
 using Moiniorell.Application.ServiceRegistration;
+using Moiniorell.Infrastructure.ServiceRegistration;
 using Moiniorell.Persistence.Hubs;
-
+using Moiniorell.Application.Abstractions.Services;
+using Moiniorell.Infrastructure.Implementations;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationServices();
-
-
 
 var app = builder.Build();
 
@@ -29,9 +31,11 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseMiddleware<ExceptionHandlerService>();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=User}/{action=Login}/{id?}");
+
 
 app.UseEndpoints(endpoints =>
 {

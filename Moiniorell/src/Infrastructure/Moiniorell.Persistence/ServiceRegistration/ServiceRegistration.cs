@@ -25,8 +25,7 @@ namespace Moiniorell.Persistence.ServiceRegistration
 
             services.AddScoped<IPostService, PostService>();
             services.AddScoped<ICommentService, CommentService>();
-            services.AddScoped<ICloudService, CloudService>();
-
+            
 
 
             services.AddHttpContextAccessor();
@@ -43,7 +42,6 @@ namespace Moiniorell.Persistence.ServiceRegistration
 
 
 
-            services.AddScoped<IEmailService, EmailService>();
             services.AddSignalR();
 
 

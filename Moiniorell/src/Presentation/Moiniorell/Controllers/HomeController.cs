@@ -37,6 +37,7 @@ namespace Moiniorell.Controllers
             {
                 Posts = await _postService.GetPosts(),
             };
+
             return View(vm);
         }
         [HttpPost]
@@ -83,7 +84,15 @@ namespace Moiniorell.Controllers
             return View("Search", users);
         }
 
+        public IActionResult ErrorPage(string error)
+        {
+            if (error is null)
+            {
+                return RedirectToAction(nameof(Index));
 
+            }
+            return View(model:error);
+        }
         
 
 

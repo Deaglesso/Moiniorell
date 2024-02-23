@@ -62,7 +62,7 @@ namespace Moiniorell.Persistence.Implementations.Services
             {
                 str.Add("emailconfirm");
                 var confres = await SendVerificationMail(Url, vm);
-
+                
                 return str;
             }
             var res = await _signInManager.PasswordSignInAsync(user, vm.Password, vm.isRemembered, true);
@@ -104,6 +104,7 @@ namespace Moiniorell.Persistence.Implementations.Services
 
         public async Task Logout()
         {
+           
             foreach (var cookie in _http.HttpContext.Request.Cookies.Keys)
             {
                 _http.HttpContext.Response.Cookies.Delete(cookie);
@@ -151,6 +152,10 @@ namespace Moiniorell.Persistence.Implementations.Services
         public async Task<IdentityResult> ConfirmEmail(string token, string email)
         {
             var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                throw new Exception("user error");
+            }
             return await _userManager.ConfirmEmailAsync(user, token);
 
         }

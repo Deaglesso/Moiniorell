@@ -1,5 +1,6 @@
 ﻿@using System.Security.Claims
 @using Humanizer
+@using Microsoft.Win32
 
 @model AppUser
 
@@ -245,12 +246,48 @@
                                                                     <div class="d-flex justify-content-center">
                                                                         @if (item.Image is not null)
                                                                         {
+                                                                            string contentType = GetContentType(item.Image);
+                                                                            string GetContentType(string fileName)
+                                                                            {
+                                                                                string extension = System.IO.Path.GetExtension(item.Image);
+                                                                                string contentType = Registry.GetValue(@"HKEY_CLASSES_ROOT\" + extension, "Content Type", null) as string;
 
-                                                                            <div style="width: 640px; height: 480px;">
+                                                                                return contentType ?? "application/octet-stream";
+                                                                            }
+                                                                            if (contentType.Contains("image"))
+                                                                            {
+                                                                                <div style="width: 640px; height: 480px;">
 
-                                                                                <img src="@item.Image" alt="post-image" class="img-fluid rounded zoom-image" style="width: 640px; height: 480px; object-fit: contain;">
+                                                                                    <img src="@item.Image" alt="post-image" class="img-fluid rounded zoom-image" style="width: 640px; height: 480px; object-fit: contain;">
+                                                                                </div>
+                                                                            }
+                                                                            else
+                                                                            {
 
-                                                                            </div>
+                                                                                <style>
+                                                                                    .vjs-big-play-button {
+                                                                                        top: 50% !important;
+                                                                                        left: 50% !important;
+                                                                                        transform: translate(-50%, -50%) !important;
+                                                                                    }
+                                                                                </style>
+
+                                                                                <div class="video-js-instance">
+                                                                                    <video id="@($"my-video-{item.Id}")"
+                                                                                           class="video-js"
+                                                                                           controls
+                                                                                           preload="auto"
+                                                                                           width="640"
+                                                                                           height="360"
+                                                                                           data-setup='{}'>
+                                                                                        <source src="~/assets/images/@item.Image" type="video/mp4">
+                                                                                        Your browser does not support the video tag.
+                                                                                    </video>
+                                                                                </div>
+
+
+                                                                            }
+
                                                                         }
                                                                     </div>
                                                                 </div>

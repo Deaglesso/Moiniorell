@@ -11,7 +11,8 @@ namespace Moiniorell.Application.Abstractions.Services
     {
         Task<List<string>> CreateComment(CreateCommentVM vm);
         Task<List<string>> CreateReply(CreateReplyVM vm);
-
+        Task<List<string>> DeleteReply(int replyId, bool mood = false);
+        Task<List<string>> DeleteComment(int commentId, bool mood = false);
 
     }
 }

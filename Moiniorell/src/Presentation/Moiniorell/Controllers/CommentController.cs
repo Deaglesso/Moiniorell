@@ -45,6 +45,25 @@ namespace Moiniorell.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
+        public async Task<IActionResult> DeleteComment(int commentId)
+        {
+            var res = await _commentService.DeleteComment(commentId);
+            if (res.Any())
+            {
+                throw new Exception();
+            }
+            return RedirectToAction("Index", "Home");
+        }
+
+        public async Task<IActionResult> DeleteReply(int replyId)
+        {
+            var res = await _commentService.DeleteReply(replyId);
+            if (res.Any())
+            {
+                throw new Exception();
+            }
+            return RedirectToAction("Index", "Home");
+        }
 
 
 

@@ -3664,12 +3664,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\fullcalendar\timegrid\README.md))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\53354255-c6f1-40c8-9f6c-bc7d06186715WIN_20240222_10_49_55_Pro.mp4))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\264cdb69-31db-4fdb-bb4d-866653bb799bWIN_20240222_10_49_55_Pro.mp4))">
       <SourceType>Package</SourceType>
       <SourceId>Moiniorell</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Moiniorell</BasePath>
-      <RelativePath>assets/images/53354255-c6f1-40c8-9f6c-bc7d06186715WIN_20240222_10_49_55_Pro.mp4</RelativePath>
+      <RelativePath>assets/images/264cdb69-31db-4fdb-bb4d-866653bb799bWIN_20240222_10_49_55_Pro.mp4</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -3678,7 +3678,23 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\53354255-c6f1-40c8-9f6c-bc7d06186715WIN_20240222_10_49_55_Pro.mp4))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\264cdb69-31db-4fdb-bb4d-866653bb799bWIN_20240222_10_49_55_Pro.mp4))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\4d19480c-8e84-4404-972b-81c275fef83aWIN_20240223_17_39_25_Pro.mp4))">
+      <SourceType>Package</SourceType>
+      <SourceId>Moiniorell</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Moiniorell</BasePath>
+      <RelativePath>assets/images/4d19480c-8e84-4404-972b-81c275fef83aWIN_20240223_17_39_25_Pro.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\4d19480c-8e84-4404-972b-81c275fef83aWIN_20240223_17_39_25_Pro.mp4))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\ad3dc1e7-0c52-4fd4-bdc7-9ee242f76788WIN_20240222_10_49_55_Pro.mp4))">
       <SourceType>Package</SourceType>
@@ -3695,6 +3711,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\ad3dc1e7-0c52-4fd4-bdc7-9ee242f76788WIN_20240222_10_49_55_Pro.mp4))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\c212e14b-8baa-4cf3-b0d7-33caa41788c9WIN_20240222_10_49_55_Pro.mp4))">
+      <SourceType>Package</SourceType>
+      <SourceId>Moiniorell</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Moiniorell</BasePath>
+      <RelativePath>assets/images/c212e14b-8baa-4cf3-b0d7-33caa41788c9WIN_20240222_10_49_55_Pro.mp4</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\c212e14b-8baa-4cf3-b0d7-33caa41788c9WIN_20240222_10_49_55_Pro.mp4))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\assets\images\error\01.png))">
       <SourceType>Package</SourceType>

@@ -265,7 +265,7 @@
                                                     </div>
                                                     <div class="d-flex align-items-center">
                                                         <a asp-controller="Profile" asp-action="AcceptFollow" asp-route-followId="@item.FolloweeId" asp-route-followerId="@item.FollowerId" class="mr-3 btn btn-primary rounded">Confirm</a>
-                                                            <a asp-controller="Profile" asp-action="DeclineFollow" asp-route-followId="@item.Id"  class="mr-3 btn btn-secondary rounded">Delete Request</a>
+                                                            <a asp-controller="Profile" asp-action="RejectFollow" asp-route-followId="@item.FolloweeId" asp-route-followerId="@item.FollowerId" class="mr-3 btn btn-secondary rounded">Delete Request</a>
                                                     </div>
                                                 </div>
                                             </div>
